@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ERRO</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static "css/cadastro.css" %}">
+</head>
+<body>
+    
+    <section>
+        <h1>Login ou Usuário Inválido tente novamente</h1>
+    </section>
+
+    <section>
+        <a href="{% url "login" %}" class="botao">Voltar</a>
+    </section>
+
+    <section>
+        <h1>Esqueceu a senha? resgate a senha logo abaixo</h1>
+    </section>
+    
+    <form action = "{% url 'update' %}" method="POST"> {# Envia os dados do formulário já com identificação pelo id do user para a url da linha 11 no arquivo urls.py do app #}
+        {% csrf_token %} {# Cria uma criptografia para os dados do usuário #}
+        <div class="inputbox">
+            <label class="campo" for="email">Email:</label>
+            <input class="dados" type="email" name="email">
+        </div>
+        
+        <div class="inputbox">
+            <label class="campo" for="senha">Nova Senha:</label>
+            <input class="dados" type="password" name="senha" maxlength="8">
+        </div>
+
+        <div class="inputbox">
+            <label class="campo" for="conf">Confirme a Nova Senha:</label>
+            <input class="dados" type="password" id="conf" name="conf_senha" maxlength="8" required>
+        </div>
+
+        <button class="botao2" type-"submit">Modificar</button>
+    </form>
+</body>
+</html>
+

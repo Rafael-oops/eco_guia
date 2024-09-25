@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/cadastro.css">
+    <title>Login</title>
+    {% load static %}
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <link href="{% static "css/cadastro.css" %}" rel="stylesheet">
+</head>
+
+<body>
+    <section class="sessao">
+        <h1 class="campo"> Bem vindo a Eco_Guia</h1>
+    </section>
+    <section class="sessao">
+        <div class="logo d-flex justify-content-center" id="logo">
+            <div class="img">
+                <img class="img-logo" src="assets/img/logotipo.png" alt="logo" width="100">
+            </div>
+            <form id="cadastroForm" action="{% url "verificar_login" %}" method="POST">
+                {% csrf_token %}
+                <h1>Entre</h1>
+                <div class="inputbox">
+                    <label class="campo" for="user">Usuário:</label>
+                    <input class="dados" type="text" id="user" name="user" required>
+                </div>
+
+                <div class="inputbox">
+                    <label class="campo" for="senha">Senha:</label>
+                    <input class="dados" type="password" id="senha" name="senha" required>
+                </div>
+                <div class="inputbox botoes">
+                    <input class="botao" type="submit" id="envio" value="Enviar">
+                </div>
+            </form>
+            <p>Ainda não tem conta?<span><a href="{% url "cadastro" %}">Cadastrar-se</a></span></p>
+        </div>
+    </section>
+<script src="js/cadastro.js"></script>
+</body>
+
+</html>

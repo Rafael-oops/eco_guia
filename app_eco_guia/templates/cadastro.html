@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastre-se</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/cadastro.css' %}">
+</head>
+
+<body>
+    <h1>Lista de Usuários</h1>
+
+    <ul class="lista-user">
+        {% comment %} {% for usuario in usuarios %} {# muda o nome 'usuarios' para 'usuario' (ver linha 11 do arquivo views.py) #}
+            <li class="item-user"> 
+                <p class="info"> 
+                    {{ usuario.nome }} - {{ usuario.email }} - {{ usuario.username }} - {{ usuario.senha }} {# Mostra em um parágrafo as informações registradas no banco (ver linha 7 do arquivo views.py) #}
+                </p>
+
+                <span>
+                    <a href="{% url "editar" usuario.id %}"><button class="botao botaoInfo">Editar</button></a>
+                    <a href="{% url "delete" usuario.id %}"><button class="botao botaoInfo botaoDel">Deletar</button></a>
+                </span>
+            </li>
+        {% endfor %} {% endcomment %}
+    </ul>
+    <header>
+
+    </header>
+    <section class="sessao">
+        <div class="logo d-flex justify-content-center" id="logo">
+            {% comment %} <div class="img">
+                <a href="index.html"><img class="img-logo" src="  {% static "img/logotipo.png" %}" alt="logo" width="100"></a>
+            </div> {% endcomment %}
+            
+            <form id="cadastroForm" action="{% url 'salvar' %}" method="POST">
+                {% csrf_token %}
+                <h1>Cadastre-se</h1>
+
+                <div class="inputbox">
+                    <label class="campo" for="nome">Nome:</label>
+                    <input class="dados" type="text" id="nome" name="nome" required>
+                </div>
+
+                <div class="inputbox">
+                    <label class="campo" for="email">Email:</label>
+                    <input class="dados" type="text" id="email" name="email" required>
+                </div>
+
+                <div class="inputbox">
+                    <label class="campo" for="username">Usuário:</label>
+                    <input class="dados" type="text" id="username" name="username" required>
+                </div>
+
+                <div class="inputbox">
+                    <label class="campo" for="senha">Crie sua Senha:</label>
+                    <input class="dados" type="password" id="senha" name="senha" maxlength="8" required>
+                </div>
+
+                <div class="inputbox">
+                    <label class="campo" for="conf">Confirme sua Senha:</label>
+                    <input class="dados" type="password" id="conf" name="conf" maxlength="8" required>
+                </div>
+                
+                <div class="inputbox botoes">
+                    <button class="botao" type="submit">Salvar</button>
+                </div>
+
+                <div class="inputbox botoes">
+                    <a class="botao" href="{% url "login" %}">Voltar</a>
+                </div>
+            </form> 
+        </div>
+    </section>
+</body>
+
+</html>

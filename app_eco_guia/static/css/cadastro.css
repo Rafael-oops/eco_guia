@@ -1,0 +1,149 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    color: #1b7340;
+    font-family: 'Poppins', sans-serif;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+  }
+  
+  .sessao {
+    width: 30%;
+  }
+  
+  .logo {
+    width: 100%;
+    border: 2px solid rgb(27, 115, 64);
+    border-radius: 3%;
+    padding: 2vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: auto;
+    box-shadow: 5px 5px 10px rgb(27, 115, 64, 0.5);
+  }
+  
+  .img {
+    text-align: center;
+  }
+
+  .lista-user {
+    padding: 5px;
+  }
+
+  .item-user {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+    margin: 0;
+    padding: 3px;
+    border-radius: 5px;
+  }
+
+  .item-user:hover {
+    background-color: rgb(82, 183, 136, 0.3);
+  }
+
+  .info {
+    margin: 0;
+  }
+  
+  #cadastroForm {
+    text-align: center;
+    width: 100%;
+  }
+  
+  .inputbox {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  
+  .campo {
+    text-align: start;
+    font-size: 1rem;
+  }
+  
+  .dados {
+    border: 1.5px solid #1b7340;
+    border-radius: 5px;
+    font-size: 1rem;
+    padding: 3px;
+  }
+  
+  .botao {
+    text-align: center;
+    width: 10rem;
+    background-color: #1b7340;
+    color: #ffffff;
+    padding: 5px;
+    margin: auto;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 1rem;
+    border: 1.8px solid #ffffff;
+    transition: 0.1s;
+  }
+  
+  .botao:hover {
+    background-color: #ffffff;
+    color: #1b7340;
+    border: 1.8px solid #1b7340;
+    cursor: pointer;
+  }
+
+  .botaoInfo {
+    width: 5rem;
+    font-size: 0.8rem;
+  }
+
+  .botaoDel {
+    background-color: red;
+  }
+
+  .botaoDel:hover {
+    color: red;
+    border: 1.8px solid red;
+  }
+  
+  
+  @media screen and (max-width: 750px) {
+    * {
+      margin: 0;
+      padding: 0;
+    }
+  
+    body {
+      width:90%;
+      margin: auto;
+      text-align: center;
+    }
+  
+    .sessao {
+      width: 100%;
+      margin-left: 0;
+      margin-right: 3rem;
+    }
+  
+    .img-logo {
+      width: 100%;
+      height: 30vh;
+    }
+  
+    .logo {
+      width: 100%;
+    }
+  
+    #cadastroForm {
+      width: 100%;
+      margin: auto;
+    }
+  }

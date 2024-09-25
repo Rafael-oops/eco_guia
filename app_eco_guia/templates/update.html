@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperar senha</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/update.css' %}">
+
+</head>
+<body>
+
+    <form action = "{% url 'update' usuario.id %}" method="POST"> {# Envia os dados do formulário já com identificação pelo id do user para a url da linha 11 no arquivo urls.py do app #}
+        {% csrf_token %} {# Cria uma criptografia para os dados do usuário #}
+        <label class="campo" for="nome">Nome:</label>
+        <input class="dados" type="text" name="nome" value="{{usuario.nome}}">
+
+        <label class="campo" for="email">Email:</label>
+        <input class="dados" type="email" name="email" value="{{usuario.email}}">
+
+        <label class="campo" for="email">Usuário:</label>
+        <input class="dados" type="text" name="username" value="{{usuario.username}} " maxlength="30">
+
+        <label class="campo" for="senha">Senha:</label>
+        <input class="dados" type="password" name="senha" value="{{usuario.senha}}" maxlength="8">
+
+        <button class="botao2" type-"submit">Modificar</button>
+    </form>
+</body>
+</html>
