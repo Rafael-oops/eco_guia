@@ -26,8 +26,6 @@ SECRET_KEY = 'django-insecure-i35fy@ui_c1mny6b_!5d_d68l(k3tuu%9_8u0rfl9nl$7%m=)h
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 ALLOWED_HOSTS = []
 
@@ -42,7 +40,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'app_eco_guia', # app adicionado para usar a pasta app_eco_guia
-    'corsheaders'
 ]
 
 MIDDLEWARE = [
@@ -52,8 +49,7 @@ MIDDLEWARE = [
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'corsheaders.middleware.CorsMiddleware'
+    'django.middleware.clickjacking.XFrameOptionsMiddleware'
 ]
 
 ROOT_URLCONF = 'projeto_eco_guia.urls'

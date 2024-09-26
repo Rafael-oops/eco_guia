@@ -1,8 +1,6 @@
 from django.urls import path
 from . import views
-from app_eco_guia.views import main, predict
-from django.conf import settings
-from django.conf.urls.static import static
+
 #  Crie as rotas da views aqui
 
 urlpatterns = [
@@ -15,6 +13,4 @@ urlpatterns = [
     path('delete/<int:id>', views.deletar, name='delete'),
     path('scan/', views.scan, name='scan'),
     path('verificar_login', views.verificar_login, name='verificar_login'),
-    path('main/', main, name='main'),  
-    path('predict/', predict, name='predict')
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] 

@@ -13,12 +13,3 @@ class USUARIO(models.Model):
     def __str__(self):
         return self.nome
     
-# Modelo para armazenar o histórico de imagens classificadas
-class ImageHistory(models.Model):
-    category = models.CharField(max_length=100)  # Categoria da classificação
-    count = models.IntegerField(default=1)  # Contador de vezes que essa categoria foi classificada
-    image = models.ImageField(upload_to='history_images/')  # Última imagem dessa categoria
-    last_classified = models.DateTimeField(auto_now=True)  # Última vez que foi classificada
-
-    def __str__(self):
-        return self.category
