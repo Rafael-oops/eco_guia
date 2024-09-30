@@ -38,7 +38,7 @@ ALLOWED_HOSTS = [
 CSRF_TRUSTED_ORIGINS = [
     'https://afb4-200-217-187-115.ngrok-free.app',
     'https://afb4-200-217-187-115.ngrok-free.app/predict/',
-    'http://127.0.0.1:8000/',
+    'http://127.0.0.1:8000/scan/',
     'http://127.0.0.1:8000/',
     'http://127.0.0.1:5500/',
 ]

@@ -17,6 +17,7 @@ class USUARIO(models.Model):
 
 from django.core.validators import MinValueValidator
 
+
 # Definição das categorias possíveis
 CATEGORIES = [
     ("cardboard", "Cardboard"),
@@ -62,4 +63,3 @@ class ImageHistory(models.Model):
             models.Index(fields=['category']),
             models.Index(fields=['last_classified']),
         ]
-    
