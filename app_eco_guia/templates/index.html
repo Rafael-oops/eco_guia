@@ -1,111 +1,209 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="csrf-token" content="{{ csrf_token }}">
     <title>Eco-Guia</title>
     {% load static %}
-    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'css/index.css' %}">
-</head>
-<body>
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+  </head>
+  <body>
     <header>
-        <nav class="menu-header">
-            <div class="logo">
-              <img class="img-logo" src="{% static "img/logotipo.png" %}" alt="logo_EcoGuia">
-            </div>
-      
-            <ul class="nav-links">
-              <li class="icones"><a class="item-link" href="#">Ecopontos de coleta</a></li>
-              <li class="icones"><a class="item-link" href="#">Fale Conosco</a></li>
-              <li class="icones"><a class="item-link" href="#">Configurações</a></li>
-      
-            </ul>
-            <!--Menu hambuguer-->
-            <div class="burger">
-              <div class="line1"></div>
-              <div class="line2"></div>
-              <div class="line3"></div>
-            </div>
-          </nav>
+      <nav class="menu-header nav">
+        <div class="logo">
+          <img
+            class="img-logo"
+            src="{% static 'img/logotipo.png' %}"
+            alt="logo_EcoGuia"
+          />
+        </div>
+
+        <ul class="nav-links">
+          <li class="icones">
+            <a class="item-link" href="#">Ecopontos de coleta</a>
+          </li>
+          <li class="icones"><a class="item-link" href="#">Fale Conosco</a></li>
+          <li class="icones">
+            <a class="item-link" href="#">Configurações</a>
+          </li>
+        </ul>
+
+        <!-- Menu hambuguer -->
+        <div class="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+      </nav>
     </header>
-    <nav>
-        <div class="box">
-            <a class="box" href="{% url "scan" %}">
-                <img src="{% static 'img/barcode-scan-icon.png' %}" alt="scan">
-                <p>Scaneie e identifique o objeto</p>
-            </a>
-        </div>
+
+    <nav class="nav">
+      <div class="box">
+        <a class="box" href="{% url 'scan' %}">
+          <img
+            class="img-box"
+            src="{% static 'img/barcode-scan-icon.png' %}"
+            alt="scan"
+          />
+          <p class="pscan">Scaneie e identifique o objeto</p>
+        </a>
+      </div>
     </nav>
-    <main>        
-        <div class = "ideias">
-            <h3>Ideias Populares</h3>
-            <p>Veja todos</p>
-        </div>
-        <div class = "populares">
-            <div class="item">
-                <div class="text">
-                    <p>Saiba Mais</p>
-                    <h4>Vasos de Garrafa de Vidro</h4>
-                </div>
-                <img src="{% static "img/artesanato-com-garrafas-de-vidro-1-removebg-preview.png" %}" alt="artesanato">
-            </div>
-             <div class="item">
-                <div class="text">
-                    <p>Saiba mais</p>
-                    <h4>Porta-retrato de pote de vidro</h4>
-                </div>
-                <img src="{% static "img/portavidro.png" %}" alt="portavidro">
-            </div>
-        </div>
-        <div class="separator"></div>
-        <div class = "catego">
-            <h3>Categorias</h3>
-            <p>Veja todos</p>
-        </div>
-        <div class = "rias">
-            <div class = "rias-item" id="red">
-                <div class="lixo red">
-                    <img src="{% static "img/lixovermelho-removebg-preview.png" %}" alt="Lixo vermelho">
-                </div>
-                    <p>Plástico</p>
-            </div>
-            <div class="rias-item" id="blue">
-                <div class="lixo blue">
-                    <img src="{% static "img/lixoazul-removebg-preview.png" %}" alt="Lixo azul">
-                </div>
-                    <p>Papel</p>
-            </div>
-            <div class = "rias-item" id="yellow">
-                <div class="lixo yellow">
-                    <img src="{% static "img/lixoamarelo.png" %}" alt="Lixo amarelo">
-                </div>
-                    <p>Metais</p>
-            </div>
-            <div class="rias-item" id="green">
-                <div class="lixo green">
-                    <img src="{% static "img/lixoverde-removebg-preview.png" %}" alt="Lixo verde">
-                </div>
-                <p>Vidro</p>
-            </div>
-        </div>
 
-        <!-- Card de descrição que aparece ao clicar____________________________________________ -->
-        <div id="card-container" class="card hidden">
-            <div class="card-content">
-                <h4 id="card-title"></h4>
-                <p id="card-description"></p>
-                <button id="close-card">Fechar</button>
-            </div>
-        </div>
+    <main>
+      <div class="ideias">
+        <h3 class="h3ideias">Ideias Populares</h3>
+        <p class="pideias">Veja todos</p>
+      </div>
 
-        <div class="separator"></div>
+      <div class="populares">
+        <div class="item">
+          <div class="text">
+            <p class="pitem">Saiba Mais</p>
+            <h4 class="h4item">Vasos de Garrafa de Vidro</h4>
+          </div>
+          <img
+            class="imgitem"
+            src="{% static 'img/artesanato-com-garrafas-de-vidro-1-removebg-preview.png' %}"
+            alt="artesanato"
+          />
+        </div>
+        <div class="item">
+          <div class="text">
+            <p class="pitem">Saiba mais</p>
+            <h4 class="h4item">Porta-retrato de pote de vidro</h4>
+          </div>
+          <img
+            class="imgitem"
+            src="{% static 'img/portavidro.png' %}"
+            alt="portavidro"
+          />
+        </div>
+      </div>
+
+      <div class="separator"></div>
+
+      <div class="catego">
+        <h3 class="h3catego">Categorias</h3>
+        <p class="pcatego">Veja todos</p>
+      </div>
+
+      <div class="rias">
+        <div class="rias-item" id="red">
+          <div class="lixo red">
+            <img
+              class="img-lixo"
+              src="{% static 'img/lixovermelho-removebg-preview.png' %}"
+              alt="Lixo vermelho"
+            />
+          </div>
+          <p>Plástico</p>
+        </div>
+        <div class="rias-item" id="blue">
+          <div class="lixo blue">
+            <img
+              class="img-lixo"
+              src="{% static 'img/lixoazul-removebg-preview.png' %}"
+              alt="Lixo azul"
+            />
+          </div>
+          <p>Papel</p>
+        </div>
+        <div class="rias-item" id="yellow">
+          <div class="lixo yellow">
+            <img
+              class="img-lixo"
+              src="{% static 'img/lixoamarelo.png' %}"
+              alt="Lixo amarelo"
+            />
+          </div>
+          <p>Metais</p>
+        </div>
+        <div class="rias-item" id="green">
+          <div class="lixo green">
+            <img
+              class="img-lixo"
+              src="{% static 'img/lixoverde-removebg-preview.png' %}"
+              alt="Lixo verde"
+            />
+          </div>
+          <p>Vidro</p>
+        </div>
+      </div>
+
+      <!-- Card de descrição que aparece ao clicar -->
+      <div id="card-container" class="card hidden">
+        <div class="card-content">
+          <h4 id="card-title"></h4>
+          <p id="card-description"></p>
+          <button id="close-card">Fechar</button>
+        </div>
+      </div>
+
+      <div class="separator"></div>
     </main>
-    <div class = "histo">
-        <h3>Histórico</h3>
+
+    <!-- Chatbot -->
+    <div class="chatbot-icon" id="chatbot-icon">
+      <img src="{% static 'img/icons8-mensagens-64.png' %}" />
     </div>
 
-    <script src="{% static 'js/home.jS' %}"></script>
-</body>
+    <div class="chat-container" id="chat-container">
+      <div class="chat-header">
+        <img
+          src="{% static 'img/avatar.png' %}"
+          alt="ÁlvaroBot"
+          class="chat-avatar"
+        />
+        <span class="chat-title">ÁlvaroBot</span>
+        <button class="close-btn" id="close-btn">✖</button>
+      </div>
+      <div id="chat-box" class="chat-box">
+        <div class="chat-message bot">
+          <img
+            src="{% static 'img/avatar.png' %}"
+            alt="ÁlvaroBot"
+            class="message-avatar"
+          />
+          <span
+            >Olá! Sou o ÁlvaroBot. Selecione uma das opções de ajuda abaixo:<br />
+            1- Localização de eco pontos🔎.<br />
+            2- Lixeira ideal para descarte🗑️.<br />
+            3- Dicas de Reciclagem♻️.<br />
+            4- Dicas de Redução de Resíduos.
+          </span>
+        </div>
+      </div>
+      <div class="input-container">
+        <input
+          type="text"
+          id="mensagem-input"
+          placeholder="Digite sua mensagem aqui..."
+          autofocus
+        />
+        <button id="enviar-btn" title="Enviar mensagem">➤</button>
+      </div>
+    </div>
+    <div id="typing-indicator" class="typing-indicator" style="display: none">
+      <img
+        src="{% static 'img/avatar.png' %}"
+        alt="ÁlvaroBot"
+        class="message-avatar"
+      />
+      <span>ÁlvaroBot está digitando...</span>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+      const avatarUrl = "{% static 'img/avatar.png' %}"; // Definindo a URL do avatar
+    </script>
+    <script src="{% static 'js/home.js' %}"></script>
+    <script src="{% static 'js/chat.js' %}"></script>
+  </body>
 </html>

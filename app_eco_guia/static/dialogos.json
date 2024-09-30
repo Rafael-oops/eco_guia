@@ -1,0 +1,49 @@
+{
+    "saudacoes": {
+        "oi": "Olá! Como posso ajudar você hoje?",
+        "olá": "Oi! O que posso fazer por você?",
+        "bom dia": "Bom dia! Espero que você tenha um ótimo dia!",
+        "boa tarde": "Boa tarde! Como posso ser útil?",
+        "boa noite": "Boa noite! Está precisando de algo?",
+        "e aí": "E aí! Como posso te ajudar hoje?",
+        "salve": "Salve! Tudo bem por aí?",
+        "hello": "Hello! How can I assist you today?",
+        "hi": "Hi there! What can I do for you?"
+    },
+    "despedidas": {
+        "tchau": "Até logo! Tenha um ótimo dia!",
+        "adeus": "Adeus! Espero te ver em breve!",
+        "até mais": "Até mais! Estarei por aqui se precisar.",
+        "até logo": "Até logo! Volte quando quiser.",
+        "falou": "Falou! Qualquer coisa, estou por aqui.",
+        "até breve": "Até breve! Fique à vontade para voltar quando quiser.",
+        "nos vemos": "Nos vemos em breve! Cuide-se."
+    },
+    "perguntas": {
+        "como você está?": "Estou apenas um código, mas estou funcionando bem!",
+        "tudo bem?": "Estou apenas um código, mas estou funcionando bem!",
+        "qual é o seu nome?": "Eu sou o ÁlvaroBot, criado para ajudar você.",
+        "o que você pode fazer?": "Posso responder perguntas, conversar e ajudar com informações básicas!",
+        "qual é a capital do Brasil?": "A capital do Brasil é Brasília.",
+        "que horas são?": "Eu não tenho um relógio interno, mas você pode verificar no seu dispositivo.",
+        "quem te criou?": "Fui criado por um programador entusiasta!",
+        "qual é o seu propósito?": "Meu propósito é ajudar você com informações e interações!",
+        "onde você mora?": "Eu vivo na nuvem, sempre pronto para ajudar.",
+        "qual é a sua cor favorita?": "Como um bot, não tenho preferências, mas posso dizer que gosto de verde!",
+        "o que você sabe fazer?": "Posso ajudar com perguntas, fornecer informações e até conversar um pouco!",
+        "você pode me contar uma piada?": "Por que o computador foi ao médico? Porque estava com um vírus!",
+        "1": "Cooperativa de Catadores de Resíduo Solido da Amazônia, Porto de Palha Av.Bernardo Saiyão Guáma",
+        "2": "As cores das lixeiras de coleta seletiva e o que cada uma representa são:\n\nAzul: Papel e papelão;\nVermelho: Plástico;\nVerde: Vidro;\nAmarelo: Metal;\nPreto: Madeira;\nMarrom: Lixo orgânico;\nCinza: Lixo não reciclável, contaminado ou cuja separação não é possível;\nBranco: Resíduos de hospitais e serviço de saúde;\nLaranja: Resíduos perigosos, como pilhas e baterias;\nRoxo: Lixo radioativo.", 
+        "3": "Separe os materiais corretamente: Tenha recipientes diferentes para papel, plástico, vidro, metal e lixo orgânico. Lave os recicláveis: Limpe embalagens de alimentos, como potes de iogurte e latas, para evitar mau cheiro e contaminação. Evite reciclar itens sujos: Papéis engordurados, como caixas de pizza sujas, não podem ser reciclados. Saiba o que não pode ser reciclado: Isopor, adesivos, papel higiênico e espelhos geralmente não são recicláveis. Reutilize antes de descartar: Transforme frascos de vidro em potes de armazenamento, por exemplo, antes de jogá-los fora. Pilhas e baterias: Devem ser descartadas em locais apropriados, pois são perigosas para o meio ambiente. Verifique a coleta local: Certifique-se de que sua cidade aceita todos os materiais que você está separando para reciclagem.",
+        "4": "Compre a granel: Evite embalagens desnecessárias comprando alimentos e produtos a granel. Leve seus próprios recipientes reutilizáveis. Use sacolas reutilizáveis: Leve sempre sacolas de pano ao fazer compras para evitar o uso de sacolas plásticas. Evite produtos descartáveis: Substitua utensílios descartáveis, como pratos e talheres de plástico, por versões reutilizáveis. Planeje suas refeições: Reduza o desperdício de alimentos planejando o que vai comer e comprando apenas o necessário. Adote o consumo consciente: Reflita antes de comprar algo. Pergunte-se se realmente precisa do produto ou se ele pode ser substituído por algo que já tem. Composte resíduos orgânicos: Transforme restos de alimentos e resíduos orgânicos em adubo para plantas, reduzindo o lixo enviado a aterros. Opte por produtos duráveis: Prefira itens de qualidade que durem mais tempo ao invés de produtos que precisam ser substituídos com frequência. Recuse plásticos de uso único: Diga não a canudos, copos, e embalagens de plástico, sempre que possível."
+    },
+    "informacoes_gerais": {
+        "o que é a cop 30?": "A COP 30 é a Conferência das Nações Unidas sobre Mudança Climática, prevista para 2025 no Brasil.",
+        "onde será a cop 30?": "A COP 30 está prevista para ocorrer em Belém, no Brasil.",
+        "qual é o objetivo da cop 30?": "O objetivo da COP 30 é discutir e implementar ações para combater as mudanças climáticas globais.",
+        "quem participa da cop 30?": "Líderes mundiais, cientistas, ativistas e representantes de diversas organizações participam da COP 30.",
+        "qual é a importância da cop 30?": "A COP 30 é crucial para avançar nas negociações e ações globais contra as mudanças climáticas.",
+        "quando será a cop 30?": "A COP 30 está prevista para ocorrer em 2025, mas as datas exatas ainda podem ser confirmadas.",
+        "o que significa cop?": "COP significa 'Conference of the Parties', uma reunião anual dos países que assinaram a Convenção-Quadro das Nações Unidas sobre a Mudança do Clima."
+    }
+}

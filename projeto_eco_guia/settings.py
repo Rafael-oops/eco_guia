@@ -27,7 +27,21 @@ SECRET_KEY = 'django-insecure-i35fy@ui_c1mny6b_!5d_d68l(k3tuu%9_8u0rfl9nl$7%m=)h
 DEBUG = True
 
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'afb4-200-217-187-115.ngrok-free.app',
+    '127.0.0.1',
+    '127.0.0.1:5500',
+    '127.0.0.1:8000',
+    
+    ]
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://afb4-200-217-187-115.ngrok-free.app',
+    'https://afb4-200-217-187-115.ngrok-free.app/predict/',
+    'http://127.0.0.1:8000/',
+    'http://127.0.0.1:8000/',
+    'http://127.0.0.1:5500/',
+]
 
 
 # Application definition
@@ -81,7 +95,7 @@ DATABASES = { # Selecionando o banco de dados (nesse caso o mysql instalado ness
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'db_eco_guia',
         'USER': 'root',
-        'PASSWORD': '123456',
+        'PASSWORD': 'MySQL@R24',
         'HOST': 'localhost',
         'PORT': '3306'
     }
@@ -128,3 +142,7 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Força o Django a servir os arquivos estáticos sem cache em desenvolvimento
+if DEBUG:
+    STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'

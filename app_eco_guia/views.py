@@ -71,3 +71,192 @@ def verificar_login(request):
     
     
 # FUNÇÕES DA IA -------------------------------------------------------------------------------------------------------------------------------
+
+import logging
+import numpy as np
+import tensorflow as tf  # Este import pode ser retirado caso nao esteja em uso
+import os
+from django.shortcuts import render
+from django.http import JsonResponse
+from django.views.decorators.csrf import csrf_exempt
+from django.core.files.storage import default_storage
+from .models import ImageHistory  
+from PIL import Image 
+from tensorflow.lite.python.interpreter import Interpreter 
+
+# View para exibir o HTML na página principal
+def scan(request):
+    history = ImageHistory.objects.all().order_by("-last_classified")
+    return render(request, "scan.html", {"history": history})
+
+# Configuração básica de logging
+logging.basicConfig(level=logging.DEBUG)
+
+# Definição das categorias de resíduos e o tamanho padrão da imagem
+categories = ["cardboard", "glass", "metal", "paper", "plastic", "trash"]
+img_size = 256
+
+# Caminho para o modelo TFLite
+model_path = r"D:\eco_guia-main\app_eco_guia\model\modelo_compativel.tflite"
+
+# Função para preparar a imagem antes da predição
+def prepare_image(image, target_size):
+    """
+    Prepara a imagem redimensionando e normalizando os valores para o formato correto
+    que o modelo espera. O tamanho alvo deve ser consistente com o treinamento do modelo.
+    """
+    logging.debug(f"Preparing image with target size {target_size}")
+    
+    # Verifica se a imagem não está no modo RGB, e converte se necessário
+    if image.mode != "RGB":
+        image = image.convert("RGB")
+    
+    # Redimensiona a imagem para o tamanho esperado pelo modelo
+    image = image.resize(target_size)
+    
+    # Converte para array numpy e normaliza os valores de pixels para [0, 1]
+    image = np.array(image) / 255.0
+    
+    # Adiciona uma dimensão extra para representar o lote (batch), esperado pelo modelo
+    image = np.expand_dims(image, axis=0)
+    
+    logging.debug("Image prepared successfully.")
+    return image
+
+# Função para fazer a predição da categoria do resíduo
+def predict_waste(image_array, interpreter, categories):
+    """
+    Faz a predição da categoria do resíduo usando o modelo TensorFlow Lite.
+    """
+    # Obter os detalhes de entrada e saída do modelo
+    input_details = interpreter.get_input_details()[0]
+    output_details = interpreter.get_output_details()[0]
+
+    # Certificar que a imagem está no formato de array float32
+    image_array = np.array(image_array, dtype=np.float32)
+    
+    # Coloca o tensor de entrada no interpretador
+    interpreter.set_tensor(input_details["index"], image_array)
+    
+    # Faz a inferência (predição)
+    interpreter.invoke()
+    
+    # Recupera os resultados das previsões
+    predictions = interpreter.get_tensor(output_details["index"])
+
+    # Obtém a classe com a maior probabilidade (resultado da predição)
+    predicted_class = np.argmax(predictions, axis=1)[0]
+    
+    # Determina a categoria e verifica se é um resíduo válido
+    category = categories[predicted_class]
+    is_waste = category in categories
+
+    return is_waste, category, predictions
+
+# View para lidar com a predição de imagens enviadas pelo cliente
+#@csrf_exempt  # Desabilita proteção CSRF, necessário para requisições POST externas
+def predict(request):
+    """
+    Endpoint que recebe uma imagem via POST, faz a predição da categoria do resíduo
+    e retorna os resultados em formato JSON.
+    """
+    # Verifica se o método da requisição é POST
+    if request.method != "POST":
+        return JsonResponse({"error": "Método inválido"}, status=400)
+
+    # Verifica se o arquivo foi enviado no corpo da requisição
+    if "file" not in request.FILES:
+        return JsonResponse({"error": "Nenhum arquivo enviado"}, status=400)
+
+    file = request.FILES["file"]
+
+    # Verifica se o arquivo é uma imagem nos formatos suportados
+    if not file.name.lower().endswith((".png", ".jpg", ".jpeg")):
+        return JsonResponse(
+            {"error": "Formato de arquivo não suportado. Por favor, envie uma imagem."},
+            status=400,
+        )
+
+    try:
+        # Tenta abrir a imagem usando a biblioteca Pillow
+        image = Image.open(file)
+
+        # Prepara a imagem para a predição
+        prepared_image = prepare_image(image, target_size=(img_size, img_size))  # Usa img_size definido globalmente
+
+        # Carrega o modelo TFLite e aloca tensores
+        interpreter = Interpreter(model_path=model_path)
+        interpreter.allocate_tensors()
+
+        # Faz a predição utilizando o modelo e a imagem preparada
+        is_waste, category, predictions = predict_waste(prepared_image, interpreter, categories)
+        confidence = float(np.max(predictions))  # Obtém a confiança da predição
+
+        # Verifica se já existe uma entrada no histórico para essa categoria
+        history_entry, created = ImageHistory.objects.get_or_create(
+            category=category, defaults={"image": file, "count": 1}
+        )
+
+        if not created:
+            # Atualiza o contador e a imagem se a categoria já existir no histórico
+            history_entry.count += 1
+            history_entry.image = file  # Substitui pela nova imagem enviada
+            history_entry.save()
+
+        # Obter a URL da imagem salva (caso esteja usando um armazenamento externo)
+        image_url = default_storage.url(history_entry.image.name)
+
+        # Retorna a resposta com os resultados da predição
+        return JsonResponse(
+            {
+                "is_waste": is_waste,
+                "category": category,
+                "confidence": confidence,
+                "image_url": image_url  # Adiciona a URL da imagem na resposta
+            }
+        )
+
+    except Exception as e:
+        logging.error(f"Erro ao processar a imagem: {e}")
+        return JsonResponse({"error": "Erro ao processar a imagem."}, status=500)
+
+    # FUNÇÕES DO CHAT -------------------------------------------------------------------------------------------------------------------------------
+# chat/views.py
+
+# chat/views.py
+
+from django.shortcuts import render
+from django.http import JsonResponse
+from django.conf import settings
+import os
+import json
+
+# Função para carregar diálogos de um arquivo JSON
+def carregar_dialogos(caminho_arquivo):
+    with open(caminho_arquivo, 'r', encoding='utf-8') as arquivo:
+        dialogos = json.load(arquivo)
+    return dialogos
+
+# Carregar o arquivo dialogos.json da pasta estática ou de outra pasta apropriada
+caminho_arquivo = os.path.join(settings.BASE_DIR, 'app_eco_guia', 'static', 'dialogos.json')
+dialogos = carregar_dialogos(caminho_arquivo)
+
+# Função para responder à mensagem do usuário
+def responder(entrada):
+    entrada = entrada.lower()
+    for categoria, respostas in dialogos.items():
+        if entrada in respostas:
+            return respostas[entrada]
+    return "Ops!!!, Selecione uma das opções Válidas🤖."
+
+# View que junta a rota da página inicial e o chat
+def chat(request):
+    if request.method == 'POST':
+        # Carregar a mensagem do corpo da requisição JSON
+        corpo = json.loads(request.body)  # Acessa o corpo da requisição JSON
+        mensagem_usuario = corpo.get("mensagem")
+        resposta = responder(mensagem_usuario)
+        return JsonResponse({"resposta": resposta})
+    else:
+        # Se for uma requisição GET, renderiza o template do chat
+        return render(request, 'index.html')

@@ -130,11 +130,17 @@ uploadForm.addEventListener("submit", async function (event) {
   let formData = new FormData();
   formData.append("file", file);
 
+  // Obtendo o CSRF token
+  const csrftoken = getCookie("csrftoken");
+
   try {
     let response = await fetch(
-      "https://c141-177-104-245-40.ngrok-free.app/myapp/predict/",
+      "https://afb4-200-217-187-115.ngrok-free.app/predict/",
       {
         method: "POST",
+        headers: {
+          "X-CSRFToken": csrftoken, // Incluindo o CSRF token no cabeçalho
+        },
         body: formData,
       }
     );
@@ -157,6 +163,21 @@ uploadForm.addEventListener("submit", async function (event) {
     document.getElementById("result").innerText = "Erro no processamento";
   }
 });
+
+function getCookie(name) {
+  let cookieValue = null;
+  if (document.cookie && document.cookie !== "") {
+    const cookies = document.cookie.split(";");
+    for (let i = 0; i < cookies.length; i++) {
+      const cookie = cookies[i].trim();
+      if (cookie.substring(0, name.length + 1) === name + "=") {
+        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+        break;
+      }
+    }
+  }
+  return cookieValue;
+}
 
 // Ajustar a câmera quando a janela ou orientação muda
 window.addEventListener("resize", function () {
