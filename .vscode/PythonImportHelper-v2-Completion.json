@@ -1,0 +1,496 @@
+[
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "messages",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "include",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "get_asgi_application",
+        "importPath": "django.core.asgi",
+        "description": "django.core.asgi",
+        "isExtraImport": true,
+        "detail": "django.core.asgi",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "get_wsgi_application",
+        "importPath": "django.core.wsgi",
+        "description": "django.core.wsgi",
+        "isExtraImport": true,
+        "detail": "django.core.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "app_eco_guia.migrations.0001_initial",
+        "description": "app_eco_guia.migrations.0001_initial",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='USUARIO',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('nome', models.CharField(max_length=100)),",
+        "detail": "app_eco_guia.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "app_eco_guia.migrations.0002_imagehistory",
+        "description": "app_eco_guia.migrations.0002_imagehistory",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('app_eco_guia', '0001_initial'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='ImageHistory',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('category', models.CharField(max_length=100)),",
+        "detail": "app_eco_guia.migrations.0002_imagehistory",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "app_eco_guia.migrations.0003_delete_imagehistory",
+        "description": "app_eco_guia.migrations.0003_delete_imagehistory",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('app_eco_guia', '0002_imagehistory'),\n    ]\n    operations = [\n        migrations.DeleteModel(\n            name='ImageHistory',\n        ),\n    ]",
+        "detail": "app_eco_guia.migrations.0003_delete_imagehistory",
+        "documentation": {}
+    },
+    {
+        "label": "AppEcoGuiaConfig",
+        "kind": 6,
+        "importPath": "app_eco_guia.apps",
+        "description": "app_eco_guia.apps",
+        "peekOfCode": "class AppEcoGuiaConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'app_eco_guia'",
+        "detail": "app_eco_guia.apps",
+        "documentation": {}
+    },
+    {
+        "label": "USUARIO",
+        "kind": 6,
+        "importPath": "app_eco_guia.models",
+        "description": "app_eco_guia.models",
+        "peekOfCode": "class USUARIO(models.Model):\n    nome = models.CharField(max_length=100) # definindo o max de caracteres como 100\n    email = models.EmailField(unique=True) # definindo o campo email como único (não irá permitir o banco de dados registrar emails iguais)\n    username = models.CharField(max_length=30, unique=True)\n    senha = models.CharField(max_length=8)\n    # Função que mostra o nome do usuário no admin do django no lugar do 'user.object'\n    def __str__(self):\n        return self.nome",
+        "detail": "app_eco_guia.models",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "app_eco_guia.urls",
+        "description": "app_eco_guia.urls",
+        "peekOfCode": "urlpatterns = [\n    path('', views.login, name='login'),\n    path('home/', views.home, name='home'),\n    path('cadastro/', views.cadastro, name='cadastro'), \n    path('salvar/', views.salvar, name='salvar'),\n    path('editar/<str:email>', views.pegarEmail, name='editar'),\n    path('update/', views.update, name='update'), # cria a rota update com o id do usuário chamando a função update do arquivo views.py (ver linha 31 do arquivo views.py) e nomeia de 'update' para o update.html encontrá-lo (ver linha 16 de update.html)\n    path('delete/<int:id>', views.deletar, name='delete'),\n    path('scan/', views.scan, name='scan'),\n    path('verificar_login', views.verificar_login, name='verificar_login'),",
+        "detail": "app_eco_guia.urls",
+        "documentation": {}
+    },
+    {
+        "label": "home",
+        "kind": 2,
+        "importPath": "app_eco_guia.views",
+        "description": "app_eco_guia.views",
+        "peekOfCode": "def home(request):\n    return render(request, 'index.html')\ndef cadastro(request):\n    usuario = USUARIO.objects.all() # Seleciona todas as colunas do banco de dados mapeadas no arquivo models.py (ver linha 6 do models.py) e armazzena na variável usuario\n    return render(request, 'cadastro.html', {'usuarios': usuario}) # Renderiza a requisição para a página cadastro.html e dá um apelido usuários para a variável usuário para o cadastro saber de onde ta importando os dados (ver linha 15 do cadastro.html)\ndef salvar(request):\n    n_nome = request.POST.get(\"nome\") # pega o valor do input no formulário com o name=\"nome\" (ver linha 43 do cadastro.html) e armazena na variável n_nome\n    n_email = request.POST.get(\"email\")\n    n_username = request.POST.get(\"username\")\n    n_senha = request.POST.get(\"senha\")",
+        "detail": "app_eco_guia.views",
+        "documentation": {}
+    },
+    {
+        "label": "cadastro",
+        "kind": 2,
+        "importPath": "app_eco_guia.views",
+        "description": "app_eco_guia.views",
+        "peekOfCode": "def cadastro(request):\n    usuario = USUARIO.objects.all() # Seleciona todas as colunas do banco de dados mapeadas no arquivo models.py (ver linha 6 do models.py) e armazzena na variável usuario\n    return render(request, 'cadastro.html', {'usuarios': usuario}) # Renderiza a requisição para a página cadastro.html e dá um apelido usuários para a variável usuário para o cadastro saber de onde ta importando os dados (ver linha 15 do cadastro.html)\ndef salvar(request):\n    n_nome = request.POST.get(\"nome\") # pega o valor do input no formulário com o name=\"nome\" (ver linha 43 do cadastro.html) e armazena na variável n_nome\n    n_email = request.POST.get(\"email\")\n    n_username = request.POST.get(\"username\")\n    n_senha = request.POST.get(\"senha\")\n    n_conf = request.POST.get(\"conf\")\n    # faz a comparação das senhas e envia para a página cadastro.html",
+        "detail": "app_eco_guia.views",
+        "documentation": {}
+    },
+    {
+        "label": "salvar",
+        "kind": 2,
+        "importPath": "app_eco_guia.views",
+        "description": "app_eco_guia.views",
+        "peekOfCode": "def salvar(request):\n    n_nome = request.POST.get(\"nome\") # pega o valor do input no formulário com o name=\"nome\" (ver linha 43 do cadastro.html) e armazena na variável n_nome\n    n_email = request.POST.get(\"email\")\n    n_username = request.POST.get(\"username\")\n    n_senha = request.POST.get(\"senha\")\n    n_conf = request.POST.get(\"conf\")\n    # faz a comparação das senhas e envia para a página cadastro.html\n    if n_conf == n_senha:\n        USUARIO.objects.create(nome = n_nome, email = n_email, username= n_username, senha = n_senha) # registra no banco de dados as informações inseridas no forms\n        usuario = USUARIO.objects.all() # seleciona todos os registros da models.py(na tabela  Usuarios do banco de dados)",
+        "detail": "app_eco_guia.views",
+        "documentation": {}
+    },
+    {
+        "label": "pegarEmail",
+        "kind": 2,
+        "importPath": "app_eco_guia.views",
+        "description": "app_eco_guia.views",
+        "peekOfCode": "def pegarEmail(request,email):\n    usuarios = USUARIO.objects.get(email = email) # pega o usuário pelo id dele no database para modificar somente o usuário selecionado e armazena na variável usuarios\n    return render(request, 'update.html', {'usuarios': usuarios}) # renderiza o id na página update.html (a mesma coisa da linha 11 )\n# Função que atualiza as mudanças feitas nas informações do usuário\ndef update(request): \n    email = request.POST.get(\"email\")\n    n_senha = request.POST.get(\"senha\")\n    conf_senha = request.POST.get(\"conf_senha\")\n    if conf_senha == n_senha:\n        try:",
+        "detail": "app_eco_guia.views",
+        "documentation": {}
+    },
+    {
+        "label": "update",
+        "kind": 2,
+        "importPath": "app_eco_guia.views",
+        "description": "app_eco_guia.views",
+        "peekOfCode": "def update(request): \n    email = request.POST.get(\"email\")\n    n_senha = request.POST.get(\"senha\")\n    conf_senha = request.POST.get(\"conf_senha\")\n    if conf_senha == n_senha:\n        try:\n            usuarios = USUARIO.objects.get(email = email) # pega o email do usuário para modificar somente o usuário selecionado e armazena na variável usuarios\n            usuarios.senha = n_senha\n            usuarios.save() # salva as mudanças\n            return redirect(login)",
+        "detail": "app_eco_guia.views",
+        "documentation": {}
+    },
+    {
+        "label": "deletar",
+        "kind": 2,
+        "importPath": "app_eco_guia.views",
+        "description": "app_eco_guia.views",
+        "peekOfCode": "def deletar(request,id):\n    usuarios = USUARIO.objects.get(id = id)\n    usuarios.delete()\n    return redirect(cadastro)\ndef scan(request):\n    return render(request, 'scan.html')\ndef login(request):\n    return render(request, 'login.html')\ndef verificar_login(request):\n    user = request.POST.get('user')",
+        "detail": "app_eco_guia.views",
+        "documentation": {}
+    },
+    {
+        "label": "scan",
+        "kind": 2,
+        "importPath": "app_eco_guia.views",
+        "description": "app_eco_guia.views",
+        "peekOfCode": "def scan(request):\n    return render(request, 'scan.html')\ndef login(request):\n    return render(request, 'login.html')\ndef verificar_login(request):\n    user = request.POST.get('user')\n    senha = request.POST.get('senha')\n    try:\n        usuario = USUARIO.objects.get(username= user, senha= senha)\n        return render(request, 'index.html')",
+        "detail": "app_eco_guia.views",
+        "documentation": {}
+    },
+    {
+        "label": "login",
+        "kind": 2,
+        "importPath": "app_eco_guia.views",
+        "description": "app_eco_guia.views",
+        "peekOfCode": "def login(request):\n    return render(request, 'login.html')\ndef verificar_login(request):\n    user = request.POST.get('user')\n    senha = request.POST.get('senha')\n    try:\n        usuario = USUARIO.objects.get(username= user, senha= senha)\n        return render(request, 'index.html')\n    except:\n        return render(request, 'erro.html')",
+        "detail": "app_eco_guia.views",
+        "documentation": {}
+    },
+    {
+        "label": "verificar_login",
+        "kind": 2,
+        "importPath": "app_eco_guia.views",
+        "description": "app_eco_guia.views",
+        "peekOfCode": "def verificar_login(request):\n    user = request.POST.get('user')\n    senha = request.POST.get('senha')\n    try:\n        usuario = USUARIO.objects.get(username= user, senha= senha)\n        return render(request, 'index.html')\n    except:\n        return render(request, 'erro.html')\n# FUNÇÕES DA IA -------------------------------------------------------------------------------------------------------------------------------",
+        "detail": "app_eco_guia.views",
+        "documentation": {}
+    },
+    {
+        "label": "application",
+        "kind": 5,
+        "importPath": "projeto_eco_guia.asgi",
+        "description": "projeto_eco_guia.asgi",
+        "peekOfCode": "application = get_asgi_application()",
+        "detail": "projeto_eco_guia.asgi",
+        "documentation": {}
+    },
+    {
+        "label": "BASE_DIR",
+        "kind": 5,
+        "importPath": "projeto_eco_guia.settings",
+        "description": "projeto_eco_guia.settings",
+        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = 'django-insecure-i35fy@ui_c1mny6b_!5d_d68l(k3tuu%9_8u0rfl9nl$7%m=)h'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [",
+        "detail": "projeto_eco_guia.settings",
+        "documentation": {}
+    },
+    {
+        "label": "SECRET_KEY",
+        "kind": 5,
+        "importPath": "projeto_eco_guia.settings",
+        "description": "projeto_eco_guia.settings",
+        "peekOfCode": "SECRET_KEY = 'django-insecure-i35fy@ui_c1mny6b_!5d_d68l(k3tuu%9_8u0rfl9nl$7%m=)h'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',",
+        "detail": "projeto_eco_guia.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DEBUG",
+        "kind": 5,
+        "importPath": "projeto_eco_guia.settings",
+        "description": "projeto_eco_guia.settings",
+        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',",
+        "detail": "projeto_eco_guia.settings",
+        "documentation": {}
+    },
+    {
+        "label": "ALLOWED_HOSTS",
+        "kind": 5,
+        "importPath": "projeto_eco_guia.settings",
+        "description": "projeto_eco_guia.settings",
+        "peekOfCode": "ALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'app_eco_guia', # app adicionado para usar a pasta app_eco_guia",
+        "detail": "projeto_eco_guia.settings",
+        "documentation": {}
+    },
+    {
+        "label": "INSTALLED_APPS",
+        "kind": 5,
+        "importPath": "projeto_eco_guia.settings",
+        "description": "projeto_eco_guia.settings",
+        "peekOfCode": "INSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'app_eco_guia', # app adicionado para usar a pasta app_eco_guia\n]\nMIDDLEWARE = [",
+        "detail": "projeto_eco_guia.settings",
+        "documentation": {}
+    },
+    {
+        "label": "MIDDLEWARE",
+        "kind": 5,
+        "importPath": "projeto_eco_guia.settings",
+        "description": "projeto_eco_guia.settings",
+        "peekOfCode": "MIDDLEWARE = [\n    'django.middleware.security.SecurityMiddleware',\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    'django.contrib.messages.middleware.MessageMiddleware',\n    'django.middleware.clickjacking.XFrameOptionsMiddleware'\n]\nROOT_URLCONF = 'projeto_eco_guia.urls'",
+        "detail": "projeto_eco_guia.settings",
+        "documentation": {}
+    },
+    {
+        "label": "ROOT_URLCONF",
+        "kind": 5,
+        "importPath": "projeto_eco_guia.settings",
+        "description": "projeto_eco_guia.settings",
+        "peekOfCode": "ROOT_URLCONF = 'projeto_eco_guia.urls'\nTEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.debug',\n                'django.template.context_processors.request',",
+        "detail": "projeto_eco_guia.settings",
+        "documentation": {}
+    },
+    {
+        "label": "TEMPLATES",
+        "kind": 5,
+        "importPath": "projeto_eco_guia.settings",
+        "description": "projeto_eco_guia.settings",
+        "peekOfCode": "TEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.debug',\n                'django.template.context_processors.request',\n                'django.contrib.auth.context_processors.auth',",
+        "detail": "projeto_eco_guia.settings",
+        "documentation": {}
+    },
+    {
+        "label": "WSGI_APPLICATION",
+        "kind": 5,
+        "importPath": "projeto_eco_guia.settings",
+        "description": "projeto_eco_guia.settings",
+        "peekOfCode": "WSGI_APPLICATION = 'projeto_eco_guia.wsgi.application'\n# Database\n# https://docs.djangoproject.com/en/4.2/ref/settings/#databases\nDATABASES = { # Selecionando o banco de dados (nesse caso o mysql instalado nessa máquina)\n    'default': {\n        'ENGINE': 'django.db.backends.mysql',\n        'NAME': 'db_eco_guia',\n        'USER': 'root',\n        'PASSWORD': '123456',\n        'HOST': 'localhost',",
+        "detail": "projeto_eco_guia.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DATABASES",
+        "kind": 5,
+        "importPath": "projeto_eco_guia.settings",
+        "description": "projeto_eco_guia.settings",
+        "peekOfCode": "DATABASES = { # Selecionando o banco de dados (nesse caso o mysql instalado nessa máquina)\n    'default': {\n        'ENGINE': 'django.db.backends.mysql',\n        'NAME': 'db_eco_guia',\n        'USER': 'root',\n        'PASSWORD': '123456',\n        'HOST': 'localhost',\n        'PORT': '3306'\n    }\n}",
+        "detail": "projeto_eco_guia.settings",
+        "documentation": {}
+    },
+    {
+        "label": "AUTH_PASSWORD_VALIDATORS",
+        "kind": 5,
+        "importPath": "projeto_eco_guia.settings",
+        "description": "projeto_eco_guia.settings",
+        "peekOfCode": "AUTH_PASSWORD_VALIDATORS = [\n    {\n        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',\n    },",
+        "detail": "projeto_eco_guia.settings",
+        "documentation": {}
+    },
+    {
+        "label": "LANGUAGE_CODE",
+        "kind": 5,
+        "importPath": "projeto_eco_guia.settings",
+        "description": "projeto_eco_guia.settings",
+        "peekOfCode": "LANGUAGE_CODE = 'en-us'\nTIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.2/howto/static-files/\nSTATIC_URL = 'static/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "projeto_eco_guia.settings",
+        "documentation": {}
+    },
+    {
+        "label": "TIME_ZONE",
+        "kind": 5,
+        "importPath": "projeto_eco_guia.settings",
+        "description": "projeto_eco_guia.settings",
+        "peekOfCode": "TIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.2/howto/static-files/\nSTATIC_URL = 'static/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "projeto_eco_guia.settings",
+        "documentation": {}
+    },
+    {
+        "label": "USE_I18N",
+        "kind": 5,
+        "importPath": "projeto_eco_guia.settings",
+        "description": "projeto_eco_guia.settings",
+        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.2/howto/static-files/\nSTATIC_URL = 'static/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "projeto_eco_guia.settings",
+        "documentation": {}
+    },
+    {
+        "label": "USE_TZ",
+        "kind": 5,
+        "importPath": "projeto_eco_guia.settings",
+        "description": "projeto_eco_guia.settings",
+        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.2/howto/static-files/\nSTATIC_URL = 'static/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "projeto_eco_guia.settings",
+        "documentation": {}
+    },
+    {
+        "label": "STATIC_URL",
+        "kind": 5,
+        "importPath": "projeto_eco_guia.settings",
+        "description": "projeto_eco_guia.settings",
+        "peekOfCode": "STATIC_URL = 'static/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "projeto_eco_guia.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_AUTO_FIELD",
+        "kind": 5,
+        "importPath": "projeto_eco_guia.settings",
+        "description": "projeto_eco_guia.settings",
+        "peekOfCode": "DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "projeto_eco_guia.settings",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "projeto_eco_guia.urls",
+        "description": "projeto_eco_guia.urls",
+        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls), # Cria a rota para a página admin do django\n    path('', include('app_eco_guia.urls')) # cria a rota para o arquivo urls.py na pasta app_eco_guia \n]",
+        "detail": "projeto_eco_guia.urls",
+        "documentation": {}
+    },
+    {
+        "label": "application",
+        "kind": 5,
+        "importPath": "projeto_eco_guia.wsgi",
+        "description": "projeto_eco_guia.wsgi",
+        "peekOfCode": "application = get_wsgi_application()",
+        "detail": "projeto_eco_guia.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "manage",
+        "description": "manage",
+        "peekOfCode": "def main():\n    \"\"\"Run administrative tasks.\"\"\"\n    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'projeto_eco_guia.settings')\n    try:\n        from django.core.management import execute_from_command_line\n    except ImportError as exc:\n        raise ImportError(\n            \"Couldn't import Django. Are you sure it's installed and \"\n            \"available on your PYTHONPATH environment variable? Did you \"\n            \"forget to activate a virtual environment?\"",
+        "detail": "manage",
+        "documentation": {}
+    }
+]
