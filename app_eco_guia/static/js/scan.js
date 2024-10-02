@@ -108,7 +108,7 @@ function addHistoryEntry(category, imageUrl, count) {
   <div class="history-entry" data-category="${category}">
     <strong>Categoria:</strong> ${category}
     <span class="counter">(${count})</span>
-    <p>Última imagem enviada: <img src="${imageUrl}" alt="Imagem" class="history-img"></p>
+    <p>Última imagem enviada: <img src="media/${imageUrl}" alt="Imagem" class="history-img"></p>
   </div>
 `;
     historyContainer.insertAdjacentHTML("beforeend", entryHtml);

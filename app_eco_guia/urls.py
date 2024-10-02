@@ -1,5 +1,8 @@
 from django.urls import path
 from . import views
+from django.conf.urls.static import static
+from django.conf import settings
+
 
 #  Crie as rotas da views aqui
 
@@ -15,4 +18,4 @@ urlpatterns = [
     path('predict/', views.predict, name='predict'), #recem adicionado
     path('chat/', views.chat, name='chat'), #recem adicionado
     path('verificar_login', views.verificar_login, name='verificar_login'),
-] 
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

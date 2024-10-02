@@ -26,6 +26,11 @@ SECRET_KEY = 'django-insecure-i35fy@ui_c1mny6b_!5d_d68l(k3tuu%9_8u0rfl9nl$7%m=)h
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+# Diretório onde os arquivos de mídia serão armazenados
+MEDIA_ROOT = os.path.join(BASE_DIR, 'history_images')
+# URL que será usada para acessar os arquivos de mídia
+MEDIA_URL = '/media/'
+
 
 ALLOWED_HOSTS = [
     'afb4-200-217-187-115.ngrok-free.app',
@@ -95,7 +100,7 @@ DATABASES = { # Selecionando o banco de dados (nesse caso o mysql instalado ness
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'db_eco_guia',
         'USER': 'root',
-        'PASSWORD': 'MySQL@R24',
+        'PASSWORD': '123456',
         'HOST': 'localhost',
         'PORT': '3306'
     }
