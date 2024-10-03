@@ -12,6 +12,9 @@ body{
     text-align: center;
   }
   
+  textarea{
+    resize: none;
+  }
   .sessao {
     width: 30%;
   }

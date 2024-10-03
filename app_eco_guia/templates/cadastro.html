@@ -9,8 +9,6 @@
 </head>
 
 <body>
-    <h1>Lista de Usuários</h1>
-
     <ul class="lista-user">
         {% comment %} {% for usuario in usuarios %} {# muda o nome 'usuarios' para 'usuario' (ver linha 11 do arquivo views.py) #}
             <li class="item-user"> 
@@ -30,9 +28,9 @@
     </header>
     <section class="sessao">
         <div class="logo d-flex justify-content-center" id="logo">
-            {% comment %} <div class="img">
+           <div class="img">
                 <a href="index.html"><img class="img-logo" src="  {% static "img/logotipo.png" %}" alt="logo" width="100"></a>
-            </div> {% endcomment %}
+            </div>
             
             <form id="cadastroForm" action="{% url 'salvar' %}" method="POST">
                 {% csrf_token %}

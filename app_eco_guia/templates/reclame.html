@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fale Conosco</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/cadastro.css' %}">
+</head>
+<body>
+  <section>
+    <div class="logo d-flex justify-content-center" id="logo">
+        <div class="img">
+      <img class="img-logo" src="{% static "img/logotipo2.png" %}" alt="logo" width="100"><br>
+        </div>
+        <h1>Fale Conosco</h1>
+        <form action="#" method="post">
+            {% csrf_token %}
+
+            <div class="inputbox">
+                <label class="campo" for="nome">Nome:</label>
+                <input class="dados" type="text" id="nome" name="nome" required>
+            </div>
+
+            <div class="inputbox">
+                    <label class="campo" for="email">Email:</label>
+                    <input class="dados" type="text" id="email" name="email" required>
+                </div>
+
+            <label for="message"><h3>Mensagem:</h3></label>
+            <textarea id="message" name="message" rows="7" cols="50" required></textarea><br>
+    
+            <button type="submit">Enviar</button><br>
+          <h4> Telefone para contato: (91) 91234-5678</h4>
+          <h4>Email: Ecoguia@gmail.com</h4>
+          
+        </form>
+    </div>
+    </section>
+</body>
+</html>

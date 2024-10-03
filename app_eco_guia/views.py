@@ -4,6 +4,8 @@ from django.contrib import messages
 
 # Create your views here.
 
+def fale_conosco(request):
+    return render(request, 'reclame.html')
 
 def home(request):
     return render(request, 'index.html')
