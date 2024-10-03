@@ -35,28 +35,16 @@ class ImageHistory(models.Model):
     Cada instância guarda uma categoria de resíduo, a contagem de vezes que essa categoria
     foi classificada e a última imagem classificada nessa categoria.
     """
-    category = models.CharField(
-        max_length=100, 
-        choices=CATEGORIES  # Limita as categorias às opções definidas
-    )
-    count = models.IntegerField(
-        default=1, 
-        validators=[MinValueValidator(1)]  # Valida que o valor deve ser >= 1
-    )
-    image = models.ImageField(
-        upload_to='history_images/'  # Define o diretório de upload para as imagens
-    )
-    last_classified = models.DateTimeField(
-        auto_now=True  # Atualiza automaticamente com a data/hora da última classificação
-    )
+    category = models.CharField(max_length=100, choices=CATEGORIES) # Limita as categorias às opções definidas
+    count = models.IntegerField(default=1,validators=[MinValueValidator(1)])  # Valida que o valor deve ser >= 1
+    image = models.ImageField(upload_to='history_images/')  # Define o diretório de upload para as imagens
+    last_classified = models.DateTimeField(auto_now=True) # Atualiza automaticamente com a data/hora da última classificação
 
     def __str__(self):
-        # Representação do objeto: retorna o nome da categoria classificada
-        return self.category
+        return self.category # Representação do objeto: retorna o nome da categoria classificada
 
     class Meta:
-        # Define que a combinação de categoria e imagem deve ser única no banco de dados
-        unique_together = ('category', 'image')
+        unique_together = ('category', 'image') # Define que a combinação de categoria e imagem deve ser única no banco de dados
 
         # Define índices para otimizar consultas por categoria e última classificação
         indexes = [
