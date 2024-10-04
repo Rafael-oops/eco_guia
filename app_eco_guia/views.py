@@ -80,14 +80,8 @@ def salvar_reclamacao(request,id):
     mensagem = request.POST.get("mensagem")
     RECLAMACOES.objects.create(id_usuario = id_user, rnome = rnome, remail = remail, mensagem= mensagem)
     return render(request, 'index.html', {'conta': id_user}) 
-    
-    
-    
-    
-    
-    
-    
-    
+
+
 # FUNÇÕES DA IA -------------------------------------------------------------------------------------------------------------------------------
 
 import logging
