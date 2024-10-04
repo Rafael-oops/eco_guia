@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.core.validators import MinValueValidator
 # Create your models here.
 
 # Mapeamento do banco de dados por meio de classes (a classe é uma tabela, as variáveis da classe são as colunas da tabela)
@@ -13,10 +13,17 @@ class USUARIO(models.Model):
     def __str__(self):
         return self.nome
 
-#---------------------------------------   Histórico de Imagens    ---------------------------------------#
+class RECLAMACOES(models.Model):
+    rnome = models.CharField(max_length=100)
+    remail = models.EmailField()
+    mensagem = models.CharField(max_length=2000)
+    id_usuario = models.ForeignKey(USUARIO, on_delete=models.CASCADE,related_name='reclamacoes')
+    
+    def __str__(self):
+        return self.rnome
+    
 
-from django.core.validators import MinValueValidator
-
+#---------------------------------------   Histórico de Imagens   ---------------------------------------#
 
 # Definição das categorias possíveis
 CATEGORIES = [

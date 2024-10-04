@@ -14,21 +14,20 @@
       <img class="img-logo" src="{% static "img/logotipo2.png" %}" alt="logo" width="100"><br>
         </div>
         <h1>Fale Conosco</h1>
-        <form action="#" method="post">
+        <form action="{% url "reclame" user.id %}" method="POST">
             {% csrf_token %}
-
             <div class="inputbox">
                 <label class="campo" for="nome">Nome:</label>
-                <input class="dados" type="text" id="nome" name="nome" required>
+                <input class="dados" type="text" id="nome" name="nome" value="{{user.username}}" required>
             </div>
 
             <div class="inputbox">
                     <label class="campo" for="email">Email:</label>
-                    <input class="dados" type="text" id="email" name="email" required>
+                    <input class="dados" type="text" id="email" name="email" value="{{user.email}}" required>
                 </div>
 
-            <label for="message"><h3>Mensagem:</h3></label>
-            <textarea id="message" name="message" rows="7" cols="50" required></textarea><br>
+            <label for="mensagem"><h3>Mensagem:</h3></label>
+            <textarea id="mensagem" name="mensagem" rows="7" cols="50" required></textarea><br>
     
             <button class="botao" type="submit">Enviar</button><br>
           <h4> Telefone para contato: (91) 91234-5678</h4>

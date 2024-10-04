@@ -1,12 +1,10 @@
 from django.shortcuts import render, redirect
-from .models import USUARIO # importa o mapeamento do banco de dados do arquivo models.py
+from .models import USUARIO, RECLAMACOES # importa o mapeamento do banco de dados do arquivo models.py
 from django.contrib import messages
 
 # Create your views here.
 
-def fale_conosco(request):
-    return render(request, 'reclame.html')
-
+ 
 def home(request):
     return render(request, 'index.html')
 
@@ -67,9 +65,27 @@ def verificar_login(request):
     
     try:
         usuario = USUARIO.objects.get(username= user, senha= senha)
-        return render(request, 'index.html')
+        return render(request, 'index.html', {"conta": usuario})
     except:
         return render(request, 'erro.html')
+    
+def fale_conosco(request, id):
+    usuario = USUARIO.objects.get(id=id)
+    return render(request, 'reclame.html', {'user': usuario})
+
+def salvar_reclamacao(request,id):
+    id_user = USUARIO.objects.get(id=id)
+    rnome = request.POST.get("nome")
+    remail = request.POST.get("email")
+    mensagem = request.POST.get("mensagem")
+    RECLAMACOES.objects.create(id_usuario = id_user, rnome = rnome, remail = remail, mensagem= mensagem)
+    return render(request, 'index.html', {'conta': id_user}) 
+    
+    
+    
+    
+    
+    
     
     
 # FUNÇÕES DA IA -------------------------------------------------------------------------------------------------------------------------------
