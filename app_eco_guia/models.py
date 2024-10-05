@@ -13,7 +13,7 @@ class USUARIO(models.Model):
     def __str__(self):
         return self.nome
 
-class RECLAMACOES(models.Model):
+class RECLAMACOE(models.Model):
     rnome = models.CharField(max_length=100)
     remail = models.EmailField()
     mensagem = models.CharField(max_length=2000)
@@ -21,6 +21,23 @@ class RECLAMACOES(models.Model):
     
     def __str__(self):
         return self.rnome
+    
+    
+class CATEGORIA(models.Model):
+    nome_categ = models.CharField(max_length=100)
+    
+    def __str__(self):
+        return self.nome_categ
+    
+class IDEIA(models.Model):
+    titulo = models.CharField(max_length=200)
+    conteudo = models.CharField(max_length=6000)
+    id_categ = models.ForeignKey(CATEGORIA, on_delete=models.CASCADE)
+    
+    def __str__(self):
+        return self.titulo
+        
+    
     
 
 #---------------------------------------   Histórico de Imagens   ---------------------------------------#

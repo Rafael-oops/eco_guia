@@ -19,5 +19,6 @@ urlpatterns = [
     path('chat/', views.chat, name='chat'), #recem adicionado
     path('verificar_login', views.verificar_login, name='verificar_login'),
     path('fale_conosco/<int:id>', views.fale_conosco, name='fale_conosco'),
-    path('salva_reclame/<int:id>', views.salvar_reclamacao, name='reclame')
+    path('salva_reclame/<int:id>', views.salvar_reclamacao, name='reclame'),
+    path('ideias/', views.ideias, name='ideias')
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

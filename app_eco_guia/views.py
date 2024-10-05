@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import USUARIO, RECLAMACOES # importa o mapeamento do banco de dados do arquivo models.py
+from .models import USUARIO, RECLAMACOE, CATEGORIA,IDEIA # importa o mapeamento do banco de dados do arquivo models.py
 from django.contrib import messages
 
 # Create your views here.
@@ -78,9 +78,15 @@ def salvar_reclamacao(request,id):
     rnome = request.POST.get("nome")
     remail = request.POST.get("email")
     mensagem = request.POST.get("mensagem")
-    RECLAMACOES.objects.create(id_usuario = id_user, rnome = rnome, remail = remail, mensagem= mensagem)
+    RECLAMACOE.objects.create(id_usuario = id_user, rnome = rnome, remail = remail, mensagem= mensagem)
     return render(request, 'index.html', {'conta': id_user}) 
 
+
+# IDEIAS DE RECICLAGEM -----------------------------------
+
+def ideias(request):
+    ideias = IDEIA.objects.all()
+    return render(request, 'ideias.html', {'ideias': ideias})
 
 # FUNÇÕES DA IA -------------------------------------------------------------------------------------------------------------------------------
 

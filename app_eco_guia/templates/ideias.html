@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ideias</title>
+</head>
+<body>
+    <h1>Ideias de Reciclagem:</h1>
+
+    {% for ideia in ideias %}
+    <div class="card">
+        <h2 class="titulo">{{ ideia.titulo }}</h2>
+        <em>{{ ideia.id_categ.nome_categ }}</em>
+        <p class="conteudo">{{ ideia.conteudo }}</p>
+    </div>
+    {% endfor %}
+    
+    <a href="#"><button>Voltar</button></a>
+</body>
+</html>
