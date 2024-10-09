@@ -31,6 +31,7 @@ class CATEGORIA(models.Model):
     
 class IDEIA(models.Model):
     titulo = models.CharField(max_length=200)
+    resumo = models.CharField(max_length=500, null=True)
     conteudo = models.CharField(max_length=6000)
     id_categ = models.ForeignKey(CATEGORIA, on_delete=models.CASCADE)
     

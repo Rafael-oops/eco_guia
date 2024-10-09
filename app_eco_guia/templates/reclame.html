@@ -11,20 +11,22 @@
   <section>
     <div class="logo d-flex justify-content-center" id="logo">
         <div class="img">
-      <img class="img-logo" src="{% static "img/logotipo2.png" %}" alt="logo" width="100"><br>
+          <img class="img-logo" src="{% static "img/logotipo2.png" %}" alt="logo" width="100"><br>
         </div>
+
         <h1>Fale Conosco</h1>
+        
         <form action="{% url "reclame" user.id %}" method="POST">
             {% csrf_token %}
             <div class="inputbox">
-                <label class="campo" for="nome">Nome:</label>
-                <input class="dados" type="text" id="nome" name="nome" value="{{user.nome}}" required>
+              <label class="campo" for="nome">Nome:</label>
+              <input class="dados" type="text" id="nome" name="nome" value="{{user.nome}}" required>
             </div>
 
             <div class="inputbox">
-                    <label class="campo" for="email">Email:</label>
-                    <input class="dados" type="text" id="email" name="email" value="{{user.email}}" required>
-                </div>
+              <label class="campo" for="email">Email:</label>
+              <input class="dados" type="text" id="email" name="email" value="{{user.email}}" required>
+            </div>
 
             <label for="mensagem"><h3>Mensagem:</h3></label>
             <textarea id="mensagem" name="mensagem" rows="7" cols="50" required></textarea><br>
