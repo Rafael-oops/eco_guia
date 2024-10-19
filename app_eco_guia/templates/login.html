@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css/cadastro.css">
     <title>Login</title>
     {% load static %}
+    <link rel="manifest" href="{% static 'manifest.json' %}">
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
     <link href="{% static "css/cadastro.css" %}" rel="stylesheet">
 </head>
@@ -39,6 +40,7 @@
         </div>
     </section>
 <script src="js/cadastro.js"></script>
+<script src="{% static 'js/pwa.js' %}"></script>
 </body>
 
 </html>

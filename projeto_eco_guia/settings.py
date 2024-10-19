@@ -59,6 +59,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'app_eco_guia', # app adicionado para usar a pasta app_eco_guia
+    'pwa',
 ]
 
 MIDDLEWARE = [
