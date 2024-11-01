@@ -1,6 +1,6 @@
 self.addEventListener('install', (event) => {
     event.waitUntil(
-      caches.open('django-app-cache').then((cache) => {
+      caches.open('eco-guia-cache').then((cache) => {
         return cache.addAll([
           '/',
         //   css -------
