@@ -33,6 +33,7 @@ MEDIA_URL = '/media/'
 
 
 ALLOWED_HOSTS = [
+    '321f-2804-8ee0-ff01-85f0-198d-4667-b04-89d.ngrok-free.app',
     'afb4-200-217-187-115.ngrok-free.app',
     '127.0.0.1',
     '127.0.0.1:5500',
@@ -41,6 +42,7 @@ ALLOWED_HOSTS = [
     ]
 
 CSRF_TRUSTED_ORIGINS = [
+    'https://321f-2804-8ee0-ff01-85f0-198d-4667-b04-89d.ngrok-free.app',
     'https://afb4-200-217-187-115.ngrok-free.app',
     'https://afb4-200-217-187-115.ngrok-free.app/predict/',
     'http://127.0.0.1:8000/scan/',
@@ -101,9 +103,9 @@ DATABASES = { # Selecionando o banco de dados (nesse caso o mysql instalado ness
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'db_eco_guia',
         'USER': 'root',
-        'PASSWORD': '123456',
+        'PASSWORD': 'freitassud',
         'HOST': 'localhost',
-        'PORT': '3306'
+        'PORT': '3309'
     }
 }
 
