@@ -8,14 +8,17 @@ self.addEventListener('install', (event) => {
           '/static/css/ideias.css',
           '/static/css/index.css',
           '/static/css/scan.css',
+          '/static/css/mapa.css',
           '/static/css/update.css',
         //   js ------
           '/static/js/chat.js',
           '/static/js/home.js',
           '/static/js/scan.js',
+          '/static/js/mapa.js',
         //   img --------
           '/static/img/artesanato-com-garrafas-de-vidro-1-removebg-preview.png',
           '/static/img/avatar.png',
+          '/static/img/favicon.ico',
           '/static/img/COP30.png',
           '/static/img/barcode-scan-icon.png',
           '/static/img/icons8-mensagens-64.png',

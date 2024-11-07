@@ -33,8 +33,7 @@ MEDIA_URL = '/media/'
 
 
 ALLOWED_HOSTS = [
-    '321f-2804-8ee0-ff01-85f0-198d-4667-b04-89d.ngrok-free.app',
-    'afb4-200-217-187-115.ngrok-free.app',
+    '8be0-177-104-245-40.ngrok-free.app',
     '127.0.0.1',
     '127.0.0.1:5500',
     '127.0.0.1:8000',
@@ -42,8 +41,7 @@ ALLOWED_HOSTS = [
     ]
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://321f-2804-8ee0-ff01-85f0-198d-4667-b04-89d.ngrok-free.app',
-    'https://afb4-200-217-187-115.ngrok-free.app',
+    'https://8be0-177-104-245-40.ngrok-free.app',
     'https://afb4-200-217-187-115.ngrok-free.app/predict/',
     'http://127.0.0.1:8000/scan/',
     'http://127.0.0.1:8000/',
@@ -61,6 +59,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'app_eco_guia', # app adicionado para usar a pasta app_eco_guia
+    'rest_framework',
     'pwa',
 ]
 
@@ -103,9 +102,9 @@ DATABASES = { # Selecionando o banco de dados (nesse caso o mysql instalado ness
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'db_eco_guia',
         'USER': 'root',
-        'PASSWORD': 'freitassud',
+        'PASSWORD': 'MySQL@R24',
         'HOST': 'localhost',
-        'PORT': '3309'
+        'PORT': '3306'
     }
 }
 

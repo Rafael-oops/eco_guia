@@ -32,6 +32,86 @@
         "documentation": {}
     },
     {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
         "label": "models",
         "importPath": "django.db",
         "description": "django.db",
@@ -54,6 +134,15 @@
         "description": "django.core.validators",
         "isExtraImport": true,
         "detail": "django.core.validators",
+        "documentation": {}
+    },
+    {
+        "label": "django.db.models.deletion",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "django.db.models.deletion",
+        "description": "django.db.models.deletion",
+        "detail": "django.db.models.deletion",
         "documentation": {}
     },
     {
@@ -89,6 +178,14 @@
         "documentation": {}
     },
     {
+        "label": "serializers",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
         "label": "TestCase",
         "importPath": "django.test",
         "description": "django.test",
@@ -118,6 +215,30 @@
         "description": "django.urls",
         "isExtraImport": true,
         "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "static",
+        "importPath": "django.conf.urls.static",
+        "description": "django.conf.urls.static",
+        "isExtraImport": true,
+        "detail": "django.conf.urls.static",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
         "documentation": {}
     },
     {
@@ -237,14 +358,6 @@
         "documentation": {}
     },
     {
-        "label": "settings",
-        "importPath": "django.conf",
-        "description": "django.conf",
-        "isExtraImport": true,
-        "detail": "django.conf",
-        "documentation": {}
-    },
-    {
         "label": "json",
         "kind": 6,
         "isExtraImport": true,
@@ -305,6 +418,51 @@
         "documentation": {}
     },
     {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "app_eco_guia.migrations.0003_reclamacoes",
+        "description": "app_eco_guia.migrations.0003_reclamacoes",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('app_eco_guia', '0002_imagehistory'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='RECLAMACOES',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('rnome', models.CharField(max_length=100)),",
+        "detail": "app_eco_guia.migrations.0003_reclamacoes",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "app_eco_guia.migrations.0004_alter_reclamacoes_remail",
+        "description": "app_eco_guia.migrations.0004_alter_reclamacoes_remail",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('app_eco_guia', '0003_reclamacoes'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='reclamacoes',\n            name='remail',\n            field=models.EmailField(max_length=254),\n        ),",
+        "detail": "app_eco_guia.migrations.0004_alter_reclamacoes_remail",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "app_eco_guia.migrations.0005_categorias_ideias",
+        "description": "app_eco_guia.migrations.0005_categorias_ideias",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('app_eco_guia', '0004_alter_reclamacoes_remail'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='CATEGORIAS',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('nome_categ', models.CharField(max_length=100)),",
+        "detail": "app_eco_guia.migrations.0005_categorias_ideias",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "app_eco_guia.migrations.0006_rename_categorias_categoria_rename_ideias_ideia_and_more",
+        "description": "app_eco_guia.migrations.0006_rename_categorias_categoria_rename_ideias_ideia_and_more",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('app_eco_guia', '0005_categorias_ideias'),\n    ]\n    operations = [\n        migrations.RenameModel(\n            old_name='CATEGORIAS',\n            new_name='CATEGORIA',\n        ),\n        migrations.RenameModel(",
+        "detail": "app_eco_guia.migrations.0006_rename_categorias_categoria_rename_ideias_ideia_and_more",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "app_eco_guia.migrations.0007_ideia_resumo",
+        "description": "app_eco_guia.migrations.0007_ideia_resumo",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('app_eco_guia', '0006_rename_categorias_categoria_rename_ideias_ideia_and_more'),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name='ideia',\n            name='resumo',\n            field=models.CharField(max_length=500, null=True),\n        ),",
+        "detail": "app_eco_guia.migrations.0007_ideia_resumo",
+        "documentation": {}
+    },
+    {
         "label": "AppEcoGuiaConfig",
         "kind": 6,
         "importPath": "app_eco_guia.apps",
@@ -318,7 +476,34 @@
         "kind": 6,
         "importPath": "app_eco_guia.models",
         "description": "app_eco_guia.models",
-        "peekOfCode": "class USUARIO(models.Model):\n    nome = models.CharField(max_length=100) # definindo o max de caracteres como 100\n    email = models.EmailField(unique=True) # definindo o campo email como único (não irá permitir o banco de dados registrar emails iguais)\n    username = models.CharField(max_length=30, unique=True)\n    senha = models.CharField(max_length=8)\n    # Função que mostra o nome do usuário no admin do django no lugar do 'user.object'\n    def __str__(self):\n        return self.nome\n#---------------------------------------   Histórico de Imagens    ---------------------------------------#\nfrom django.core.validators import MinValueValidator",
+        "peekOfCode": "class USUARIO(models.Model):\n    nome = models.CharField(max_length=100) # definindo o max de caracteres como 100\n    email = models.EmailField(unique=True) # definindo o campo email como único (não irá permitir o banco de dados registrar emails iguais)\n    username = models.CharField(max_length=30, unique=True)\n    senha = models.CharField(max_length=8)\n    # Função que mostra o nome do usuário no admin do django no lugar do 'user.object'\n    def __str__(self):\n        return self.nome\nclass RECLAMACOE(models.Model):\n    rnome = models.CharField(max_length=100)",
+        "detail": "app_eco_guia.models",
+        "documentation": {}
+    },
+    {
+        "label": "RECLAMACOE",
+        "kind": 6,
+        "importPath": "app_eco_guia.models",
+        "description": "app_eco_guia.models",
+        "peekOfCode": "class RECLAMACOE(models.Model):\n    rnome = models.CharField(max_length=100)\n    remail = models.EmailField()\n    mensagem = models.CharField(max_length=2000)\n    id_usuario = models.ForeignKey(USUARIO, on_delete=models.CASCADE,related_name='reclamacoes')\n    def __str__(self):\n        return self.rnome\nclass CATEGORIA(models.Model):\n    nome_categ = models.CharField(max_length=100)\n    def __str__(self):",
+        "detail": "app_eco_guia.models",
+        "documentation": {}
+    },
+    {
+        "label": "CATEGORIA",
+        "kind": 6,
+        "importPath": "app_eco_guia.models",
+        "description": "app_eco_guia.models",
+        "peekOfCode": "class CATEGORIA(models.Model):\n    nome_categ = models.CharField(max_length=100)\n    def __str__(self):\n        return self.nome_categ\nclass IDEIA(models.Model):\n    titulo = models.CharField(max_length=200)\n    resumo = models.CharField(max_length=500, null=True)\n    conteudo = models.CharField(max_length=6000)\n    id_categ = models.ForeignKey(CATEGORIA, on_delete=models.CASCADE)\n    def __str__(self):",
+        "detail": "app_eco_guia.models",
+        "documentation": {}
+    },
+    {
+        "label": "IDEIA",
+        "kind": 6,
+        "importPath": "app_eco_guia.models",
+        "description": "app_eco_guia.models",
+        "peekOfCode": "class IDEIA(models.Model):\n    titulo = models.CharField(max_length=200)\n    resumo = models.CharField(max_length=500, null=True)\n    conteudo = models.CharField(max_length=6000)\n    id_categ = models.ForeignKey(CATEGORIA, on_delete=models.CASCADE)\n    def __str__(self):\n        return self.titulo\n#---------------------------------------   Histórico de Imagens   ---------------------------------------#\n# Definição das categorias possíveis\nCATEGORIES = [",
         "detail": "app_eco_guia.models",
         "documentation": {}
     },
@@ -327,7 +512,16 @@
         "kind": 6,
         "importPath": "app_eco_guia.models",
         "description": "app_eco_guia.models",
-        "peekOfCode": "class ImageHistory(models.Model):\n    \"\"\"\n    Modelo que armazena o histórico de imagens classificadas pelo sistema.\n    Cada instância guarda uma categoria de resíduo, a contagem de vezes que essa categoria\n    foi classificada e a última imagem classificada nessa categoria.\n    \"\"\"\n    category = models.CharField(\n        max_length=100, \n        choices=CATEGORIES  # Limita as categorias às opções definidas\n    )",
+        "peekOfCode": "class ImageHistory(models.Model):\n    \"\"\"\n    Modelo que armazena o histórico de imagens classificadas pelo sistema.\n    Cada instância guarda uma categoria de resíduo, a contagem de vezes que essa categoria\n    foi classificada e a última imagem classificada nessa categoria.\n    \"\"\"\n    category = models.CharField(max_length=100, choices=CATEGORIES) # Limita as categorias às opções definidas\n    count = models.IntegerField(default=1,validators=[MinValueValidator(1)])  # Valida que o valor deve ser >= 1\n    image = models.ImageField()  # Define o diretório de upload para as imagens\n    last_classified = models.DateTimeField(auto_now=True) # Atualiza automaticamente com a data/hora da última classificação",
+        "detail": "app_eco_guia.models",
+        "documentation": {}
+    },
+    {
+        "label": "Marcadore",
+        "kind": 6,
+        "importPath": "app_eco_guia.models",
+        "description": "app_eco_guia.models",
+        "peekOfCode": "class Marcadores (models.Model):\n    nome = models.CharField(max_length=255)\n    endereco = models.CharField(max_length=255)\n    latitude = models.FloatField()\n    longitude = models.FloatField()\n    tipo_material = models.CharField(max_length=100)\n    horario = models.CharField(max_length=255)  # Ex: \"Seg-Sex: 08:00 - 18:00\"\n    descricao = models.TextField()\n    def __str__(self):\n        return self.nome",
         "detail": "app_eco_guia.models",
         "documentation": {}
     },
@@ -341,11 +535,20 @@
         "documentation": {}
     },
     {
+        "label": "MarkerSerializer",
+        "kind": 6,
+        "importPath": "app_eco_guia.serializer",
+        "description": "app_eco_guia.serializer",
+        "peekOfCode": "class MarkerSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Marker\n        fields = ['nome', 'endereco', 'latitude', 'logintude', 'horario']",
+        "detail": "app_eco_guia.serializer",
+        "documentation": {}
+    },
+    {
         "label": "urlpatterns",
         "kind": 5,
         "importPath": "app_eco_guia.urls",
         "description": "app_eco_guia.urls",
-        "peekOfCode": "urlpatterns = [\n    path('', views.login, name='login'),\n    path('home/', views.home, name='home'),\n    path('cadastro/', views.cadastro, name='cadastro'), \n    path('salvar/', views.salvar, name='salvar'),\n    path('editar/<str:email>', views.pegarEmail, name='editar'),\n    path('update/', views.update, name='update'), # cria a rota update com o id do usuário chamando a função update do arquivo views.py (ver linha 31 do arquivo views.py) e nomeia de 'update' para o update.html encontrá-lo (ver linha 16 de update.html)\n    path('delete/<int:id>', views.deletar, name='delete'),\n    path('scan/', views.scan, name='scan'),\n    path('predict/', views.predict, name='predict'), #recem adicionado",
+        "peekOfCode": "urlpatterns = [\n    path('', views.login, name='login'),\n    path('home/', views.home, name='home'),\n    path('cadastro/', views.cadastro, name='cadastro'), \n    path('salvar/', views.salvar, name='salvar'),\n    path('editar/<str:email>', views.pegarEmail, name='editar'),\n    path('update/', views.update, name='update'), # cria a rota update com o id do usuário chamando a função update do arquivo views.py (ver linha 31 do arquivo views.py) e nomeia de 'update' para o update.html encontrá-lo (ver linha 16 de update.html)\n    path('delete/<int:id>', views.deletar, name='delete'),\n    path('mapa/', views.mapa_view, name='mapa'),\n    path('scan/', views.scan, name='scan'),",
         "detail": "app_eco_guia.urls",
         "documentation": {}
     },
@@ -408,7 +611,7 @@
         "kind": 2,
         "importPath": "app_eco_guia.views",
         "description": "app_eco_guia.views",
-        "peekOfCode": "def scan(request):\n    return render(request, 'scan.html')\ndef login(request):\n    return render(request, 'login.html')\ndef verificar_login(request):\n    user = request.POST.get('user')\n    senha = request.POST.get('senha')\n    try:\n        usuario = USUARIO.objects.get(username= user, senha= senha)\n        return render(request, 'index.html')",
+        "peekOfCode": "def scan(request):\n    return render(request, 'scan.html')\ndef login(request):\n    return render(request, 'login.html')\ndef verificar_login(request):\n    user = request.POST.get('user')\n    senha = request.POST.get('senha')\n    try:\n        usuario = USUARIO.objects.get(username= user, senha= senha)\n        return render(request, 'index.html', {\"conta\": usuario})",
         "detail": "app_eco_guia.views",
         "documentation": {}
     },
@@ -417,7 +620,7 @@
         "kind": 2,
         "importPath": "app_eco_guia.views",
         "description": "app_eco_guia.views",
-        "peekOfCode": "def login(request):\n    return render(request, 'login.html')\ndef verificar_login(request):\n    user = request.POST.get('user')\n    senha = request.POST.get('senha')\n    try:\n        usuario = USUARIO.objects.get(username= user, senha= senha)\n        return render(request, 'index.html')\n    except:\n        return render(request, 'erro.html')",
+        "peekOfCode": "def login(request):\n    return render(request, 'login.html')\ndef verificar_login(request):\n    user = request.POST.get('user')\n    senha = request.POST.get('senha')\n    try:\n        usuario = USUARIO.objects.get(username= user, senha= senha)\n        return render(request, 'index.html', {\"conta\": usuario})\n    except:\n        return render(request, 'erro.html')",
         "detail": "app_eco_guia.views",
         "documentation": {}
     },
@@ -426,7 +629,34 @@
         "kind": 2,
         "importPath": "app_eco_guia.views",
         "description": "app_eco_guia.views",
-        "peekOfCode": "def verificar_login(request):\n    user = request.POST.get('user')\n    senha = request.POST.get('senha')\n    try:\n        usuario = USUARIO.objects.get(username= user, senha= senha)\n        return render(request, 'index.html')\n    except:\n        return render(request, 'erro.html')\n# FUNÇÕES DA IA -------------------------------------------------------------------------------------------------------------------------------\nimport logging",
+        "peekOfCode": "def verificar_login(request):\n    user = request.POST.get('user')\n    senha = request.POST.get('senha')\n    try:\n        usuario = USUARIO.objects.get(username= user, senha= senha)\n        return render(request, 'index.html', {\"conta\": usuario})\n    except:\n        return render(request, 'erro.html')\ndef fale_conosco(request, id):\n    usuario = USUARIO.objects.get(id=id)",
+        "detail": "app_eco_guia.views",
+        "documentation": {}
+    },
+    {
+        "label": "fale_conosco",
+        "kind": 2,
+        "importPath": "app_eco_guia.views",
+        "description": "app_eco_guia.views",
+        "peekOfCode": "def fale_conosco(request, id):\n    usuario = USUARIO.objects.get(id=id)\n    return render(request, 'reclame.html', {'user': usuario})\ndef salvar_reclamacao(request,id):\n    id_user = USUARIO.objects.get(id=id)\n    rnome = request.POST.get(\"nome\")\n    remail = request.POST.get(\"email\")\n    mensagem = request.POST.get(\"mensagem\")\n    RECLAMACOE.objects.create(id_usuario = id_user, rnome = rnome, remail = remail, mensagem= mensagem)\n    return render(request, 'index.html', {'conta': id_user}) ",
+        "detail": "app_eco_guia.views",
+        "documentation": {}
+    },
+    {
+        "label": "salvar_reclamacao",
+        "kind": 2,
+        "importPath": "app_eco_guia.views",
+        "description": "app_eco_guia.views",
+        "peekOfCode": "def salvar_reclamacao(request,id):\n    id_user = USUARIO.objects.get(id=id)\n    rnome = request.POST.get(\"nome\")\n    remail = request.POST.get(\"email\")\n    mensagem = request.POST.get(\"mensagem\")\n    RECLAMACOE.objects.create(id_usuario = id_user, rnome = rnome, remail = remail, mensagem= mensagem)\n    return render(request, 'index.html', {'conta': id_user}) \n# IDEIAS DE RECICLAGEM -----------------------------------\ndef ideias(request):\n    ideias = IDEIA.objects.all()",
+        "detail": "app_eco_guia.views",
+        "documentation": {}
+    },
+    {
+        "label": "ideias",
+        "kind": 2,
+        "importPath": "app_eco_guia.views",
+        "description": "app_eco_guia.views",
+        "peekOfCode": "def ideias(request):\n    ideias = IDEIA.objects.all()\n    return render(request, 'ideias.html', {'ideias': ideias})\n# FUNÇÕES DA IA -------------------------------------------------------------------------------------------------------------------------------\nimport logging\nimport numpy as np\nimport tensorflow as tf  # Este import pode ser retirado caso nao esteja em uso\nimport os\nfrom django.shortcuts import render\nfrom django.http import JsonResponse",
         "detail": "app_eco_guia.views",
         "documentation": {}
     },
@@ -435,7 +665,7 @@
         "kind": 2,
         "importPath": "app_eco_guia.views",
         "description": "app_eco_guia.views",
-        "peekOfCode": "def scan(request):\n    history = ImageHistory.objects.all().order_by(\"-last_classified\")\n    return render(request, \"scan.html\", {\"history\": history})\n# Configuração básica de logging\nlogging.basicConfig(level=logging.DEBUG)\n# Definição das categorias de resíduos e o tamanho padrão da imagem\ncategories = [\"cardboard\", \"glass\", \"metal\", \"paper\", \"plastic\", \"trash\"]\nimg_size = 256\n# Caminho para o modelo TFLite\nmodel_path = r\"D:\\eco_guia-main\\app_eco_guia\\model\\modelo_compativel.tflite\"",
+        "peekOfCode": "def scan(request):\n    history = ImageHistory.objects.all().order_by(\"-last_classified\")\n    return render(request, \"scan.html\", {\"history\": history})\n# Configuração básica de logging\nlogging.basicConfig(level=logging.DEBUG)\n# Definição das categorias de resíduos e o tamanho padrão da imagem\ncategories = [\"cardboard\", \"glass\", \"metal\", \"paper\", \"plastic\", \"trash\"]\nimg_size = 256\n# Caminho para o modelo TFLite\nmodel_path = \"app_eco_guia\\model\\modelo_compativel.tflite\"",
         "detail": "app_eco_guia.views",
         "documentation": {}
     },
@@ -494,11 +724,20 @@
         "documentation": {}
     },
     {
+        "label": "mapa_view",
+        "kind": 2,
+        "importPath": "app_eco_guia.views",
+        "description": "app_eco_guia.views",
+        "peekOfCode": "def mapa_view(request):\n    tipo = request.GET.get(\"tipo\")\n    if tipo:\n        pontos = Marcadores.objects.filter(tipo_material=tipo)\n    else:\n        pontos = Marcadores.objects.all()\n    # Transformando os dados em uma lista de dicionários para ser usada no template\n    pontos_data = list(pontos.values(\"nome\", \"endereco\", \"latitude\", \"longitude\", \"tipo_material\", \"horario\", \"descricao\"))\n    # Garantir que os dados estejam em formato JSON com aspas duplas\n    pontos_json = json.dumps(pontos_data)",
+        "detail": "app_eco_guia.views",
+        "documentation": {}
+    },
+    {
         "label": "categories",
         "kind": 5,
         "importPath": "app_eco_guia.views",
         "description": "app_eco_guia.views",
-        "peekOfCode": "categories = [\"cardboard\", \"glass\", \"metal\", \"paper\", \"plastic\", \"trash\"]\nimg_size = 256\n# Caminho para o modelo TFLite\nmodel_path = r\"D:\\eco_guia-main\\app_eco_guia\\model\\modelo_compativel.tflite\"\n# Função para preparar a imagem antes da predição\ndef prepare_image(image, target_size):\n    \"\"\"\n    Prepara a imagem redimensionando e normalizando os valores para o formato correto\n    que o modelo espera. O tamanho alvo deve ser consistente com o treinamento do modelo.\n    \"\"\"",
+        "peekOfCode": "categories = [\"cardboard\", \"glass\", \"metal\", \"paper\", \"plastic\", \"trash\"]\nimg_size = 256\n# Caminho para o modelo TFLite\nmodel_path = \"app_eco_guia\\model\\modelo_compativel.tflite\"\n# Função para preparar a imagem antes da predição\ndef prepare_image(image, target_size):\n    \"\"\"\n    Prepara a imagem redimensionando e normalizando os valores para o formato correto\n    que o modelo espera. O tamanho alvo deve ser consistente com o treinamento do modelo.\n    \"\"\"",
         "detail": "app_eco_guia.views",
         "documentation": {}
     },
@@ -507,7 +746,7 @@
         "kind": 5,
         "importPath": "app_eco_guia.views",
         "description": "app_eco_guia.views",
-        "peekOfCode": "img_size = 256\n# Caminho para o modelo TFLite\nmodel_path = r\"D:\\eco_guia-main\\app_eco_guia\\model\\modelo_compativel.tflite\"\n# Função para preparar a imagem antes da predição\ndef prepare_image(image, target_size):\n    \"\"\"\n    Prepara a imagem redimensionando e normalizando os valores para o formato correto\n    que o modelo espera. O tamanho alvo deve ser consistente com o treinamento do modelo.\n    \"\"\"\n    logging.debug(f\"Preparing image with target size {target_size}\")",
+        "peekOfCode": "img_size = 256\n# Caminho para o modelo TFLite\nmodel_path = \"app_eco_guia\\model\\modelo_compativel.tflite\"\n# Função para preparar a imagem antes da predição\ndef prepare_image(image, target_size):\n    \"\"\"\n    Prepara a imagem redimensionando e normalizando os valores para o formato correto\n    que o modelo espera. O tamanho alvo deve ser consistente com o treinamento do modelo.\n    \"\"\"\n    logging.debug(f\"Preparing image with target size {target_size}\")",
         "detail": "app_eco_guia.views",
         "documentation": {}
     },
@@ -516,7 +755,7 @@
         "kind": 5,
         "importPath": "app_eco_guia.views",
         "description": "app_eco_guia.views",
-        "peekOfCode": "model_path = r\"D:\\eco_guia-main\\app_eco_guia\\model\\modelo_compativel.tflite\"\n# Função para preparar a imagem antes da predição\ndef prepare_image(image, target_size):\n    \"\"\"\n    Prepara a imagem redimensionando e normalizando os valores para o formato correto\n    que o modelo espera. O tamanho alvo deve ser consistente com o treinamento do modelo.\n    \"\"\"\n    logging.debug(f\"Preparing image with target size {target_size}\")\n    # Verifica se a imagem não está no modo RGB, e converte se necessário\n    if image.mode != \"RGB\":",
+        "peekOfCode": "model_path = \"app_eco_guia\\model\\modelo_compativel.tflite\"\n# Função para preparar a imagem antes da predição\ndef prepare_image(image, target_size):\n    \"\"\"\n    Prepara a imagem redimensionando e normalizando os valores para o formato correto\n    que o modelo espera. O tamanho alvo deve ser consistente com o treinamento do modelo.\n    \"\"\"\n    logging.debug(f\"Preparing image with target size {target_size}\")\n    # Verifica se a imagem não está no modo RGB, e converte se necessário\n    if image.mode != \"RGB\":",
         "detail": "app_eco_guia.views",
         "documentation": {}
     },
@@ -552,7 +791,7 @@
         "kind": 5,
         "importPath": "projeto_eco_guia.settings",
         "description": "projeto_eco_guia.settings",
-        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = 'django-insecure-i35fy@ui_c1mny6b_!5d_d68l(k3tuu%9_8u0rfl9nl$7%m=)h'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = [\n    'afb4-200-217-187-115.ngrok-free.app',\n    '127.0.0.1',",
+        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = 'django-insecure-i35fy@ui_c1mny6b_!5d_d68l(k3tuu%9_8u0rfl9nl$7%m=)h'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\n# Diretório onde os arquivos de mídia serão armazenados\nMEDIA_ROOT = os.path.join(BASE_DIR, 'history_images')\n# URL que será usada para acessar os arquivos de mídia",
         "detail": "projeto_eco_guia.settings",
         "documentation": {}
     },
@@ -561,7 +800,7 @@
         "kind": 5,
         "importPath": "projeto_eco_guia.settings",
         "description": "projeto_eco_guia.settings",
-        "peekOfCode": "SECRET_KEY = 'django-insecure-i35fy@ui_c1mny6b_!5d_d68l(k3tuu%9_8u0rfl9nl$7%m=)h'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = [\n    'afb4-200-217-187-115.ngrok-free.app',\n    '127.0.0.1',\n    '127.0.0.1:5500',\n    '127.0.0.1:8000',\n    ]\nCSRF_TRUSTED_ORIGINS = [",
+        "peekOfCode": "SECRET_KEY = 'django-insecure-i35fy@ui_c1mny6b_!5d_d68l(k3tuu%9_8u0rfl9nl$7%m=)h'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\n# Diretório onde os arquivos de mídia serão armazenados\nMEDIA_ROOT = os.path.join(BASE_DIR, 'history_images')\n# URL que será usada para acessar os arquivos de mídia\nMEDIA_URL = '/media/'\nALLOWED_HOSTS = [\n    '8be0-177-104-245-40.ngrok-free.app',\n    '127.0.0.1',",
         "detail": "projeto_eco_guia.settings",
         "documentation": {}
     },
@@ -570,7 +809,25 @@
         "kind": 5,
         "importPath": "projeto_eco_guia.settings",
         "description": "projeto_eco_guia.settings",
-        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = [\n    'afb4-200-217-187-115.ngrok-free.app',\n    '127.0.0.1',\n    '127.0.0.1:5500',\n    '127.0.0.1:8000',\n    ]\nCSRF_TRUSTED_ORIGINS = [\n    'https://afb4-200-217-187-115.ngrok-free.app',\n    'https://afb4-200-217-187-115.ngrok-free.app/predict/',",
+        "peekOfCode": "DEBUG = True\n# Diretório onde os arquivos de mídia serão armazenados\nMEDIA_ROOT = os.path.join(BASE_DIR, 'history_images')\n# URL que será usada para acessar os arquivos de mídia\nMEDIA_URL = '/media/'\nALLOWED_HOSTS = [\n    '8be0-177-104-245-40.ngrok-free.app',\n    '127.0.0.1',\n    '127.0.0.1:5500',\n    '127.0.0.1:8000',",
+        "detail": "projeto_eco_guia.settings",
+        "documentation": {}
+    },
+    {
+        "label": "MEDIA_ROOT",
+        "kind": 5,
+        "importPath": "projeto_eco_guia.settings",
+        "description": "projeto_eco_guia.settings",
+        "peekOfCode": "MEDIA_ROOT = os.path.join(BASE_DIR, 'history_images')\n# URL que será usada para acessar os arquivos de mídia\nMEDIA_URL = '/media/'\nALLOWED_HOSTS = [\n    '8be0-177-104-245-40.ngrok-free.app',\n    '127.0.0.1',\n    '127.0.0.1:5500',\n    '127.0.0.1:8000',\n    ]\nCSRF_TRUSTED_ORIGINS = [",
+        "detail": "projeto_eco_guia.settings",
+        "documentation": {}
+    },
+    {
+        "label": "MEDIA_URL",
+        "kind": 5,
+        "importPath": "projeto_eco_guia.settings",
+        "description": "projeto_eco_guia.settings",
+        "peekOfCode": "MEDIA_URL = '/media/'\nALLOWED_HOSTS = [\n    '8be0-177-104-245-40.ngrok-free.app',\n    '127.0.0.1',\n    '127.0.0.1:5500',\n    '127.0.0.1:8000',\n    ]\nCSRF_TRUSTED_ORIGINS = [\n    'https://8be0-177-104-245-40.ngrok-free.app',\n    'https://afb4-200-217-187-115.ngrok-free.app/predict/',",
         "detail": "projeto_eco_guia.settings",
         "documentation": {}
     },
@@ -579,7 +836,7 @@
         "kind": 5,
         "importPath": "projeto_eco_guia.settings",
         "description": "projeto_eco_guia.settings",
-        "peekOfCode": "ALLOWED_HOSTS = [\n    'afb4-200-217-187-115.ngrok-free.app',\n    '127.0.0.1',\n    '127.0.0.1:5500',\n    '127.0.0.1:8000',\n    ]\nCSRF_TRUSTED_ORIGINS = [\n    'https://afb4-200-217-187-115.ngrok-free.app',\n    'https://afb4-200-217-187-115.ngrok-free.app/predict/',\n    'http://127.0.0.1:8000/scan/',",
+        "peekOfCode": "ALLOWED_HOSTS = [\n    '8be0-177-104-245-40.ngrok-free.app',\n    '127.0.0.1',\n    '127.0.0.1:5500',\n    '127.0.0.1:8000',\n    ]\nCSRF_TRUSTED_ORIGINS = [\n    'https://8be0-177-104-245-40.ngrok-free.app',\n    'https://afb4-200-217-187-115.ngrok-free.app/predict/',\n    'http://127.0.0.1:8000/scan/',",
         "detail": "projeto_eco_guia.settings",
         "documentation": {}
     },
@@ -588,7 +845,7 @@
         "kind": 5,
         "importPath": "projeto_eco_guia.settings",
         "description": "projeto_eco_guia.settings",
-        "peekOfCode": "CSRF_TRUSTED_ORIGINS = [\n    'https://afb4-200-217-187-115.ngrok-free.app',\n    'https://afb4-200-217-187-115.ngrok-free.app/predict/',\n    'http://127.0.0.1:8000/scan/',\n    'http://127.0.0.1:8000/',\n    'http://127.0.0.1:5500/',\n]\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',",
+        "peekOfCode": "CSRF_TRUSTED_ORIGINS = [\n    'https://8be0-177-104-245-40.ngrok-free.app',\n    'https://afb4-200-217-187-115.ngrok-free.app/predict/',\n    'http://127.0.0.1:8000/scan/',\n    'http://127.0.0.1:8000/',\n    'http://127.0.0.1:5500/',\n]\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',",
         "detail": "projeto_eco_guia.settings",
         "documentation": {}
     },
@@ -597,7 +854,7 @@
         "kind": 5,
         "importPath": "projeto_eco_guia.settings",
         "description": "projeto_eco_guia.settings",
-        "peekOfCode": "INSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'app_eco_guia', # app adicionado para usar a pasta app_eco_guia\n]\nMIDDLEWARE = [",
+        "peekOfCode": "INSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'app_eco_guia', # app adicionado para usar a pasta app_eco_guia\n    'rest_framework',\n    'pwa',",
         "detail": "projeto_eco_guia.settings",
         "documentation": {}
     },

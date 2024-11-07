@@ -1,0 +1,217 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Cabeçalho */
+header {
+  background-color: #2a6a4f;
+  color: #ffffff;
+  padding: 20px 0;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+  max-width: 1200px;
+}
+
+.site-title {
+  font-size: 24px;
+  text-align: center;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+}
+
+.navbar ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Instruções */
+.section-instructions {
+  padding: 20px;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+.travel-mode-select {
+  margin-top: 10px;
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+/* Mapa */
+#map-container {
+  width: 100%;
+  height: 600px;
+  padding: 8px ;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+}
+
+/* Estilo do conteúdo do InfoWindow */
+.info-window {
+  font-family: Arial, sans-serif;
+  color: #333;
+  max-width: 250px;
+  text-align: left;
+}
+
+.info-window h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #2a6a4f;
+}
+
+.info-window p {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+/* Centralizar o botão */
+.info-window .button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.info-window button {
+  padding: 8px 16px;
+  background-color: #2a6a4f;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.info-window button:hover {
+  background-color: #1e5039;
+}
+
+/* Estilo para a seção de horários de coleta */
+.coleta-horarios {
+  margin: 20px 0;
+  padding: 20px;
+  background-color: #f0f4f1;
+  border-radius: 8px;
+  color: #333;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.coleta-horarios h2 {
+  font-size: 24px;
+  color: #2a6a4f;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* Flexbox layout para exibir os blocos lado a lado */
+.coleta-horarios-container {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.horario-bloco {
+  flex: 1;
+  padding: 10px;
+  border-right: 1px solid rgba(0, 0, 0, 0.2); /* Linha vertical opaca */
+}
+
+.horario-bloco:last-child {
+  border-right: none; /* Remove a borda do último bloco */
+}
+
+.horario-bloco h3 {
+  font-size: 18px;
+  color: #2a6a4f;
+  margin-bottom: 8px;
+}
+
+.horario-bloco p {
+  font-size: 14px;
+  margin: 4px 0;
+  color: #333;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 800px) {
+  .coleta-horarios-container {
+      flex-direction: column;
+  }
+
+  .horario-bloco {
+      border-right: none;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2); /* Linha horizontal em telas menores */
+      margin-bottom: 10px;
+  }
+
+  .horario-bloco:last-child {
+      border-bottom: none;
+  }
+}
+
+
+/* Rodapé */
+footer {
+  background-color: #2a6a4f;
+  color: #ffffff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.footer-links li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-links li a:hover {
+  text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .navbar ul {
+      flex-direction: column;
+      align-items: center;
+  }
+  
+  #map-container {
+      height: 400px;
+  }
+  
+  .site-title {
+      font-size: 20px;
+  }
+}

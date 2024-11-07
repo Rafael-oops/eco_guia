@@ -1,40 +1,43 @@
 {
-    "name": "Eco Guia",
-    "short_name": "EcoGuia",
-    "start_url": "/",
-    "display": "standalone",
-    "background_color": "#ffffff",
-    "theme_color": "#000000",
-    "icons": [
-      {
-        "src": "/static/img/logotipo2.png",
-        "sizes": "369x367",
-        "type": "image/png"
-      }
-    ],
-    "screenshots": [
+  "name": "Eco Guia",
+  "short_name": "Eco Guia",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "icons": [
+    {
+      "src": "/static/img/logotipo_normal.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/static/img/logotipo_verdao.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "screenshots": [
     {
       "src": "/static/img/image.png",
       "sizes": "512x512",
       "type": "image/png",
-      "form_factor": "wide" 
+      "form_factor": "wide"
     },
     {
-        "src": "/static/img/image.png",
-        "sizes": "320x320",
-        "type": "image/png",
-        "form_factor": "narrow"
-      }
-  ],
-  "anotações":[
-    {
-        "linha 26":"diz que a imagem é para formato de telas maiores como desktops",
-        "linha 32":"diz que a imagem é para formato de telas menores como mobile"
+      "src": "/static/img/image.png",
+      "sizes": "320x320",
+      "type": "image/png",
+      "form_factor": "narrow"
     }
   ],
   "description": "Ajudante virtual ecológico",
-  "categories": ["Ecológico", "Consciente", "Cop 30"],
-  "orientation":"portrait",
+  "categories": [
+    "Ecológico",
+    "Consciente",
+    "Cop 30"
+  ],
+  "orientation": "portrait",
   "lang": "pt-br",
   "dir": "ltr"
-  }
+}

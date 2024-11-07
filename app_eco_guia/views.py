@@ -238,9 +238,7 @@ def predict(request):
         logging.error(f"Erro ao processar a imagem: {e}")
         return JsonResponse({"error": "Erro ao processar a imagem."}, status=500)
 
-    # FUNÇÕES DO CHAT -------------------------------------------------------------------------------------------------------------------------------
-# chat/views.py
-
+# FUNÇÕES DO CHAT -------------------------------------------------------------------------------------------------------------------------------
 # chat/views.py
 
 from django.shortcuts import render
@@ -278,3 +276,21 @@ def chat(request):
     else:
         # Se for uma requisição GET, renderiza o template do chat
         return render(request, 'index.html')
+
+# FUNÇÕES DO MAPA -------------------------------------------------------------------------------------------------------------------------------
+from .models import Marcadores
+
+def mapa_view(request):
+    tipo = request.GET.get("tipo")
+    if tipo:
+        pontos = Marcadores.objects.filter(tipo_material=tipo)
+    else:
+        pontos = Marcadores.objects.all()
+
+    # Transformando os dados em uma lista de dicionários para ser usada no template
+    pontos_data = list(pontos.values("nome", "endereco", "latitude", "longitude", "tipo_material", "horario", "descricao"))
+    
+    # Garantir que os dados estejam em formato JSON com aspas duplas
+    pontos_json = json.dumps(pontos_data)
+
+    return render(request, "mapa.html", {"pontos": pontos_json})

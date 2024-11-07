@@ -62,7 +62,7 @@ class ImageHistory(models.Model):
     """
     category = models.CharField(max_length=100, choices=CATEGORIES) # Limita as categorias às opções definidas
     count = models.IntegerField(default=1,validators=[MinValueValidator(1)])  # Valida que o valor deve ser >= 1
-    image = models.ImageField(upload_to='history_images/')  # Define o diretório de upload para as imagens
+    image = models.ImageField()  # Define o diretório de upload para as imagens
     last_classified = models.DateTimeField(auto_now=True) # Atualiza automaticamente com a data/hora da última classificação
 
     def __str__(self):
@@ -76,3 +76,17 @@ class ImageHistory(models.Model):
             models.Index(fields=['category']),
             models.Index(fields=['last_classified']),
         ]
+
+#---------------------------------------   Mapa   ---------------------------------------#
+from django.db import models
+
+class Marcadores (models.Model):
+    nome = models.CharField(max_length=255)
+    endereco = models.CharField(max_length=255)
+    latitude = models.FloatField()
+    longitude = models.FloatField()
+    tipo_material = models.CharField(max_length=100)
+    horario = models.CharField(max_length=255)  # Ex: "Seg-Sex: 08:00 - 18:00"
+    descricao = models.TextField()
+    def __str__(self):
+        return self.nome

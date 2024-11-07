@@ -3,22 +3,22 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/cadastro.css">
     <title>Login</title>
     {% load static %}
     <link rel="manifest" href="{% static 'manifest.json' %}">
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
     <link href="{% static "css/cadastro.css" %}" rel="stylesheet">
+    <link rel="icon" href="{% static "img/favicon.ico" %}">
 </head>
 
 <body>
     <section class="sessao">
-        <h1 class="campo"> Bem vindo a Eco_Guia</h1>
+        <h1 class="campo" id="welcome"> Bem vindo a Eco_Guia</h1>
     </section>
     <section class="sessao">
         <div class="logo d-flex justify-content-center" id="logo">
             <div class="img">
-                <img class="img-logo" src="assets/img/logotipo.png" alt="logo" width="100">
+                <img class="img-logo" src="{% static "img/logotipo2.png" %}" alt="logo" width="100">
             </div>
             <form id="cadastroForm" action="{% url "verificar_login" %}" method="POST">
                 {% csrf_token %}
@@ -39,7 +39,6 @@
             <p>Ainda não tem conta?<span><a href="{% url "cadastro" %}">Cadastrar-se</a></span></p>
         </div>
     </section>
-<script src="js/cadastro.js"></script>
 <script src="{% static 'js/pwa.js' %}"></script>
 </body>
 

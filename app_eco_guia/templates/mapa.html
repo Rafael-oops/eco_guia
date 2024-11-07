@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% load static %}
+    <title>Pontos de Coleta de Lixo Reciclável</title>
+
+    <!-- Meta Descrição e Palavras-Chave -->
+    <meta
+      name="description"
+      content="Localize pontos de coleta de lixo reciclável em sua cidade através do mapa interativo."
+    />
+    <meta
+      name="keywords"
+      content="coleta seletiva, lixo reciclável, sustentabilidade, reciclagem, pontos de coleta, ecologia, Google Maps"
+    />
+
+    <!-- Carregar CSS -->
+    <link rel="stylesheet" href="{% static 'css/mapa.css' %}" />
+
+    <!-- Carregar JS do mapa -->
+    <script defer src="{% static 'js/mapa.js' %}"></script>
+
+    <!-- Google Maps API -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCdToAyM1w9LyCQ6oAFTdlX-9MRvnEYmhs&libraries=marker,places&callback=initMap"
+      async
+      defer
+    ></script>
+
+    <!-- Favicon -->
+    <link rel="icon" href="{% static 'img/favicon.ico' %}"/>
+
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <!-- Cabeçalho e Navegação -->
+    <header>
+      <div class="container">
+        <h1 class="site-title">Pontos de Coleta de Lixo Reciclável</h1>
+        <nav class="navbar">
+          <ul>
+            <li><a href="#instrucoes">Instruções</a></li>
+            <li><a href="#footer">Contato</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- Instruções -->
+      <section id="instrucoes" class="section-instructions">
+        <h2>Como Utilizar</h2>
+        <p>
+          Selecione um ponto de coleta no mapa abaixo para visualizar
+          informações detalhadas. Escolha o modo de transporte e calcule a rota
+          para chegar ao ponto de coleta.
+        </p>
+        <select id="travelMode" class="travel-mode-select">
+          <option value="DRIVING">Carro</option>
+          <option value="BICYCLING">Bicicleta</option>
+          <option value="TRANSIT">Transporte Público</option>
+          <option value="WALKING">A Pé</option>
+        </select>
+      </section>
+
+      <!-- Mapa Interativo -->
+      <section id="map-container">
+        <div id="map"></div>
+      </section>
+    </main>
+
+    <!-- Informações sobre horários de coleta -->
+    <section class="coleta-horarios">
+        <h2>Horários de Coleta de Lixo por Local</h2>
+        <div class="coleta-horarios-container">
+            <div class="horario-bloco">
+                <h3>Segunda a sábado - a partir das 7h</h3>
+                <p><strong>Belém:</strong> Cremação, Terra Firme e Curió-Utinga.</p>
+                <p><strong>Distrito de Mosqueiro:</strong> Vila, Praia Grande, Farol.</p>
+                <p><strong>Distrito de Icoaraci:</strong> Campina e Agulha.</p>
+            </div>
+            <div class="horario-bloco">
+                <h3>Segunda a sábado - a partir das 18h</h3>
+                <p>Maracangalha, Marambaia, Souza, Castanheira, Fátima, Sacramenta, Pedreira, Telégrafo, Marco, Matinha, Umarizal, Campina, Comércio, Reduto, Nazaré e Batista Campos.</p>
+            </div>
+            <div class="horario-bloco">
+                <h3>Segunda, quarta e sexta - a partir das 7h</h3>
+                <p><strong>Belém:</strong> Tapanã, Pratinha, Bengui, Mangueirão, Parque Verde, Parque Guajará, Miramar, Val-de-cães, Barreiro, Guanabara e Águas Lindas.</p>
+                <p><strong>Distrito de Mosqueiro:</strong> Ariramba, Paraíso, Marahú, Caruara, São Francisco e Carananduba.</p>
+            </div>
+            <div class="horario-bloco">
+                <h3>Terça, quinta e sábado - a partir das 7h</h3>
+                <p><strong>Belém:</strong> Canudos, Águas Negras, Tenoné, Coqueiro, Cabanagem, Una e Terra Firme.</p>
+                <p><strong>Distrito de Outeiro:</strong> Brasilia.</p>
+                <p><strong>Distrito de Mosqueiro:</strong> Aeroporto, Chapéu Virado, Murubira, Porto Arthur, Baia do Sol e Sucurujiquara.</p>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Rodapé -->
+    <footer id="footer">
+      <div class="footer-content container">
+        <p>&copy; 2024 - Plataforma de Coleta Sustentável</p>
+        <ul class="footer-links">
+          <li><a href="#">Sobre Nós</a></li>
+          <li><a href="#">Contato</a></li>
+          <li><a href="#">Política de Privacidade</a></li>
+          <li><a href="#">Termos de Uso</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <!-- Dados JSON para o Mapa -->
+    <script id="pontos_data" type="application/json">
+      {{ pontos|safe }}
+    </script>
+  </body>
+</html>

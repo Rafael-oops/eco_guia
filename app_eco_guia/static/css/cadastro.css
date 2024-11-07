@@ -1,156 +1,215 @@
-body{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    color: #1b7340;
-    font-family: 'Poppins', sans-serif;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    text-align: center;
-  }
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  color: #1b7340;
+  font-family: 'Poppins', sans-serif;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
 
-  a {
-    text-decoration: none;
-  }
-  
-  textarea{
-    resize: none;
-  }
+a {
+  text-decoration: none;
+}
+
+#welcome {
+  text-align: center;
+}
+
+textarea {
+  resize: none;
+}
+
+.sessao {
+  width: 30%;
+}
+
+.logo {
+  width: auto;
+  border: 2px solid rgb(27, 115, 64);
+  border-radius: 3%;
+  padding: 2vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: auto;
+  box-shadow: 5px 5px 10px rgb(27, 115, 64, 0.5);
+}
+
+.img {
+  text-align: center;
+}
+
+.lista-user {
+  padding: 5px;
+}
+
+.item-user {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+  margin: 0;
+  padding: 3px;
+  border-radius: 5px;
+}
+
+.item-user:hover {
+  background-color: rgb(82, 183, 136, 0.3);
+}
+
+.info {
+  margin: 0;
+}
+
+#cadastroForm {
+  text-align: center;
+  width: 100%;
+}
+
+.inputbox {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.campo {
+  text-align: start;
+  font-size: 1rem;
+}
+
+.dados {
+  border: 1.5px solid #1b7340;
+  border-radius: 5px;
+  font-size: 1rem;
+  padding: 3px;
+}
+
+.botao {
+  text-align: center;
+  width: 10rem;
+  background-color: #1b7340;
+  color: #ffffff;
+  padding: 5px;
+  margin: auto;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-size: 1rem;
+  border: 1.8px solid #ffffff;
+  transition: 0.1s;
+}
+
+.botao:hover {
+  background-color: #ffffff;
+  color: #1b7340;
+  border: 1.8px solid #1b7340;
+  cursor: pointer;
+}
+
+.botaoInfo {
+  width: 5rem;
+  font-size: 0.8rem;
+}
+
+.botaoDel {
+  background-color: red;
+}
+
+.botaoDel:hover {
+  color: red;
+  border: 1.8px solid red;
+}
+
+
+/* Telas grandes: Largura entre 1024px e 1440px (laptops grandes, desktops) */
+@media screen and (max-width: 1440px) {
   .sessao {
-    width: 30%;
-  }
-  
-  .logo {
-    width: 100%;
-    border: 2px solid rgb(27, 115, 64);
-    border-radius: 3%;
-    padding: 2vh;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    margin: auto;
-    box-shadow: 5px 5px 10px rgb(27, 115, 64, 0.5);
-  }
-  
-  .img {
-    text-align: center;
+    width: 40%;
   }
 
-  .lista-user {
-    padding: 5px;
-  }
-
-  .item-user {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 5px;
-    margin: 0;
-    padding: 3px;
-    border-radius: 5px;
-  }
-
-  .item-user:hover {
-    background-color: rgb(82, 183, 136, 0.3);
-  }
-
-  .info {
-    margin: 0;
-  }
-  
-  #cadastroForm {
-    text-align: center;
-    width: 100%;
-  }
-  
-  .inputbox {
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    margin-bottom: 10px;
-    width: 100%;
-  }
-  
-  .campo {
-    text-align: start;
-    font-size: 1rem;
-  }
-  
-  .dados {
-    border: 1.5px solid #1b7340;
-    border-radius: 5px;
-    font-size: 1rem;
-    padding: 3px;
-  }
-  
   .botao {
-    text-align: center;
-    width: 10rem;
-    background-color: #1b7340;
-    color: #ffffff;
-    padding: 5px;
+    width: 9rem;
+    font-size: 0.95rem;
+  }
+}
+
+/* Telas intermediárias: Largura entre 768px e 1024px (tablets, laptops pequenos) */
+@media screen and (max-width: 1024px) {
+  .sessao {
+    width: 60%;
+    padding: 1rem;
+  }
+
+  .logo {
+    padding: 2vh;
+  }
+
+  .botao {
+    width: 8rem;
+    font-size: 0.9rem;
+  }
+
+  .inputbox {
+    width: 90%;
+  }
+}
+
+/* Telas médias: Largura entre 480px e 768px (tablets, smartphones grandes) */
+@media screen and (max-width: 768px) {
+  body {
+    width: 100%;
     margin: auto;
-    border-radius: 5px;
-    text-transform: uppercase;
+  }
+
+  .sessao {
+    width: 80%;
+  }
+
+  .img-logo {
+    width: 70%;
+    height: auto;
+  }
+
+  .botao {
+    width: 70%;
+    padding: 8px;
     font-size: 1rem;
-    border: 1.8px solid #ffffff;
-    transition: 0.1s;
-  }
-  
-  .botao:hover {
-    background-color: #ffffff;
-    color: #1b7340;
-    border: 1.8px solid #1b7340;
-    cursor: pointer;
   }
 
-  .botaoInfo {
-    width: 5rem;
-    font-size: 0.8rem;
+  .inputbox {
+    width: 100%;
+  }
+}
+
+/* Telas pequenas: Largura abaixo de 480px (smartphones) */
+@media screen and (max-width: 480px) {
+  .sessao {
+    width: 60%;
   }
 
-  .botaoDel {
-    background-color: red;
+  .logo {
+    padding: 1.5vh;
+    border-radius: 5%;
   }
 
-  .botaoDel:hover {
-    color: red;
-    border: 1.8px solid red;
+  .img-logo {
+    width: 60%;
+    height: auto;
   }
-  
-  
-  @media screen and (max-width: 750px) {
-    * {
-      margin: 0;
-      padding: 0;
-    }
-  
-    body {
-      width:90%;
-      margin: auto;
-      text-align: center;
-    }
-  
-    .sessao {
-      width: 100%;
-      margin-left: 0;
-      margin-right: 3rem;
-    }
-  
-    .img-logo {
-      width: 100%;
-      height: 30vh;
-    }
-  
-    .logo {
-      width: 100%;
-    }
-  
-    #cadastroForm {
-      width: 100%;
-      margin: auto;
-    }
+
+  .botao {
+    width: 80%;
+    padding: 10px;
+    font-size: 0.9rem;
   }
+
+  .campo {
+    font-size: 1.1rem;
+  }
+}

@@ -1,15 +1,15 @@
-// MENU HAMBURGUER QUANDO A TELA FICAR PRA CELULAR FICAR PRA CELULAR
+// MENU HAMBURGUER QUANDO A TELA FICAR PRA CELULAR
 const navSlide = () => {
   const burger = document.querySelector(".burger");
   const nav = document.querySelector(".nav-links");
-  //Fazendo aparecer os itens
   const navLinks = document.querySelectorAll(".nav-links li");
 
-  //Fazendo o clique do menu funcionar
+  // Fazendo o clique do menu funcionar
   burger.addEventListener("click", () => {
+    // Alternando a visibilidade do menu
     nav.classList.toggle("nav-active");
 
-    //Animações links
+    // Animações dos links
     navLinks.forEach((link, index) => {
       if (link.style.animation) {
         link.style.animation = "";
@@ -19,12 +19,15 @@ const navSlide = () => {
         }s`;
       }
     });
-    //Transformando em X
+
+    // Transformando o ícone do menu em 'X'
     burger.classList.toggle("toggle");
   });
 };
 
 navSlide();
+
+
 
 // CARDS FLUTUANTE QUE APARECE AO CLICAR NA IMAGEM DO LIXO  -------------------------------------------
 
