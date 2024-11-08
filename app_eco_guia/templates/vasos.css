@@ -1,0 +1,132 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 0;
+}
+h1, h2 {
+    text-align: center;
+}
+img {
+    display: block;
+    margin: 0 auto;
+    width: 40%; /* Definir uma largura retangular */
+    border-radius: 15px; /* Borda arredondada */
+}
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    line-height: 1.6;
+}
+.back-btn, .notification-btn {
+    position: absolute;
+    top: 20px;
+    font-size: 20px;
+}
+.back-btn {
+    left: 20px;
+}
+.notification-btn {
+    right: 20px;
+}
+a {
+    text-decoration: none;
+    color: green;
+}
+
+.comment-section {
+max-width: 800px;
+margin: 20px auto;
+padding: 20px;
+background-color: #f9f9f9;
+border-radius: 10px;
+box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.comment-section h2 {
+text-align: center;
+margin-bottom: 20px;
+}
+
+.comment-section form {
+display: flex;
+flex-direction: column;
+}
+
+.comment-section label {
+margin-bottom: 5px;
+font-weight: bold;
+}
+
+.comment-section input[type="text"],
+.comment-section textarea {
+margin-bottom: 15px;
+padding: 10px;
+font-size: 16px;
+border: 1px solid #ccc;
+border-radius: 5px;
+}
+
+.comment-section button {
+padding: 10px;
+font-size: 16px;
+background-color: green;
+color: white;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+}
+
+.comment-section button:hover {
+background-color: darkgreen;
+}
+
+.comment {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+.comment strong {
+    color: green;
+}
+
+.comment p {
+    margin: 5px 0;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: #b2f2bb; /* Verde claro */
+    padding: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.navbar .nav-link {
+    margin: 0 15px;
+    color: green;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.navbar .nav-link:hover {
+    color: darkgreen;
+}
+
+
+
+.navbar-brand {
+    display: flex;
+    align-items: center; /* Alinha verticalmente o ícone e o texto */
+}
+
+.navbar-brand i {
+    margin-right: 5px; /* Espaço entre o ícone e o texto */
+}
