@@ -1,6 +1,17 @@
 from django.shortcuts import render, redirect
 from .models import USUARIO, RECLAMACOE, CATEGORIA,IDEIA # importa o mapeamento do banco de dados do arquivo models.py
 from django.contrib import messages
+import logging
+import numpy as np
+import tensorflow as tf  # Este import pode ser retirado caso nao esteja em uso
+import os
+from django.shortcuts import render
+from django.http import JsonResponse
+from django.views.decorators.csrf import csrf_exempt
+from django.core.files.storage import default_storage
+from .models import ImageHistory  
+from PIL import Image 
+from tensorflow.lite.python.interpreter import Interpreter 
 
 # Create your views here.
 
@@ -90,17 +101,7 @@ def ideias(request):
 
 # FUNÇÕES DA IA -------------------------------------------------------------------------------------------------------------------------------
 
-import logging
-import numpy as np
-import tensorflow as tf  # Este import pode ser retirado caso nao esteja em uso
-import os
-from django.shortcuts import render
-from django.http import JsonResponse
-from django.views.decorators.csrf import csrf_exempt
-from django.core.files.storage import default_storage
-from .models import ImageHistory  
-from PIL import Image 
-from tensorflow.lite.python.interpreter import Interpreter 
+
 
 # View para exibir o HTML na página principal
 def scan(request):

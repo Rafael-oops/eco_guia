@@ -35,6 +35,7 @@ MEDIA_URL = '/media/'
 ALLOWED_HOSTS = ['*']
 
 CSRF_TRUSTED_ORIGINS = [
+    'https://788c-2804-8ee0-ff01-85f0-d7f-7041-35cd-e669.ngrok-free.app',
     'https://8be0-177-104-245-40.ngrok-free.app',
     'https://afb4-200-217-187-115.ngrok-free.app/predict/',
     'http://127.0.0.1:8000/scan/',
@@ -54,7 +55,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'app_eco_guia', # app adicionado para usar a pasta app_eco_guia
     'rest_framework',
-    'pwa',
+    'pwa', # app adicionado para usar pwa e deixar instalável
 ]
 
 MIDDLEWARE = [
@@ -125,7 +126,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'pt-br'
 
 TIME_ZONE = 'UTC'
 
