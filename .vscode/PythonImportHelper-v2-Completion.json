@@ -825,7 +825,7 @@
         "kind": 5,
         "importPath": "projeto_eco_guia.settings",
         "description": "projeto_eco_guia.settings",
-        "peekOfCode": "SECRET_KEY = 'django-insecure-i35fy@ui_c1mny6b_!5d_d68l(k3tuu%9_8u0rfl9nl$7%m=)h'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\n# Diretório onde os arquivos de mídia serão armazenados\nMEDIA_ROOT = os.path.join(BASE_DIR, 'history_images')\n# URL que será usada para acessar os arquivos de mídia\nMEDIA_URL = '/media/'\nALLOWED_HOSTS = ['*']\nCSRF_TRUSTED_ORIGINS = [\n    'https://4997-177-104-245-40.ngrok-free.app',",
+        "peekOfCode": "SECRET_KEY = 'django-insecure-i35fy@ui_c1mny6b_!5d_d68l(k3tuu%9_8u0rfl9nl$7%m=)h'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\n# Diretório onde os arquivos de mídia serão armazenados\nMEDIA_ROOT = os.path.join(BASE_DIR, 'history_images')\n# URL que será usada para acessar os arquivos de mídia\nMEDIA_URL = '/media/'\nALLOWED_HOSTS = ['*']\nCSRF_TRUSTED_ORIGINS = [\n    'https://914b-2804-8ee0-ff01-85f0-8581-b37c-9225-76e3.ngrok-free.app',",
         "detail": "projeto_eco_guia.settings",
         "documentation": {}
     },
@@ -834,7 +834,7 @@
         "kind": 5,
         "importPath": "projeto_eco_guia.settings",
         "description": "projeto_eco_guia.settings",
-        "peekOfCode": "DEBUG = True\n# Diretório onde os arquivos de mídia serão armazenados\nMEDIA_ROOT = os.path.join(BASE_DIR, 'history_images')\n# URL que será usada para acessar os arquivos de mídia\nMEDIA_URL = '/media/'\nALLOWED_HOSTS = ['*']\nCSRF_TRUSTED_ORIGINS = [\n    'https://4997-177-104-245-40.ngrok-free.app',\n    'https://7d04-177-104-245-40.ngrok-free.app/predict/',\n    'http://127.0.0.1:8000/scan/',",
+        "peekOfCode": "DEBUG = True\n# Diretório onde os arquivos de mídia serão armazenados\nMEDIA_ROOT = os.path.join(BASE_DIR, 'history_images')\n# URL que será usada para acessar os arquivos de mídia\nMEDIA_URL = '/media/'\nALLOWED_HOSTS = ['*']\nCSRF_TRUSTED_ORIGINS = [\n    'https://914b-2804-8ee0-ff01-85f0-8581-b37c-9225-76e3.ngrok-free.app',\n    'https://8be0-177-104-245-40.ngrok-free.app',\n    'https://afb4-200-217-187-115.ngrok-free.app/predict/',",
         "detail": "projeto_eco_guia.settings",
         "documentation": {}
     },
@@ -843,7 +843,7 @@
         "kind": 5,
         "importPath": "projeto_eco_guia.settings",
         "description": "projeto_eco_guia.settings",
-        "peekOfCode": "MEDIA_ROOT = os.path.join(BASE_DIR, 'history_images')\n# URL que será usada para acessar os arquivos de mídia\nMEDIA_URL = '/media/'\nALLOWED_HOSTS = ['*']\nCSRF_TRUSTED_ORIGINS = [\n    'https://4997-177-104-245-40.ngrok-free.app',\n    'https://7d04-177-104-245-40.ngrok-free.app/predict/',\n    'http://127.0.0.1:8000/scan/',\n    'http://127.0.0.1:8000/',\n    'http://127.0.0.1:5500/',",
+        "peekOfCode": "MEDIA_ROOT = os.path.join(BASE_DIR, 'history_images')\n# URL que será usada para acessar os arquivos de mídia\nMEDIA_URL = '/media/'\nALLOWED_HOSTS = ['*']\nCSRF_TRUSTED_ORIGINS = [\n    'https://914b-2804-8ee0-ff01-85f0-8581-b37c-9225-76e3.ngrok-free.app',\n    'https://8be0-177-104-245-40.ngrok-free.app',\n    'https://afb4-200-217-187-115.ngrok-free.app/predict/',\n    # 'http://127.0.0.1:8000/scan/',\n    'http://127.0.0.1:8000/',",
         "detail": "projeto_eco_guia.settings",
         "documentation": {}
     },
@@ -852,7 +852,7 @@
         "kind": 5,
         "importPath": "projeto_eco_guia.settings",
         "description": "projeto_eco_guia.settings",
-        "peekOfCode": "MEDIA_URL = '/media/'\nALLOWED_HOSTS = ['*']\nCSRF_TRUSTED_ORIGINS = [\n    'https://4997-177-104-245-40.ngrok-free.app',\n    'https://7d04-177-104-245-40.ngrok-free.app/predict/',\n    'http://127.0.0.1:8000/scan/',\n    'http://127.0.0.1:8000/',\n    'http://127.0.0.1:5500/',\n]\n# Application definition",
+        "peekOfCode": "MEDIA_URL = '/media/'\nALLOWED_HOSTS = ['*']\nCSRF_TRUSTED_ORIGINS = [\n    'https://914b-2804-8ee0-ff01-85f0-8581-b37c-9225-76e3.ngrok-free.app',\n    'https://8be0-177-104-245-40.ngrok-free.app',\n    'https://afb4-200-217-187-115.ngrok-free.app/predict/',\n    # 'http://127.0.0.1:8000/scan/',\n    'http://127.0.0.1:8000/',\n    'http://127.0.0.1:5500/',\n]",
         "detail": "projeto_eco_guia.settings",
         "documentation": {}
     },
@@ -861,7 +861,7 @@
         "kind": 5,
         "importPath": "projeto_eco_guia.settings",
         "description": "projeto_eco_guia.settings",
-        "peekOfCode": "ALLOWED_HOSTS = ['*']\nCSRF_TRUSTED_ORIGINS = [\n    'https://4997-177-104-245-40.ngrok-free.app',\n    'https://7d04-177-104-245-40.ngrok-free.app/predict/',\n    'http://127.0.0.1:8000/scan/',\n    'http://127.0.0.1:8000/',\n    'http://127.0.0.1:5500/',\n]\n# Application definition\nINSTALLED_APPS = [",
+        "peekOfCode": "ALLOWED_HOSTS = ['*']\nCSRF_TRUSTED_ORIGINS = [\n    'https://914b-2804-8ee0-ff01-85f0-8581-b37c-9225-76e3.ngrok-free.app',\n    'https://8be0-177-104-245-40.ngrok-free.app',\n    'https://afb4-200-217-187-115.ngrok-free.app/predict/',\n    # 'http://127.0.0.1:8000/scan/',\n    'http://127.0.0.1:8000/',\n    'http://127.0.0.1:5500/',\n]\n# Application definition",
         "detail": "projeto_eco_guia.settings",
         "documentation": {}
     },
@@ -870,7 +870,7 @@
         "kind": 5,
         "importPath": "projeto_eco_guia.settings",
         "description": "projeto_eco_guia.settings",
-        "peekOfCode": "CSRF_TRUSTED_ORIGINS = [\n    'https://4997-177-104-245-40.ngrok-free.app',\n    'https://7d04-177-104-245-40.ngrok-free.app/predict/',\n    'http://127.0.0.1:8000/scan/',\n    'http://127.0.0.1:8000/',\n    'http://127.0.0.1:5500/',\n]\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',",
+        "peekOfCode": "CSRF_TRUSTED_ORIGINS = [\n    'https://914b-2804-8ee0-ff01-85f0-8581-b37c-9225-76e3.ngrok-free.app',\n    'https://8be0-177-104-245-40.ngrok-free.app',\n    'https://afb4-200-217-187-115.ngrok-free.app/predict/',\n    # 'http://127.0.0.1:8000/scan/',\n    'http://127.0.0.1:8000/',\n    'http://127.0.0.1:5500/',\n]\n# Application definition\nINSTALLED_APPS = [",
         "detail": "projeto_eco_guia.settings",
         "documentation": {}
     },
@@ -915,7 +915,7 @@
         "kind": 5,
         "importPath": "projeto_eco_guia.settings",
         "description": "projeto_eco_guia.settings",
-        "peekOfCode": "WSGI_APPLICATION = 'projeto_eco_guia.wsgi.application'\n# Database\n# https://docs.djangoproject.com/en/4.2/ref/settings/#databases\nDATABASES = { # Selecionando o banco de dados (nesse caso o mysql instalado nessa máquina)\n    'default': {\n        'ENGINE': 'django.db.backends.mysql',\n        'NAME': 'db_eco_guia',\n        'USER': 'root',\n        'PASSWORD': 'MySQL@R24',\n        'HOST': 'localhost',",
+        "peekOfCode": "WSGI_APPLICATION = 'projeto_eco_guia.wsgi.application'\n# Database\n# https://docs.djangoproject.com/en/4.2/ref/settings/#databases\n# DATABASES = { # Selecionando o banco de dados (nesse caso o mysql instalado nessa máquina)\n#     'default': {\n#         'ENGINE': 'django.db.backends.mysql',\n#         'NAME': 'db_eco_guia',\n#         'USER': 'rafael',\n#         'PASSWORD': 'MySQL24RM',\n#         'HOST': 'ecoguia.cnmg0kakaqo7.sa-east-1.rds.amazonaws.com',",
         "detail": "projeto_eco_guia.settings",
         "documentation": {}
     },
@@ -924,7 +924,7 @@
         "kind": 5,
         "importPath": "projeto_eco_guia.settings",
         "description": "projeto_eco_guia.settings",
-        "peekOfCode": "DATABASES = { # Selecionando o banco de dados (nesse caso o mysql instalado nessa máquina)\n    'default': {\n        'ENGINE': 'django.db.backends.mysql',\n        'NAME': 'db_eco_guia',\n        'USER': 'root',\n        'PASSWORD': 'MySQL@R24',\n        'HOST': 'localhost',\n        'PORT': '3306'\n    }\n}",
+        "peekOfCode": "DATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.mysql',\n        'NAME': os.environ.get('DB_NAME', 'db_eco_guia'),\n        'USER': os.environ.get('DB_USER', 'rafael'),\n        'PASSWORD': os.environ.get('DB_PASSWORD', 'MySQL24RM'),\n        'HOST': os.environ.get('DB_HOST', 'ecoguia.cnmg0kakaqo7.sa-east-1.rds.amazonaws.com'),\n        'PORT': os.environ.get('DB_PORT', '3306'),\n    }\n}",
         "detail": "projeto_eco_guia.settings",
         "documentation": {}
     },

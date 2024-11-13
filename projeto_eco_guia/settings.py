@@ -35,16 +35,10 @@ MEDIA_URL = '/media/'
 ALLOWED_HOSTS = ['*']
 
 CSRF_TRUSTED_ORIGINS = [
-<<<<<<< HEAD
-    'https://4997-177-104-245-40.ngrok-free.app',
-    'https://7d04-177-104-245-40.ngrok-free.app/predict/',
-    'http://127.0.0.1:8000/scan/',
-=======
     'https://914b-2804-8ee0-ff01-85f0-8581-b37c-9225-76e3.ngrok-free.app',
     'https://8be0-177-104-245-40.ngrok-free.app',
     'https://afb4-200-217-187-115.ngrok-free.app/predict/',
     # 'http://127.0.0.1:8000/scan/',
->>>>>>> 2952b52ad2475cb3f3f50dd562db500add2c2d7a
     'http://127.0.0.1:8000/',
     'http://127.0.0.1:5500/',
 ]
@@ -114,10 +108,10 @@ import os
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': os.environ.get('DB_NAME'),
-        'USER': os.environ.get('DB_USER'),
-        'PASSWORD': os.environ.get('DB_PASSWORD'),
-        'HOST': os.environ.get('DB_HOST'),
+        'NAME': os.environ.get('DB_NAME', 'db_eco_guia'),
+        'USER': os.environ.get('DB_USER', 'rafael'),
+        'PASSWORD': os.environ.get('DB_PASSWORD', 'MySQL24RM'),
+        'HOST': os.environ.get('DB_HOST', 'ecoguia.cnmg0kakaqo7.sa-east-1.rds.amazonaws.com'),
         'PORT': os.environ.get('DB_PORT', '3306'),
     }
 }
