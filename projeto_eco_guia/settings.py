@@ -35,9 +35,16 @@ MEDIA_URL = '/media/'
 ALLOWED_HOSTS = ['*']
 
 CSRF_TRUSTED_ORIGINS = [
+<<<<<<< HEAD
     'https://4997-177-104-245-40.ngrok-free.app',
     'https://7d04-177-104-245-40.ngrok-free.app/predict/',
     'http://127.0.0.1:8000/scan/',
+=======
+    'https://914b-2804-8ee0-ff01-85f0-8581-b37c-9225-76e3.ngrok-free.app',
+    'https://8be0-177-104-245-40.ngrok-free.app',
+    'https://afb4-200-217-187-115.ngrok-free.app/predict/',
+    # 'http://127.0.0.1:8000/scan/',
+>>>>>>> 2952b52ad2475cb3f3f50dd562db500add2c2d7a
     'http://127.0.0.1:8000/',
     'http://127.0.0.1:5500/',
 ]
