@@ -135,7 +135,7 @@ uploadForm.addEventListener("submit", async function (event) {
 
   try {
     let response = await fetch(
-      "https://8be0-177-104-245-40.ngrok-free.app/predict/",
+      "https://4997-177-104-245-40.ngrok-free.app/predict/",
       {
         method: "POST",
         headers: {

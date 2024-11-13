@@ -35,9 +35,8 @@ MEDIA_URL = '/media/'
 ALLOWED_HOSTS = ['*']
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://788c-2804-8ee0-ff01-85f0-d7f-7041-35cd-e669.ngrok-free.app',
-    'https://8be0-177-104-245-40.ngrok-free.app',
-    'https://afb4-200-217-187-115.ngrok-free.app/predict/',
+    'https://4997-177-104-245-40.ngrok-free.app',
+    'https://7d04-177-104-245-40.ngrok-free.app/predict/',
     'http://127.0.0.1:8000/scan/',
     'http://127.0.0.1:8000/',
     'http://127.0.0.1:5500/',
@@ -92,17 +91,29 @@ WSGI_APPLICATION = 'projeto_eco_guia.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES = { # Selecionando o banco de dados (nesse caso o mysql instalado nessa máquina)
+# DATABASES = { # Selecionando o banco de dados (nesse caso o mysql instalado nessa máquina)
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'db_eco_guia',
+#         'USER': 'rafael',
+#         'PASSWORD': 'MySQL24RM',
+#         'HOST': 'ecoguia.cnmg0kakaqo7.sa-east-1.rds.amazonaws.com',
+#         'PORT': '3306'
+#     }
+# }
+
+import os
+
+DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'db_eco_guia',
-        'USER': 'root',
-        'PASSWORD': 'MySQL@R24',
-        'HOST': 'localhost',
-        'PORT': '3306'
+        'NAME': os.environ.get('DB_NAME'),
+        'USER': os.environ.get('DB_USER'),
+        'PASSWORD': os.environ.get('DB_PASSWORD'),
+        'HOST': os.environ.get('DB_HOST'),
+        'PORT': os.environ.get('DB_PORT', '3306'),
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators

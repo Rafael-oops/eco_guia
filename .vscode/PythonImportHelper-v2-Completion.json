@@ -104,6 +104,22 @@
         "documentation": {}
     },
     {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
         "label": "models",
         "importPath": "django.db",
         "description": "django.db",
@@ -463,6 +479,15 @@
         "documentation": {}
     },
     {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "app_eco_guia.migrations.0008_marcadores_alter_imagehistory_image",
+        "description": "app_eco_guia.migrations.0008_marcadores_alter_imagehistory_image",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('app_eco_guia', '0007_ideia_resumo'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Marcadores',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('nome', models.CharField(max_length=255)),",
+        "detail": "app_eco_guia.migrations.0008_marcadores_alter_imagehistory_image",
+        "documentation": {}
+    },
+    {
         "label": "AppEcoGuiaConfig",
         "kind": 6,
         "importPath": "app_eco_guia.apps",
@@ -656,7 +681,7 @@
         "kind": 2,
         "importPath": "app_eco_guia.views",
         "description": "app_eco_guia.views",
-        "peekOfCode": "def ideias(request):\n    ideias = IDEIA.objects.all()\n    return render(request, 'ideias.html', {'ideias': ideias})\n# FUNÇÕES DA IA -------------------------------------------------------------------------------------------------------------------------------\nimport logging\nimport numpy as np\nimport tensorflow as tf  # Este import pode ser retirado caso nao esteja em uso\nimport os\nfrom django.shortcuts import render\nfrom django.http import JsonResponse",
+        "peekOfCode": "def ideias(request):\n    ideias = IDEIA.objects.all()\n    return render(request, 'ideias.html', {'ideias': ideias})\n# FUNÇÕES DA IA -------------------------------------------------------------------------------------------------------------------------------\n# View para exibir o HTML na página principal\ndef scan(request):\n    history = ImageHistory.objects.all().order_by(\"-last_classified\")\n    return render(request, \"scan.html\", {\"history\": history})\n# Configuração básica de logging\nlogging.basicConfig(level=logging.DEBUG)",
         "detail": "app_eco_guia.views",
         "documentation": {}
     },
@@ -800,7 +825,7 @@
         "kind": 5,
         "importPath": "projeto_eco_guia.settings",
         "description": "projeto_eco_guia.settings",
-        "peekOfCode": "SECRET_KEY = 'django-insecure-i35fy@ui_c1mny6b_!5d_d68l(k3tuu%9_8u0rfl9nl$7%m=)h'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\n# Diretório onde os arquivos de mídia serão armazenados\nMEDIA_ROOT = os.path.join(BASE_DIR, 'history_images')\n# URL que será usada para acessar os arquivos de mídia\nMEDIA_URL = '/media/'\nALLOWED_HOSTS = [\n    '8be0-177-104-245-40.ngrok-free.app',\n    '127.0.0.1',",
+        "peekOfCode": "SECRET_KEY = 'django-insecure-i35fy@ui_c1mny6b_!5d_d68l(k3tuu%9_8u0rfl9nl$7%m=)h'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\n# Diretório onde os arquivos de mídia serão armazenados\nMEDIA_ROOT = os.path.join(BASE_DIR, 'history_images')\n# URL que será usada para acessar os arquivos de mídia\nMEDIA_URL = '/media/'\nALLOWED_HOSTS = ['*']\nCSRF_TRUSTED_ORIGINS = [\n    'https://4997-177-104-245-40.ngrok-free.app',",
         "detail": "projeto_eco_guia.settings",
         "documentation": {}
     },
@@ -809,7 +834,7 @@
         "kind": 5,
         "importPath": "projeto_eco_guia.settings",
         "description": "projeto_eco_guia.settings",
-        "peekOfCode": "DEBUG = True\n# Diretório onde os arquivos de mídia serão armazenados\nMEDIA_ROOT = os.path.join(BASE_DIR, 'history_images')\n# URL que será usada para acessar os arquivos de mídia\nMEDIA_URL = '/media/'\nALLOWED_HOSTS = [\n    '8be0-177-104-245-40.ngrok-free.app',\n    '127.0.0.1',\n    '127.0.0.1:5500',\n    '127.0.0.1:8000',",
+        "peekOfCode": "DEBUG = True\n# Diretório onde os arquivos de mídia serão armazenados\nMEDIA_ROOT = os.path.join(BASE_DIR, 'history_images')\n# URL que será usada para acessar os arquivos de mídia\nMEDIA_URL = '/media/'\nALLOWED_HOSTS = ['*']\nCSRF_TRUSTED_ORIGINS = [\n    'https://4997-177-104-245-40.ngrok-free.app',\n    'https://7d04-177-104-245-40.ngrok-free.app/predict/',\n    'http://127.0.0.1:8000/scan/',",
         "detail": "projeto_eco_guia.settings",
         "documentation": {}
     },
@@ -818,7 +843,7 @@
         "kind": 5,
         "importPath": "projeto_eco_guia.settings",
         "description": "projeto_eco_guia.settings",
-        "peekOfCode": "MEDIA_ROOT = os.path.join(BASE_DIR, 'history_images')\n# URL que será usada para acessar os arquivos de mídia\nMEDIA_URL = '/media/'\nALLOWED_HOSTS = [\n    '8be0-177-104-245-40.ngrok-free.app',\n    '127.0.0.1',\n    '127.0.0.1:5500',\n    '127.0.0.1:8000',\n    ]\nCSRF_TRUSTED_ORIGINS = [",
+        "peekOfCode": "MEDIA_ROOT = os.path.join(BASE_DIR, 'history_images')\n# URL que será usada para acessar os arquivos de mídia\nMEDIA_URL = '/media/'\nALLOWED_HOSTS = ['*']\nCSRF_TRUSTED_ORIGINS = [\n    'https://4997-177-104-245-40.ngrok-free.app',\n    'https://7d04-177-104-245-40.ngrok-free.app/predict/',\n    'http://127.0.0.1:8000/scan/',\n    'http://127.0.0.1:8000/',\n    'http://127.0.0.1:5500/',",
         "detail": "projeto_eco_guia.settings",
         "documentation": {}
     },
@@ -827,7 +852,7 @@
         "kind": 5,
         "importPath": "projeto_eco_guia.settings",
         "description": "projeto_eco_guia.settings",
-        "peekOfCode": "MEDIA_URL = '/media/'\nALLOWED_HOSTS = [\n    '8be0-177-104-245-40.ngrok-free.app',\n    '127.0.0.1',\n    '127.0.0.1:5500',\n    '127.0.0.1:8000',\n    ]\nCSRF_TRUSTED_ORIGINS = [\n    'https://8be0-177-104-245-40.ngrok-free.app',\n    'https://afb4-200-217-187-115.ngrok-free.app/predict/',",
+        "peekOfCode": "MEDIA_URL = '/media/'\nALLOWED_HOSTS = ['*']\nCSRF_TRUSTED_ORIGINS = [\n    'https://4997-177-104-245-40.ngrok-free.app',\n    'https://7d04-177-104-245-40.ngrok-free.app/predict/',\n    'http://127.0.0.1:8000/scan/',\n    'http://127.0.0.1:8000/',\n    'http://127.0.0.1:5500/',\n]\n# Application definition",
         "detail": "projeto_eco_guia.settings",
         "documentation": {}
     },
@@ -836,7 +861,7 @@
         "kind": 5,
         "importPath": "projeto_eco_guia.settings",
         "description": "projeto_eco_guia.settings",
-        "peekOfCode": "ALLOWED_HOSTS = [\n    '8be0-177-104-245-40.ngrok-free.app',\n    '127.0.0.1',\n    '127.0.0.1:5500',\n    '127.0.0.1:8000',\n    ]\nCSRF_TRUSTED_ORIGINS = [\n    'https://8be0-177-104-245-40.ngrok-free.app',\n    'https://afb4-200-217-187-115.ngrok-free.app/predict/',\n    'http://127.0.0.1:8000/scan/',",
+        "peekOfCode": "ALLOWED_HOSTS = ['*']\nCSRF_TRUSTED_ORIGINS = [\n    'https://4997-177-104-245-40.ngrok-free.app',\n    'https://7d04-177-104-245-40.ngrok-free.app/predict/',\n    'http://127.0.0.1:8000/scan/',\n    'http://127.0.0.1:8000/',\n    'http://127.0.0.1:5500/',\n]\n# Application definition\nINSTALLED_APPS = [",
         "detail": "projeto_eco_guia.settings",
         "documentation": {}
     },
@@ -845,7 +870,7 @@
         "kind": 5,
         "importPath": "projeto_eco_guia.settings",
         "description": "projeto_eco_guia.settings",
-        "peekOfCode": "CSRF_TRUSTED_ORIGINS = [\n    'https://8be0-177-104-245-40.ngrok-free.app',\n    'https://afb4-200-217-187-115.ngrok-free.app/predict/',\n    'http://127.0.0.1:8000/scan/',\n    'http://127.0.0.1:8000/',\n    'http://127.0.0.1:5500/',\n]\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',",
+        "peekOfCode": "CSRF_TRUSTED_ORIGINS = [\n    'https://4997-177-104-245-40.ngrok-free.app',\n    'https://7d04-177-104-245-40.ngrok-free.app/predict/',\n    'http://127.0.0.1:8000/scan/',\n    'http://127.0.0.1:8000/',\n    'http://127.0.0.1:5500/',\n]\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',",
         "detail": "projeto_eco_guia.settings",
         "documentation": {}
     },
@@ -854,7 +879,7 @@
         "kind": 5,
         "importPath": "projeto_eco_guia.settings",
         "description": "projeto_eco_guia.settings",
-        "peekOfCode": "INSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'app_eco_guia', # app adicionado para usar a pasta app_eco_guia\n    'rest_framework',\n    'pwa',",
+        "peekOfCode": "INSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'app_eco_guia', # app adicionado para usar a pasta app_eco_guia\n    'rest_framework',\n    'pwa', # app adicionado para usar pwa e deixar instalável",
         "detail": "projeto_eco_guia.settings",
         "documentation": {}
     },
@@ -917,7 +942,7 @@
         "kind": 5,
         "importPath": "projeto_eco_guia.settings",
         "description": "projeto_eco_guia.settings",
-        "peekOfCode": "LANGUAGE_CODE = 'en-us'\nTIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.2/howto/static-files/\nSTATIC_URL = 'static/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "peekOfCode": "LANGUAGE_CODE = 'pt-br'\nTIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.2/howto/static-files/\nSTATIC_URL = 'static/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
         "detail": "projeto_eco_guia.settings",
         "documentation": {}
     },
