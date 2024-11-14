@@ -36,10 +36,9 @@ ALLOWED_HOSTS = ['eco-guia.onrender.com']
 
 CSRF_TRUSTED_ORIGINS = [
     'https://eco-guia.onrender.com',
-    'https://914b-2804-8ee0-ff01-85f0-8581-b37c-9225-76e3.ngrok-free.app',
-    'https://8be0-177-104-245-40.ngrok-free.app',
-    'https://afb4-200-217-187-115.ngrok-free.app/predict/',
-    # 'http://127.0.0.1:8000/scan/',
+    'https://eco-guia.onrender.com/predict/',
+    'http://127.0.0.1:8000/scan/',
+    'https://eco-guia.onrender.com/scan/',
     'http://127.0.0.1:8000/',
     'http://127.0.0.1:5500/',
 ]
