@@ -35,6 +35,7 @@ MEDIA_URL = '/media/'
 ALLOWED_HOSTS = ['*']
 
 CSRF_TRUSTED_ORIGINS = [
+    'https://eco-guia.onrender.com',
     'https://914b-2804-8ee0-ff01-85f0-8581-b37c-9225-76e3.ngrok-free.app',
     'https://8be0-177-104-245-40.ngrok-free.app',
     'https://afb4-200-217-187-115.ngrok-free.app/predict/',
