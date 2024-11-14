@@ -32,7 +32,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'history_images')
 MEDIA_URL = '/media/'
 
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['eco-guia.onrender.com']
 
 CSRF_TRUSTED_ORIGINS = [
     'https://eco-guia.onrender.com',
