@@ -135,7 +135,7 @@ uploadForm.addEventListener("submit", async function (event) {
 
   try {
     let response = await fetch(
-      "http://127.0.0.1:8000/predict/",
+      "https://e740-177-104-245-40.ngrok-free.app/predict/",
       {
         method: "POST",
         headers: {
