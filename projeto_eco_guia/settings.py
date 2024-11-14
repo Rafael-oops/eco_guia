@@ -16,7 +16,6 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
@@ -24,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-i35fy@ui_c1mny6b_!5d_d68l(k3tuu%9_8u0rfl9nl$7%m=)h'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 # Diretório onde os arquivos de mídia serão armazenados
 MEDIA_ROOT = os.path.join(BASE_DIR, 'history_images')
@@ -32,12 +31,13 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'history_images')
 MEDIA_URL = '/media/'
 
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['eco-guia.onrender.com']
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://e740-177-104-245-40.ngrok-free.app',
-    'https://e740-177-104-245-40.ngrok-free.app/predict/',
-    # 'http://127.0.0.1:8000/scan/',
+    'https://eco-guia.onrender.com',
+    'https://eco-guia.onrender.com/predict/',
+    'http://127.0.0.1:8000/scan/',
+    'https://eco-guia.onrender.com/scan/',
     'http://127.0.0.1:8000/',
     'http://127.0.0.1:5500/',
 ]
