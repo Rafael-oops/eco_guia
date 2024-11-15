@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-i35fy@ui_c1mny6b_!5d_d68l(k3tuu%9_8u0rfl9nl$7%m=)h'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 # Diretório onde os arquivos de mídia serão armazenados
 MEDIA_ROOT = os.path.join(BASE_DIR, 'history_images')
@@ -31,7 +31,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'history_images')
 MEDIA_URL = '/media/'
 
 
-ALLOWED_HOSTS = ['eco-guia.onrender.com']
+ALLOWED_HOSTS = ['eco-guia.onrender.com','127.0.0.1']
 
 CSRF_TRUSTED_ORIGINS = [
     'https://eco-guia.onrender.com',
@@ -102,7 +102,7 @@ WSGI_APPLICATION = 'projeto_eco_guia.wsgi.application'
 #     }
 # }
 
-import os
+
 
 DATABASES = {
     'default': {
@@ -150,6 +150,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
+
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
