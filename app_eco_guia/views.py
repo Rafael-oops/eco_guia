@@ -116,7 +116,11 @@ categories = ["cardboard", "glass", "metal", "paper", "plastic", "trash"]
 img_size = 256
 
 # Caminho para o modelo TFLite
-model_path = "app_eco_guia\model\model_trained_quantized.tflite"
+# model_path = "app_eco_guia\model\model_trained_quantized.tflite"
+import os
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+model_path = os.path.join(BASE_DIR, 'app_eco_guia', 'model', 'modelo_compativel.tflite')
+
 
 # Função para preparar a imagem antes da predição
 def prepare_image(image, target_size):

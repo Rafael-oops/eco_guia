@@ -690,7 +690,7 @@
         "kind": 2,
         "importPath": "app_eco_guia.views",
         "description": "app_eco_guia.views",
-        "peekOfCode": "def scan(request):\n    history = ImageHistory.objects.all().order_by(\"-last_classified\")\n    return render(request, \"scan.html\", {\"history\": history})\n# Configuração básica de logging\nlogging.basicConfig(level=logging.DEBUG)\n# Definição das categorias de resíduos e o tamanho padrão da imagem\ncategories = [\"cardboard\", \"glass\", \"metal\", \"paper\", \"plastic\", \"trash\"]\nimg_size = 256\n# Caminho para o modelo TFLite\nmodel_path = \"app_eco_guia\\model\\modelo_compativel.tflite\"",
+        "peekOfCode": "def scan(request):\n    history = ImageHistory.objects.all().order_by(\"-last_classified\")\n    return render(request, \"scan.html\", {\"history\": history})\n# Configuração básica de logging\nlogging.basicConfig(level=logging.DEBUG)\n# Definição das categorias de resíduos e o tamanho padrão da imagem\ncategories = [\"cardboard\", \"glass\", \"metal\", \"paper\", \"plastic\", \"trash\"]\nimg_size = 256\n# Caminho para o modelo TFLite\n# model_path = \"app_eco_guia\\model\\model_trained_quantized.tflite\"",
         "detail": "app_eco_guia.views",
         "documentation": {}
     },
@@ -762,7 +762,7 @@
         "kind": 5,
         "importPath": "app_eco_guia.views",
         "description": "app_eco_guia.views",
-        "peekOfCode": "categories = [\"cardboard\", \"glass\", \"metal\", \"paper\", \"plastic\", \"trash\"]\nimg_size = 256\n# Caminho para o modelo TFLite\nmodel_path = \"app_eco_guia\\model\\modelo_compativel.tflite\"\n# Função para preparar a imagem antes da predição\ndef prepare_image(image, target_size):\n    \"\"\"\n    Prepara a imagem redimensionando e normalizando os valores para o formato correto\n    que o modelo espera. O tamanho alvo deve ser consistente com o treinamento do modelo.\n    \"\"\"",
+        "peekOfCode": "categories = [\"cardboard\", \"glass\", \"metal\", \"paper\", \"plastic\", \"trash\"]\nimg_size = 256\n# Caminho para o modelo TFLite\n# model_path = \"app_eco_guia\\model\\model_trained_quantized.tflite\"\nimport os\nBASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))\nmodel_path = os.path.join(BASE_DIR, 'app_eco_guia', 'model', 'modelo_compativel.tflite')\n# Função para preparar a imagem antes da predição\ndef prepare_image(image, target_size):\n    \"\"\"",
         "detail": "app_eco_guia.views",
         "documentation": {}
     },
@@ -771,7 +771,16 @@
         "kind": 5,
         "importPath": "app_eco_guia.views",
         "description": "app_eco_guia.views",
-        "peekOfCode": "img_size = 256\n# Caminho para o modelo TFLite\nmodel_path = \"app_eco_guia\\model\\modelo_compativel.tflite\"\n# Função para preparar a imagem antes da predição\ndef prepare_image(image, target_size):\n    \"\"\"\n    Prepara a imagem redimensionando e normalizando os valores para o formato correto\n    que o modelo espera. O tamanho alvo deve ser consistente com o treinamento do modelo.\n    \"\"\"\n    logging.debug(f\"Preparing image with target size {target_size}\")",
+        "peekOfCode": "img_size = 256\n# Caminho para o modelo TFLite\n# model_path = \"app_eco_guia\\model\\model_trained_quantized.tflite\"\nimport os\nBASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))\nmodel_path = os.path.join(BASE_DIR, 'app_eco_guia', 'model', 'modelo_compativel.tflite')\n# Função para preparar a imagem antes da predição\ndef prepare_image(image, target_size):\n    \"\"\"\n    Prepara a imagem redimensionando e normalizando os valores para o formato correto",
+        "detail": "app_eco_guia.views",
+        "documentation": {}
+    },
+    {
+        "label": "BASE_DIR",
+        "kind": 5,
+        "importPath": "app_eco_guia.views",
+        "description": "app_eco_guia.views",
+        "peekOfCode": "BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))\nmodel_path = os.path.join(BASE_DIR, 'app_eco_guia', 'model', 'modelo_compativel.tflite')\n# Função para preparar a imagem antes da predição\ndef prepare_image(image, target_size):\n    \"\"\"\n    Prepara a imagem redimensionando e normalizando os valores para o formato correto\n    que o modelo espera. O tamanho alvo deve ser consistente com o treinamento do modelo.\n    \"\"\"\n    logging.debug(f\"Preparing image with target size {target_size}\")\n    # Verifica se a imagem não está no modo RGB, e converte se necessário",
         "detail": "app_eco_guia.views",
         "documentation": {}
     },
@@ -780,7 +789,7 @@
         "kind": 5,
         "importPath": "app_eco_guia.views",
         "description": "app_eco_guia.views",
-        "peekOfCode": "model_path = \"app_eco_guia\\model\\modelo_compativel.tflite\"\n# Função para preparar a imagem antes da predição\ndef prepare_image(image, target_size):\n    \"\"\"\n    Prepara a imagem redimensionando e normalizando os valores para o formato correto\n    que o modelo espera. O tamanho alvo deve ser consistente com o treinamento do modelo.\n    \"\"\"\n    logging.debug(f\"Preparing image with target size {target_size}\")\n    # Verifica se a imagem não está no modo RGB, e converte se necessário\n    if image.mode != \"RGB\":",
+        "peekOfCode": "model_path = os.path.join(BASE_DIR, 'app_eco_guia', 'model', 'modelo_compativel.tflite')\n# Função para preparar a imagem antes da predição\ndef prepare_image(image, target_size):\n    \"\"\"\n    Prepara a imagem redimensionando e normalizando os valores para o formato correto\n    que o modelo espera. O tamanho alvo deve ser consistente com o treinamento do modelo.\n    \"\"\"\n    logging.debug(f\"Preparing image with target size {target_size}\")\n    # Verifica se a imagem não está no modo RGB, e converte se necessário\n    if image.mode != \"RGB\":",
         "detail": "app_eco_guia.views",
         "documentation": {}
     },
@@ -825,7 +834,7 @@
         "kind": 5,
         "importPath": "projeto_eco_guia.settings",
         "description": "projeto_eco_guia.settings",
-        "peekOfCode": "SECRET_KEY = 'django-insecure-i35fy@ui_c1mny6b_!5d_d68l(k3tuu%9_8u0rfl9nl$7%m=)h'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\n# Diretório onde os arquivos de mídia serão armazenados\nMEDIA_ROOT = os.path.join(BASE_DIR, 'history_images')\n# URL que será usada para acessar os arquivos de mídia\nMEDIA_URL = '/media/'\nALLOWED_HOSTS = ['*']\nCSRF_TRUSTED_ORIGINS = [\n    'https://914b-2804-8ee0-ff01-85f0-8581-b37c-9225-76e3.ngrok-free.app',",
+        "peekOfCode": "SECRET_KEY = 'django-insecure-i35fy@ui_c1mny6b_!5d_d68l(k3tuu%9_8u0rfl9nl$7%m=)h'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\n# Diretório onde os arquivos de mídia serão armazenados\nMEDIA_ROOT = os.path.join(BASE_DIR, 'history_images')\n# URL que será usada para acessar os arquivos de mídia\nMEDIA_URL = '/media/'\nALLOWED_HOSTS = ['eco-guia.onrender.com','127.0.0.1']\nCSRF_TRUSTED_ORIGINS = [\n    'https://eco-guia.onrender.com',",
         "detail": "projeto_eco_guia.settings",
         "documentation": {}
     },
@@ -834,7 +843,7 @@
         "kind": 5,
         "importPath": "projeto_eco_guia.settings",
         "description": "projeto_eco_guia.settings",
-        "peekOfCode": "DEBUG = True\n# Diretório onde os arquivos de mídia serão armazenados\nMEDIA_ROOT = os.path.join(BASE_DIR, 'history_images')\n# URL que será usada para acessar os arquivos de mídia\nMEDIA_URL = '/media/'\nALLOWED_HOSTS = ['*']\nCSRF_TRUSTED_ORIGINS = [\n    'https://914b-2804-8ee0-ff01-85f0-8581-b37c-9225-76e3.ngrok-free.app',\n    'https://8be0-177-104-245-40.ngrok-free.app',\n    'https://afb4-200-217-187-115.ngrok-free.app/predict/',",
+        "peekOfCode": "DEBUG = True\n# Diretório onde os arquivos de mídia serão armazenados\nMEDIA_ROOT = os.path.join(BASE_DIR, 'history_images')\n# URL que será usada para acessar os arquivos de mídia\nMEDIA_URL = '/media/'\nALLOWED_HOSTS = ['eco-guia.onrender.com','127.0.0.1']\nCSRF_TRUSTED_ORIGINS = [\n    'https://eco-guia.onrender.com',\n    'https://eco-guia.onrender.com/predict/',\n    'http://127.0.0.1:8000/scan/',",
         "detail": "projeto_eco_guia.settings",
         "documentation": {}
     },
@@ -843,7 +852,7 @@
         "kind": 5,
         "importPath": "projeto_eco_guia.settings",
         "description": "projeto_eco_guia.settings",
-        "peekOfCode": "MEDIA_ROOT = os.path.join(BASE_DIR, 'history_images')\n# URL que será usada para acessar os arquivos de mídia\nMEDIA_URL = '/media/'\nALLOWED_HOSTS = ['*']\nCSRF_TRUSTED_ORIGINS = [\n    'https://914b-2804-8ee0-ff01-85f0-8581-b37c-9225-76e3.ngrok-free.app',\n    'https://8be0-177-104-245-40.ngrok-free.app',\n    'https://afb4-200-217-187-115.ngrok-free.app/predict/',\n    # 'http://127.0.0.1:8000/scan/',\n    'http://127.0.0.1:8000/',",
+        "peekOfCode": "MEDIA_ROOT = os.path.join(BASE_DIR, 'history_images')\n# URL que será usada para acessar os arquivos de mídia\nMEDIA_URL = '/media/'\nALLOWED_HOSTS = ['eco-guia.onrender.com','127.0.0.1']\nCSRF_TRUSTED_ORIGINS = [\n    'https://eco-guia.onrender.com',\n    'https://eco-guia.onrender.com/predict/',\n    'http://127.0.0.1:8000/scan/',\n    'https://eco-guia.onrender.com/scan/',\n    'http://127.0.0.1:8000/',",
         "detail": "projeto_eco_guia.settings",
         "documentation": {}
     },
@@ -852,7 +861,7 @@
         "kind": 5,
         "importPath": "projeto_eco_guia.settings",
         "description": "projeto_eco_guia.settings",
-        "peekOfCode": "MEDIA_URL = '/media/'\nALLOWED_HOSTS = ['*']\nCSRF_TRUSTED_ORIGINS = [\n    'https://914b-2804-8ee0-ff01-85f0-8581-b37c-9225-76e3.ngrok-free.app',\n    'https://8be0-177-104-245-40.ngrok-free.app',\n    'https://afb4-200-217-187-115.ngrok-free.app/predict/',\n    # 'http://127.0.0.1:8000/scan/',\n    'http://127.0.0.1:8000/',\n    'http://127.0.0.1:5500/',\n]",
+        "peekOfCode": "MEDIA_URL = '/media/'\nALLOWED_HOSTS = ['eco-guia.onrender.com','127.0.0.1']\nCSRF_TRUSTED_ORIGINS = [\n    'https://eco-guia.onrender.com',\n    'https://eco-guia.onrender.com/predict/',\n    'http://127.0.0.1:8000/scan/',\n    'https://eco-guia.onrender.com/scan/',\n    'http://127.0.0.1:8000/',\n    'http://127.0.0.1:5500/',\n]",
         "detail": "projeto_eco_guia.settings",
         "documentation": {}
     },
@@ -861,7 +870,7 @@
         "kind": 5,
         "importPath": "projeto_eco_guia.settings",
         "description": "projeto_eco_guia.settings",
-        "peekOfCode": "ALLOWED_HOSTS = ['*']\nCSRF_TRUSTED_ORIGINS = [\n    'https://914b-2804-8ee0-ff01-85f0-8581-b37c-9225-76e3.ngrok-free.app',\n    'https://8be0-177-104-245-40.ngrok-free.app',\n    'https://afb4-200-217-187-115.ngrok-free.app/predict/',\n    # 'http://127.0.0.1:8000/scan/',\n    'http://127.0.0.1:8000/',\n    'http://127.0.0.1:5500/',\n]\n# Application definition",
+        "peekOfCode": "ALLOWED_HOSTS = ['eco-guia.onrender.com','127.0.0.1']\nCSRF_TRUSTED_ORIGINS = [\n    'https://eco-guia.onrender.com',\n    'https://eco-guia.onrender.com/predict/',\n    'http://127.0.0.1:8000/scan/',\n    'https://eco-guia.onrender.com/scan/',\n    'http://127.0.0.1:8000/',\n    'http://127.0.0.1:5500/',\n]\n# Application definition",
         "detail": "projeto_eco_guia.settings",
         "documentation": {}
     },
@@ -870,7 +879,7 @@
         "kind": 5,
         "importPath": "projeto_eco_guia.settings",
         "description": "projeto_eco_guia.settings",
-        "peekOfCode": "CSRF_TRUSTED_ORIGINS = [\n    'https://914b-2804-8ee0-ff01-85f0-8581-b37c-9225-76e3.ngrok-free.app',\n    'https://8be0-177-104-245-40.ngrok-free.app',\n    'https://afb4-200-217-187-115.ngrok-free.app/predict/',\n    # 'http://127.0.0.1:8000/scan/',\n    'http://127.0.0.1:8000/',\n    'http://127.0.0.1:5500/',\n]\n# Application definition\nINSTALLED_APPS = [",
+        "peekOfCode": "CSRF_TRUSTED_ORIGINS = [\n    'https://eco-guia.onrender.com',\n    'https://eco-guia.onrender.com/predict/',\n    'http://127.0.0.1:8000/scan/',\n    'https://eco-guia.onrender.com/scan/',\n    'http://127.0.0.1:8000/',\n    'http://127.0.0.1:5500/',\n]\n# Application definition\nINSTALLED_APPS = [",
         "detail": "projeto_eco_guia.settings",
         "documentation": {}
     },
