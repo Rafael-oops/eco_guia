@@ -14,7 +14,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4 # Atualize para a versão mais recente
         with:
           repository: 'fenando-ff/eco_guia'
           token: ${{ secrets.GITHUB_TOKEN }}
