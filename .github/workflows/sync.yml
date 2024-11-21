@@ -17,7 +17,7 @@ jobs:
         uses: actions/checkout@v4 # Atualize para a versão mais recente
         with:
           repository: 'fenando-ff/eco_guia'
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
 
       - name: Sync with upstream
         run: |
