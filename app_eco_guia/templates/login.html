@@ -20,6 +20,14 @@
             <div class="img">
                 <img class="img-logo" src="{% static "img/logotipo2.png" %}" alt="logo" width="100">
             </div>
+            <!-- Exibe mensagens de erro -->
+            {% if messages %}
+            <ul>
+                {% for message in messages %}
+                <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
             <form id="cadastroForm" action="{% url "verificar_login" %}" method="POST">
                 {% csrf_token %}
                 <h1>Entre</h1>

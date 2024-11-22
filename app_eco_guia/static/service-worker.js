@@ -10,11 +10,13 @@ self.addEventListener('install', (event) => {
           '/static/css/scan.css',
           '/static/css/mapa.css',
           '/static/css/update.css',
+          '/static/css/vasos.css',
         //   js ------
           '/static/js/chat.js',
           '/static/js/home.js',
           '/static/js/scan.js',
           '/static/js/mapa.js',
+          '/static/js/vasos.js',
         //   img --------
           '/static/img/artesanato-com-garrafas-de-vidro-1-removebg-preview.png',
           '/static/img/avatar.png',

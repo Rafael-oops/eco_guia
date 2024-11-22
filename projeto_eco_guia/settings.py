@@ -95,9 +95,9 @@ WSGI_APPLICATION = 'projeto_eco_guia.wsgi.application'
 #     'default': {
 #         'ENGINE': 'django.db.backends.mysql',
 #         'NAME': 'db_eco_guia',
-#         'USER': 'rafael',
-#         'PASSWORD': 'MySQL24RM',
-#         'HOST': 'ecoguia.cnmg0kakaqo7.sa-east-1.rds.amazonaws.com',
+#         'USER': 'root',
+#         'PASSWORD': 'MySQL@R24',
+#         'HOST': 'localhost',
 #         'PORT': '3306'
 #     }
 # }

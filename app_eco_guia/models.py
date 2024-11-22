@@ -45,14 +45,15 @@ class IDEIA(models.Model):
 
 # Definição das categorias possíveis
 CATEGORIES = [
-    ("cardboard", "Cardboard"),
-    ("glass", "Glass"),
+    ("casca_de_ovo", "Casca de Ovo"),
+    ("lixo", "Lixo"),
     ("metal", "Metal"),
-    ("paper", "Paper"),
-    ("plastic", "Plastic"),
-    ("trash", "Trash"),
+    ("papel", "Papel"),
+    ("plastico", "Plastico"),
+    ("residuo_de_alimentos", "Residuo de Alimentos"),
+    ("vidro", "Vidro")
 ]
-
+#'casca_de_ovo', 'lixo', 'metal', 'papel', 'plastico', 'residuo_de_alimentos', 'vidro'
 # Modelo para armazenar o histórico de imagens classificadas
 class ImageHistory(models.Model):
     """

@@ -5,14 +5,13 @@ import logging
 import numpy as np
 import tensorflow as tf  # Este import pode ser retirado caso nao esteja em uso
 import os
-from django.shortcuts import render
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.core.files.storage import default_storage
 from .models import ImageHistory  
 from PIL import Image 
 from tensorflow.lite.python.interpreter import Interpreter 
-
+from django.contrib.auth.hashers import check_password
 # Create your views here.
 
 def home(request):
@@ -33,9 +32,11 @@ def salvar(request):
     if n_conf == n_senha:
         USUARIO.objects.create(nome = n_nome, email = n_email, username= n_username, senha = n_senha) # registra no banco de dados as informações inseridas no forms
         usuario = USUARIO.objects.all() # seleciona todos os registros da models.py(na tabela  Usuarios do banco de dados)
+        messages.success(request, 'Cadastro realizado com sucesso!')
         return render(request, 'login.html', {'usuarios': usuario}) # renderiza os dados salvos no cadastro.html
     else:
         messages.error(request, 'As senhas não conferem')
+        return render(request, 'cadastro.html')
 
 def pegarEmail(request,email):
     usuarios = USUARIO.objects.get(email = email) # pega o usuário pelo id dele no database para modificar somente o usuário selecionado e armazena na variável usuarios
@@ -52,11 +53,14 @@ def update(request):
             usuarios = USUARIO.objects.get(email = email) # pega o email do usuário para modificar somente o usuário selecionado e armazena na variável usuarios
             usuarios.senha = n_senha
             usuarios.save() # salva as mudanças
+            messages.success(request, 'Senha atualizada com sucesso!')
             return redirect(login)
         except USUARIO.DoesNotExist:
             messages.error(request, 'Email não encontrado')
+            return redirect('update')
     else:
         messages.error(request, 'As senha não conferem')
+        return redirect('update')
 
 def deletar(request,id):
     usuarios = USUARIO.objects.get(id = id)
@@ -69,15 +73,32 @@ def scan(request):
 def login(request):
     return render(request, 'login.html')
 
+from django.contrib import messages
+from django.shortcuts import render, redirect
+from django.contrib.auth.hashers import check_password
+from .models import USUARIO
+
 def verificar_login(request):
-    user = request.POST.get('user')
-    senha = request.POST.get('senha')
-    
-    try:
-        usuario = USUARIO.objects.get(username= user, senha= senha)
-        return render(request, 'index.html', {"conta": usuario})
-    except:
-        return render(request, 'erro.html')
+    if request.method == "POST":
+        user = request.POST.get('user')
+        senha = request.POST.get('senha')
+        
+        try:
+            # Busca o usuário pelo username
+            usuario = USUARIO.objects.get(username=user)
+            
+            # Verifica se a senha é igual à salva no banco
+            if senha == usuario.senha:
+                return render(request, 'index.html', {"conta": usuario})
+            else:
+                messages.error(request, 'Senha incorreta. Tente novamente.')
+                return redirect('login')
+        except USUARIO.DoesNotExist:
+            messages.error(request, 'Usuário não encontrado. Tente novamente.')
+            return redirect('login')
+    else:
+        return redirect('login')
+
     
 def fale_conosco(request, id):
     usuario = USUARIO.objects.get(id=id)
@@ -98,6 +119,16 @@ def ideias(request):
     ideias = IDEIA.objects.all()
     return render(request, 'ideias.html', {'ideias': ideias})
 
+# VASOS -----------------------------------
+
+def vasos (request):
+    return render (request, 'vasos.html')
+
+# PORTA_RETRATO -----------------------------------
+
+def porta_retrato (request):
+    return render(request, 'porta_retrato.html')
+
 # FUNÇÕES DA IA -------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -111,8 +142,8 @@ def scan(request):
 logging.basicConfig(level=logging.DEBUG)
 
 # Definição das categorias de resíduos e o tamanho padrão da imagem
-categories = ["cardboard", "glass", "metal", "paper", "plastic", "trash"]
-img_size = 256
+categories = ['casca_de_ovo', 'lixo', 'metal', 'papel', 'plastico', 'residuo_de_alimentos', 'vidro']
+img_size = 224
 
 # Caminho para o modelo TFLite
 # model_path = "app_eco_guia\model\model_trained_quantized.tflite"
