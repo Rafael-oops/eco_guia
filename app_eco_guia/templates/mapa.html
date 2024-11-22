@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     {% load static %}
     <title>Pontos de Coleta de Lixo Reciclável</title>
 
@@ -38,15 +39,36 @@
   <body>
     <!-- Cabeçalho e Navegação -->
     <header>
-      <div class="container">
-        <h1 class="site-title">Pontos de Coleta de Lixo Reciclável</h1>
-        <nav class="navbar">
-          <ul>
-            <li><a href="#instrucoes">Instruções</a></li>
-            <li><a href="#footer">Contato</a></li>
-          </ul>
-        </nav>
-      </div>
+      <nav class="menu-header nav">
+        <div class="logo">
+          <img
+            class="img-logo"
+            src="{% static 'img/logotipo.png' %}"
+            alt="logo_EcoGuia"
+          />
+        </div>
+
+        <ul class="nav-links">
+          <li class="icones"><a class="item-link" href="{% url 'home'%}">Home</a></li>
+          <li class="icones">
+            {% if conta %}
+                <a class="item-link" href="{% url 'fale_conosco' conta.id %}">Fale Conosco</a>
+            {% else %}
+                <a class="item-link" href="#">Fale Conosco</a> <!-- Link inativo ou alternativo -->
+            {% endif %}
+          </li>    
+          <li class="icones"><a class="item-link" href="#">Configurações</a></li>
+          <li class="icones"><a class='item-link' href="#instrucoes">Instruções</a></li>
+          <li class="icones"><a class='item-link' href="#footer">Contato</a></li>
+        </ul>
+
+        <!-- Menu hambuguer -->
+        <div class="burger">
+          <div class="linha1"></div>
+          <div class="linha2"></div>
+          <div class="linha3"></div>
+        </div>
+      </nav>
     </header>
 
     <main>
@@ -118,5 +140,6 @@
     <script id="pontos_data" type="application/json">
       {{ pontos|safe }}
     </script>
+    <script src="{% static 'js/home.js' %}"></script>
   </body>
 </html>

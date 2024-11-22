@@ -27,9 +27,15 @@
 
         <ul class="nav-links">
           <li class="icones">
-            <a class="item-link" href="mapa">Ecopontos de coleta</a>
+            <a class="item-link" href="{% url "mapa"%}">Ecopontos de coleta</a>
           </li>
-          <li class="icones"><a class="item-link" href="{% url "fale_conosco" conta.id %}">Fale Conosco</a></li>
+          <li class="icones">
+            {% if conta %}
+                <a class="item-link" href="{% url 'fale_conosco' conta.id %}">Fale Conosco</a>
+            {% else %}
+                <a class="item-link" href="#">Fale Conosco</a> <!-- Link inativo ou alternativo -->
+            {% endif %}
+          </li>
           <li class="icones">
             <a class="item-link" href="#">Configurações</a>
           </li>

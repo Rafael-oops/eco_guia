@@ -15,7 +15,6 @@ from tensorflow.lite.python.interpreter import Interpreter
 
 # Create your views here.
 
- 
 def home(request):
     return render(request, 'index.html')
 
@@ -82,7 +81,7 @@ def verificar_login(request):
     
 def fale_conosco(request, id):
     usuario = USUARIO.objects.get(id=id)
-    return render(request, 'reclame.html', {'user': usuario})
+    return render(request, 'reclame.html',{'user': usuario})
 
 def salvar_reclamacao(request,id):
     id_user = USUARIO.objects.get(id=id)
@@ -90,7 +89,7 @@ def salvar_reclamacao(request,id):
     remail = request.POST.get("email")
     mensagem = request.POST.get("mensagem")
     RECLAMACOE.objects.create(id_usuario = id_user, rnome = rnome, remail = remail, mensagem= mensagem)
-    return render(request, 'index.html', {'conta': id_user}) 
+    return render(request, 'index.html',{'conta': id_user}) 
 
 
 # IDEIAS DE RECICLAGEM -----------------------------------
@@ -298,4 +297,15 @@ def mapa_view(request):
     # Garantir que os dados estejam em formato JSON com aspas duplas
     pontos_json = json.dumps(pontos_data)
 
-    return render(request, "mapa.html", {"pontos": pontos_json})
+    # Integração das funções fale_conosco e salvar_reclamacao
+    id = request.GET.get("id")  # Obtém o ID do usuário da query string, se disponível
+    if id:
+        usuario = get_object_or_404(USUARIO, id=id)
+        if request.method == "POST":
+            # Chama a função salvar_reclamacao se for uma requisição POST
+            salvar_reclamacao(request, id)
+        else:
+            # Chama a função fale_conosco se for uma requisição GET
+            fale_conosco(request, id)
+    
+    return render(request, "mapa.html", {"pontos": pontos_json},)

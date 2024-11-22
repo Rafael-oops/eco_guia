@@ -663,7 +663,7 @@
         "kind": 2,
         "importPath": "app_eco_guia.views",
         "description": "app_eco_guia.views",
-        "peekOfCode": "def fale_conosco(request, id):\n    usuario = USUARIO.objects.get(id=id)\n    return render(request, 'reclame.html', {'user': usuario})\ndef salvar_reclamacao(request,id):\n    id_user = USUARIO.objects.get(id=id)\n    rnome = request.POST.get(\"nome\")\n    remail = request.POST.get(\"email\")\n    mensagem = request.POST.get(\"mensagem\")\n    RECLAMACOE.objects.create(id_usuario = id_user, rnome = rnome, remail = remail, mensagem= mensagem)\n    return render(request, 'index.html', {'conta': id_user}) ",
+        "peekOfCode": "def fale_conosco(request, id):\n    usuario = USUARIO.objects.get(id=id)\n    return render(request, 'reclame.html',{'user': usuario})\ndef salvar_reclamacao(request,id):\n    id_user = USUARIO.objects.get(id=id)\n    rnome = request.POST.get(\"nome\")\n    remail = request.POST.get(\"email\")\n    mensagem = request.POST.get(\"mensagem\")\n    RECLAMACOE.objects.create(id_usuario = id_user, rnome = rnome, remail = remail, mensagem= mensagem)\n    return render(request, 'index.html',{'conta': id_user}) ",
         "detail": "app_eco_guia.views",
         "documentation": {}
     },
@@ -672,7 +672,7 @@
         "kind": 2,
         "importPath": "app_eco_guia.views",
         "description": "app_eco_guia.views",
-        "peekOfCode": "def salvar_reclamacao(request,id):\n    id_user = USUARIO.objects.get(id=id)\n    rnome = request.POST.get(\"nome\")\n    remail = request.POST.get(\"email\")\n    mensagem = request.POST.get(\"mensagem\")\n    RECLAMACOE.objects.create(id_usuario = id_user, rnome = rnome, remail = remail, mensagem= mensagem)\n    return render(request, 'index.html', {'conta': id_user}) \n# IDEIAS DE RECICLAGEM -----------------------------------\ndef ideias(request):\n    ideias = IDEIA.objects.all()",
+        "peekOfCode": "def salvar_reclamacao(request,id):\n    id_user = USUARIO.objects.get(id=id)\n    rnome = request.POST.get(\"nome\")\n    remail = request.POST.get(\"email\")\n    mensagem = request.POST.get(\"mensagem\")\n    RECLAMACOE.objects.create(id_usuario = id_user, rnome = rnome, remail = remail, mensagem= mensagem)\n    return render(request, 'index.html',{'conta': id_user}) \n# IDEIAS DE RECICLAGEM -----------------------------------\ndef ideias(request):\n    ideias = IDEIA.objects.all()",
         "detail": "app_eco_guia.views",
         "documentation": {}
     },
