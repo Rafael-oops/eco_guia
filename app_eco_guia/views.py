@@ -112,7 +112,7 @@ logging.basicConfig(level=logging.DEBUG)
 
 # Definição das categorias de resíduos e o tamanho padrão da imagem
 categories = ["cardboard", "glass", "metal", "paper", "plastic", "trash"]
-img_size = 256
+img_size = 224
 
 # Caminho para o modelo TFLite
 # model_path = "app_eco_guia\model\model_trained_quantized.tflite"
