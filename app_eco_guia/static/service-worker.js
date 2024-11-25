@@ -28,8 +28,8 @@ self.addEventListener('install', (event) => {
           '/static/img/lixoazul-removebg-preview.png',
           '/static/img/lixoverde-removebg-preview.png',
           '/static/img/lixovermelho-removebg-preview.png',
-          '/static/img/logotipo.png',
-          '/static/img/logotipo2.png',
+          '/static/img/logo_definitiva-rbg.png',
+          '/static/img/logo_definitiva_192-rbg.png',
           '/static/img/portavidro.png',
         //   json ---------
           '/static/dialogos.json',

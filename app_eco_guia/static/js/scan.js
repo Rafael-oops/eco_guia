@@ -9,24 +9,27 @@ const uploadForm = document.getElementById("upload-form");
 let stream = null;
 let currentFacingMode = "environment";
 
-async function openCamera() {
+async function openCamera(fullscreen = true) {
   const constraints = {
     video: {
       facingMode: { ideal: currentFacingMode },
-      width: { ideal: window.innerWidth }, // Adapta ao tamanho da tela
-      height: { ideal: window.innerHeight }, // Adapta ao tamanho da tela
+      width: { ideal: fullscreen ? window.innerWidth : window.innerWidth / 2 },
+      height: {
+        ideal: fullscreen ? window.innerHeight : window.innerHeight / 2,
+      },
     },
   };
 
   try {
+    // Solicitar acesso à câmera
     stream = await navigator.mediaDevices.getUserMedia(constraints);
     video.srcObject = stream;
     cameraContainer.style.display = "block";
 
-    // Ajustar o vídeo ao tamanho do dispositivo
+    // Ajustar o vídeo ao tamanho desejado
     video.onloadedmetadata = function () {
-      video.style.width = "100%"; // Ajusta para ocupar a largura do contêiner
-      video.style.height = "auto"; // Mantém proporção correta
+      video.style.width = fullscreen ? "100%" : "auto";
+      video.style.height = fullscreen ? "100%" : "auto";
     };
   } catch (error) {
     console.error("Erro ao acessar a câmera:", error);
@@ -34,7 +37,9 @@ async function openCamera() {
   }
 }
 
-openCameraButton.addEventListener("click", openCamera);
+openCameraButton.addEventListener("click", function () {
+  openCamera(true); // Abrir em tela cheia inicialmente
+});
 
 switchCameraButton.addEventListener("click", async function () {
   if (stream) {
@@ -62,7 +67,7 @@ captureButton.addEventListener("click", function () {
       type: "image/png",
     });
 
-    // Colocar o arquivo capturado no input file (para ser enviado para a API)
+    // Colocar o arquivo capturado no input file
     const dataTransfer = new DataTransfer();
     dataTransfer.items.add(file);
     fileInput.files = dataTransfer.files;
@@ -72,9 +77,17 @@ captureButton.addEventListener("click", function () {
       "captured_image.png";
   }, "image/png");
 
-  // Fechar a câmera
-  stream.getTracks().forEach((track) => track.stop());
-  cameraContainer.style.display = "none"; // Esconder a visualização da câmera
+  // Ajustar a câmera para tamanho reduzido
+  video.style.width = "auto";
+  video.style.height = "auto";
+
+  // Fechar a câmera após captura
+  setTimeout(() => {
+    if (stream) {
+      stream.getTracks().forEach((track) => track.stop());
+    }
+    cameraContainer.style.display = "none"; // Esconder a visualização da câmera
+  }, 2000); // Tempo para usuário visualizar a foto antes de sair
 });
 
 // Listener para quando o arquivo é selecionado no input
@@ -136,6 +149,7 @@ uploadForm.addEventListener("submit", async function (event) {
   try {
     let response = await fetch(
       "https://eco-guia.onrender.com/predict/",
+      // "https://7843-177-104-245-40.ngrok-free.app/predict/",
       {
         method: "POST",
         headers: {
@@ -180,9 +194,9 @@ function getCookie(name) {
 }
 
 // Ajustar a câmera quando a janela ou orientação muda
-window.addEventListener("resize", function () {
-  if (stream) {
-    stream.getTracks().forEach((track) => track.stop()); // Para a câmera anterior
-  }
-  openCamera(); // Reabre a câmera com a nova resolução
-});
+// window.addEventListener("resize", function () {
+//   if (stream) {
+//     stream.getTracks().forEach((track) => track.stop()); // Para a câmera anterior
+//   }
+//   openCamera(); // Reabre a câmera com a nova resolução
+// });

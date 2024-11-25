@@ -43,7 +43,7 @@
         <div class="logo">
           <img
             class="img-logo"
-            src="{% static 'img/logotipo.png' %}"
+            src="{% static 'img/logo_definitiva-rbg.png' %}"
             alt="logo_EcoGuia"
           />
         </div>
@@ -72,13 +72,69 @@
     </header>
 
     <main>
+      <div id="route-popup" class="hidden">
+        <div class="popup-content">
+          <h3>Informações da Rota</h3>
+          <p id="route-details"></p>
+          <button id="close-popup">Fechar</button>
+        </div>
+      </div>
+      
+      <div class="map-wrapper">
+        <!-- Informações Detalhadas -->
+        <aside id="info-detalhada" class="info-detalhada">
+          <h2>Informações dos Pontos</h2>
+          <div id="detalhes-ponto" class="detalhes-ponto">
+            <p>Selecione um para ver mais detalhes.</p>
+          </div>
+          <div class="container-pontos">
+            <div class="pontos" alt="ponto-1">
+              <div class="img-container">
+                <img class="img-ponto" src="{% static 'img/logo_definitiva-rbg.png' %}" alt="Imagem do Ecoponto 1">
+              </div>
+              <div class="descricao">
+                Ponto 1 reservado para coleta e muito mais. Este é um local destinado a coleta seletiva de resíduos recicláveis.
+              </div>
+            </div>
+            <div class="pontos" alt="ponto-2">
+              <div class="img-container">
+                <img class="img-ponto" src="{% static 'img/logo_definitiva-rbg.png' %}" alt="Imagem do Ecoponto 2">
+              </div>
+              <div class="descricao">
+                Ponto 2 reservado para coleta e muito mais. Este é um local destinado a coleta seletiva de resíduos recicláveis.
+              </div>
+            </div>
+            <div class="pontos" alt="ponto-3">
+              <div class="img-container">
+                <img class="img-ponto" src="{% static 'img/logo_definitiva-rbg.png' %}" alt="Imagem do Ecoponto 3">
+              </div>
+              <div class="descricao">
+                Ponto 3 reservado para coleta e muito mais. Este é um local destinado a coleta seletiva de resíduos recicláveis.
+              </div>
+            </div>
+            <div class="pontos" alt="ponto-4">
+              <div class="img-container">
+                <img class="img-ponto" src="{% static 'img/logo_definitiva-rbg.png' %}" alt="Imagem do Ecoponto 4">
+              </div>
+              <div class="descricao">
+                Ponto 4 reservado para coleta e muito mais. Este é um local destinado a coleta seletiva de resíduos recicláveis.
+              </div>
+            </div>
+          </div>
+        </aside>
+        <!-- Mapa Interativo -->
+        <section id="map-container">
+          <div id="map"></div>
+        </section>
+      </div>
+    
       <!-- Instruções -->
       <section id="instrucoes" class="section-instructions">
         <h2>Como Utilizar</h2>
         <p>
-          Selecione um ponto de coleta no mapa abaixo para visualizar
-          informações detalhadas. Escolha o modo de transporte e calcule a rota
-          para chegar ao ponto de coleta.
+          Selecione um ponto de coleta no mapa para visualizar informações
+          detalhadas. Escolha o modo de transporte e calcule a rota para chegar ao
+          ponto de coleta.
         </p>
         <select id="travelMode" class="travel-mode-select">
           <option value="DRIVING">Carro</option>
@@ -87,12 +143,8 @@
           <option value="WALKING">A Pé</option>
         </select>
       </section>
-
-      <!-- Mapa Interativo -->
-      <section id="map-container">
-        <div id="map"></div>
-      </section>
     </main>
+    
 
     <!-- Informações sobre horários de coleta -->
     <section class="coleta-horarios">

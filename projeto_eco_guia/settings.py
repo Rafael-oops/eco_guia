@@ -31,9 +31,12 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'history_images')
 MEDIA_URL = '/media/'
 
 
-ALLOWED_HOSTS = ['eco-guia.onrender.com','127.0.0.1']
+ALLOWED_HOSTS = ['eco-guia.onrender.com','127.0.0.1','7843-177-104-245-40.ngrok-free.app']
 
 CSRF_TRUSTED_ORIGINS = [
+    'https://7843-177-104-245-40.ngrok-free.app',
+    'https://7843-177-104-245-40.ngrok-free.app/predict/',
+    'https://7843-177-104-245-40.ngrok-free.app/verificar_login',
     'https://eco-guia.onrender.com',
     'https://eco-guia.onrender.com/predict/',
     'http://127.0.0.1:8000/scan/',

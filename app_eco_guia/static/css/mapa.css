@@ -1,257 +1,193 @@
-/* Menu de cabeçalho */
-.menu-header {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  font-family: "Poppins", sans-serif;
-  width: 100%; /* Exibe o menu de forma centralizada */
-}
-
-/* Links de navegação */
-.nav-links {
-  display: flex;
-  justify-content: center; /* Centraliza os links */
-}
-
-.nav-links .item-link {
-  color: #1b7340; /* Cor do texto dos links */
-  text-decoration: none;
-  letter-spacing: 3px;
-  font-weight: bold;
-  font-size: 14px;
-}
-
-/* Ícones e outros itens do cabeçalho */
-.icones {
-  list-style: none;
-  margin: 0 10px;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  padding-top: 10px; /* Alinha os ícones no centro */
-}
-
-.icon-menu { width: 20px; } /* Define o tamanho dos ícones */
-.bandeira { width: 20%; } /* Define o tamanho da bandeira */
-.logo {
-  color: white;
-  text-transform: uppercase;
-  letter-spacing: 5px;
-  font-size: 20px;
-}
-.img-logo { width: 30%; } /* Tamanho da imagem do logotipo */
-
-/* Ícone de menu "burger" */
-.burger {
-  display: none; /* Inicialmente oculto */
-  cursor: pointer;
-}
-
-.burger .linha1, .linha2, .linha3 {
-  width: 25px;
-  height: 3px;
-  background-color: #1b7340;
-  margin: 5px;
-  transition: all 0.3s ease; /* Transição suave ao abrir o menu */
-}
-
-/* Responsividade para telas menores */
-@media screen and (max-width: 1024px) {
-  .nav-links { width: 60%; } /* Ajusta a largura dos links de navegação */
-}
-
-@media screen and (max-width: 768px) {
-  .body-home { overflow-x: hidden; } /* Evita rolagem horizontal */
-  .nav-links {
-    position: fixed;
-    right: 0px;
-    height: 92vh;
-    top: 5vh;
-    background-color: #ffffff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 50%;
-    height: 100%;
-    transform: translateX(100%);
-    transition: transform 0.3s ease-in; /* Transição suave ao abrir */
-    border-radius: 10px;
-  }
-
-  .nav-links .icones {
-    /*opacity: 0;*/
-    margin: 20px 0;
-    justify-content: space-between; /* Organiza os ícones */
-  }
-
-  .burger { display: block; } /* Exibe o menu burger */
-}
-
-.nav-active { transform: translateX(0%); } /* Ativa o menu lateral */
-
-/* Animação de fade dos links */
-@keyframes navLinkFade {
-  from { opacity: 0; transform: translateX(50px); }
-  to { opacity: 1; transform: translateX(0px); }
-}
-
-/* Transformação do ícone burger ao abrir o menu */
-.toggle .linha1 { transform: rotate(-45deg) translate(-5px, 6px); }
-.toggle .linha2 { opacity: 0; }
-.toggle .linha3 { transform: rotate(45deg) translate(-5px, -6px); }
-
-
-/* ------------------------------------------ */
-/* Reset */
+/* Reset e Configurações Globais */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
+body {
+  background-color: #f0f8f5; /* Fundo claro com tema ambiental */
+  color: #333;
+  line-height: 1.6;
+}
 
+/* Cabeçalho */
+.menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff; /* Verde sustentável */
+  color: #fff;
+  padding: 10px 20px;
+}
 
+.menu-header .logo .img-logo {
+  width: 120px; /* Tamanho do logotipo */
+}
 
-/* Instruções */
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links .item-link {
+  color: #1b7340;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-links .item-link:hover {
+  color: #cce7d8; /* Verde claro ao passar o mouse */
+}
+
+/* Estilo do botão burger */
+.burger {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #1b7340;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    width: 200px;
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .burger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px;
+    transition: all 0.3s ease;
+  }
+}
+
+/* Seção de Instruções */
 .section-instructions {
-  padding: 20px;
-  background-color: #f4f4f4;
+  background: linear-gradient(135deg, #eaf9f3, #f0f8f5); /* Gradiente leve */
   text-align: center;
+  padding: 8px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+.section-instructions h2 {
+  color: #1b7340;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.section-instructions p {
+  margin-bottom: 10px;
+  font-size: 16px;
 }
 
 .travel-mode-select {
-  margin-top: 10px;
-  padding: 8px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #1b7340;
   font-size: 16px;
-  border-radius: 4px;
-}
-
-/* Mapa */
-#map-container {
-  width: 100%;
-  height: 600px;
-  padding: 8px ;
-}
-
-#map {
-  width: 100%;
-  height: 100%;
-  min-height: 400px;
-}
-
-/* Estilo do conteúdo do InfoWindow */
-.info-window {
-  font-family: Arial, sans-serif;
+  background-color: #fff;
   color: #333;
-  max-width: 250px;
-  text-align: left;
+}
+
+/*-----------------------------------------------------------------------*/
+/* InfoWindow */
+.info-window {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
 }
 
 .info-window h3 {
   font-size: 18px;
-  margin-bottom: 8px;
-  color: #2a6a4f;
+  color: #1b7340;
 }
 
 .info-window p {
   font-size: 14px;
-  margin: 5px 0;
-}
-
-/* Centralizar o botão */
-.info-window .button-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 10px;
 }
 
 .info-window button {
-  padding: 8px 16px;
-  background-color: #2a6a4f;
-  color: #ffffff;
+  background-color: #1b7340;
+  color: #fff;
   border: none;
-  border-radius: 4px;
+  padding: 8px 16px;
+  border-radius: 5px;
   cursor: pointer;
-  font-size: 14px;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease;
 }
 
 .info-window button:hover {
-  background-color: #1e5039;
+  background-color: #145a2f;
 }
 
-/* Estilo para a seção de horários de coleta */
+.button-container {
+  text-align: center;
+}
+
+/* Seção de Horários de Coleta */
 .coleta-horarios {
-  margin: 20px 0;
-  padding: 20px;
-  background-color: #f0f4f1;
+  background-color: #ffffff;
+  border: 1px solid #dce7e2;
   border-radius: 8px;
-  color: #333;
-  max-width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
+  padding: 20px;
+  margin: 20px auto;
+  /* max-width: 1000px; */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .coleta-horarios h2 {
-  font-size: 24px;
-  color: #2a6a4f;
   text-align: center;
-  margin-bottom: 15px;
+  color: #1b7340;
+  font-size: 24px;
+  margin-bottom: 20px;
 }
 
-/* Flexbox layout para exibir os blocos lado a lado */
 .coleta-horarios-container {
   display: flex;
-  gap: 10px;
-  justify-content: space-between;
+  /* flex-wrap: wrap; */
+  gap: 20px;
 }
 
 .horario-bloco {
-  flex: 1;
-  padding: 10px;
-  border-right: 1px solid rgba(0, 0, 0, 0.2); /* Linha vertical opaca */
-}
-
-.horario-bloco:last-child {
-  border-right: none; /* Remove a borda do último bloco */
+  flex: 1 1 calc(50% - 20px); /* Dois blocos por linha */
+  background-color: #f8fefb;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .horario-bloco h3 {
-  font-size: 18px;
-  color: #2a6a4f;
-  margin-bottom: 8px;
+  color: #1b7340;
+  margin-bottom: 10px;
 }
 
 .horario-bloco p {
   font-size: 14px;
-  margin: 4px 0;
-  color: #333;
+  line-height: 1.4;
 }
-
-/* Responsividade para telas menores */
-@media (max-width: 800px) {
-  .coleta-horarios-container {
-      flex-direction: column;
-  }
-
-  .horario-bloco {
-      border-right: none;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.2); /* Linha horizontal em telas menores */
-      margin-bottom: 10px;
-  }
-
-  .horario-bloco:last-child {
-      border-bottom: none;
-  }
-}
-
 
 /* Rodapé */
 footer {
-  background-color: #2a6a4f;
-  color: #ffffff;
-  padding: 20px 0;
+  background-color: #1b7340;
+  color: #fff;
+  padding: 20px 10px;
   text-align: center;
 }
 
@@ -263,27 +199,211 @@ footer {
 }
 
 .footer-links li a {
-  color: #ffffff;
+  color: #cce7d8;
   text-decoration: none;
-  font-size: 14px;
 }
 
 .footer-links li a:hover {
+  color: #fff;
   text-decoration: underline;
 }
 
 /* Responsividade */
+@media (max-width: 800px) {
+  .coleta-horarios-container {
+    flex-direction: column;
+  }
+
+  .horario-bloco {
+    flex: 1 1 100%;
+  }
+}
+/*--------------------------------------------------------------------------------------------------*/
+/* Contêiner principal que contém o painel lateral e o mapa */
+
+#detalhes-ponto {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.map-wrapper {
+  display: flex; /* Ativa o Flexbox para organizar os elementos em linha */
+  height: 100vh; /* Garante que o contêiner ocupe toda a altura da tela */
+  width: 100%; /* Garante que o contêiner ocupe toda a largura da tela */
+}
+
+/* Painel lateral */
+#info-detalhada {
+  width: 30%; /* O painel ocupa 30% da largura */
+  height: 100%; /* Altura total da tela */
+  background-color: #f9f9f9;
+  border-right: 2px solid #ccc;
+  overflow-y: auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Título do painel */
+#info-detalhada h2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #333;
+  text-align: center;
+}
+
+/* Container dos pontos */
+.container-pontos {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Espaçamento entre os pontos */
+}
+
+/* Estilo para cada ponto */
+.pontos {
+  background-color: #fff; /* Fundo branco */
+  border-radius: 8px; /* Bordas arredondadas */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+  overflow: hidden; /* Garante que nada "escape" dos limites da div */
+  transition: transform 0.3s, box-shadow 0.3s; /* Animação ao passar o mouse */
+  flex-shrink: 0; /* Garante que os pontos não diminuam */
+}
+
+.pontos:hover {
+  transform: scale(1.03); /* Aumenta ligeiramente o tamanho */
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); /* Sombra mais intensa */
+}
+
+/* Contêiner da imagem */
+.img-container {
+  width: 100%;
+  height: 200px; /* Altura fixa para as imagens */
+  overflow: hidden; /* Impede que imagens muito grandes "escapem" */
+  background-color: #eee; /* Cor de fundo para imagens que não carregam */
+  position: relative;
+}
+
+.img-container img {
+  width: 100%; /* A imagem ocupa toda a largura da div */
+  height: 100%; /* A imagem ocupa toda a altura da div */
+  object-fit: cover; /* Mantém o aspecto proporcional, cortando se necessário */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Estilo para a descrição */
+.descricao {
+  padding: 10px;
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+  height: auto; /* Ajusta dinamicamente ao conteúdo */
+  max-height: 100px; /* Limita a altura da descrição */
+  overflow-y: auto; /* Permite rolagem caso o texto seja longo */
+}
+
+
+
+/* Mapa */
+#map-container {
+  flex: 1;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Mapa */
+#map {
+  flex-grow: 1; /* O mapa ocupa o espaço restante */
+  height: 100%; /* Altura total */
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .map-wrapper {
+    flex-direction: column; /* Painel lateral e mapa em pilha */
+  }
+
+  #info-detalhada {
+    width: 100%; /* Lateral ocupa toda a largura */
+    max-height: 40%; /* Altura limitada */
+  }
+}
+
 @media (max-width: 768px) {
-  .navbar ul {
-      flex-direction: column;
-      align-items: center;
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #1b7340;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    width: 200px;
+    padding: 10px;
+    border-radius: 8px;
   }
-  
-  #map-container {
-      height: 400px;
+
+  .nav-links.active {
+    display: flex;
   }
-  
-  .site-title {
-      font-size: 20px;
+
+  .burger {
+    display: block;
+    cursor: pointer;
   }
+
+  .burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px;
+    transition: all 0.3s ease;
+  }
+}
+
+.img-ponto {
+  width: 80px;
+  height: 80px;
+}
+
+/*---------------------------------------*/
+/* Estilos para o pop-up */
+#route-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+#route-popup.hidden {
+  display: none; /* Oculta o pop-up */
+}
+
+.popup-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+}
+
+#close-popup {
+  background-color: #069e6e;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
 }

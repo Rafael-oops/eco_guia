@@ -1,5 +1,5 @@
 function initMap() {
-  const mapId = "2879afcdd9c5ffa8"; // Substitua pelo seu mapId
+  const mapId = "2879afcdd9c5ffa8";
   map = new google.maps.Map(document.getElementById("map"), {
     zoom: 12,
     center: { lat: -1.450526, lng: -48.468272 },
@@ -27,13 +27,11 @@ function initMap() {
     });
 
     advancedMarkerElement.addListener("click", function () {
-      // Fecha o InfoWindow anterior, se estiver aberto
+      // Atualiza a InfoWindow (como já faz atualmente)
       infoWindow.close();
-
-      // Obter o modo de transporte selecionado
+      
       const travelMode = document.getElementById("travelMode").value;
 
-      // Exibe as informações no InfoWindow com o botão para calcular rota
       infoWindow.setContent(`
         <div class="info-window">
             <h3>${ponto.nome}</h3>
@@ -41,11 +39,11 @@ function initMap() {
             <p><strong>Horário:</strong> ${ponto.horario}</p>
             <p>${ponto.descricao}</p>
             <div class="button-container">
-                <button onclick="calcRoute(${ponto.latitude}, ${ponto.longitude}, '${travelMode}')">Calcular Rota</button>
+              <button onclick="calcRoute(${ponto.latitude}, ${ponto.longitude}, '${travelMode}')">Calcular Rota</button>
             </div>
         </div>
-    `);
-    
+      `);
+      
       infoWindow.setPosition({
         lat: parseFloat(ponto.latitude),
         lng: parseFloat(ponto.longitude),
@@ -55,8 +53,23 @@ function initMap() {
   });
 }
 
+// Obtenha os elementos do pop-up
+const routePopup = document.getElementById("route-popup");
+const routeDetails = document.getElementById("route-details");
+const closePopup = document.getElementById("close-popup");
 
-// Função para calcular a rota entre a localização atual e o destino selecionado
+// Função para mostrar o pop-up
+function showPopup(message) {
+  routeDetails.textContent = message;
+  routePopup.classList.remove("hidden");
+}
+
+// Fechar o pop-up ao clicar no botão
+closePopup.addEventListener("click", () => {
+  routePopup.classList.add("hidden");
+});
+
+// Atualize a função calcRoute
 function calcRoute(destLatitude, destLongitude, travelMode) {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(
@@ -84,7 +97,9 @@ function calcRoute(destLatitude, destLongitude, travelMode) {
             const route = result.routes[0].legs[0];
             const duration = route.duration.text;
             const distance = route.distance.text;
-            alert(`Tempo estimado: ${duration}, Distância: ${distance}`);
+
+            // Substitui o alert pelo pop-up
+            showPopup(`Tempo estimado: ${duration}, Distância: ${distance}`);
           } else {
             console.error("Erro ao calcular a rota: " + status);
           }

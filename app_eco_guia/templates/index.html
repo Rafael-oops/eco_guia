@@ -13,6 +13,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+    <link rel="icon" href="{% static 'img/favicon.ico' %}"/>
   </head>
   <body>
     <header class="cabecalho">
@@ -20,7 +21,7 @@
         <div class="logo">
           <img
             class="img-logo"
-            src="{% static 'img/logotipo.png' %}"
+            src="{% static 'img/logo_definitiva_192-rbg.png' %}"
             alt="logo_EcoGuia"
           />
         </div>
@@ -143,7 +144,73 @@
           </div>
           <p class='type-lixo'>Vidro</p>
         </div>
-      </div>
+        <!-- Novos tipos de lixo -->
+        <div class="rias-item" id="black">
+          <div class="lixo black">
+            <img
+              class="img-lixo"
+              src="{% static 'img/lixopreto-removebg-preview.png' %}" 
+              alt="Lixo preto"
+            />
+          </div>
+          <p class='type-lixo'>Madeira</p>
+        </div>
+
+        <div class="rias-item" id="orange">
+          <div class="lixo orange">
+            <img
+              class="img-lixo"
+              src="{% static 'img/lixolaranja-removebg-preview.png' %}" 
+              alt="Lixo laranja"
+            />
+          </div>
+          <p class='type-lixo'>Resíduos Perigosos</p>
+        </div>
+
+        <div class="rias-item" id="white">
+          <div class="lixo white">
+            <img
+              class="img-lixo"
+              src="{% static 'img/lixobranco-removebg-preview.png' %}"
+              alt="Lixo branco"
+            />
+          </div>
+          <p class='type-lixo'>Resíduos de Saúde</p>
+        </div>
+
+        <div class="rias-item" id="purple">
+          <div class="lixo purple">
+            <img
+              class="img-lixo"
+              src="{% static 'img/lixoroxo-removebg-preview.png' %}" 
+              alt="Lixo roxo"
+            />
+          </div>
+          <p class='type-lixo'>Resíduos Radioativos</p>
+        </div>
+
+        <div class="rias-item" id="brown">
+          <div class="lixo brown">
+            <img
+              class="img-lixo"
+              src="{% static 'img/lixomarrom-removebg-preview.png' %}" 
+              alt="Lixo marrom"
+            />
+          </div>
+          <p class='type-lixo'>Orgânico</p>
+        </div>
+
+        <div class="rias-item" id="gray">
+          <div class="lixo gray">
+            <img
+              class="img-lixo"
+              src="{% static 'img/lixocinza-removebg-preview.png' %}" 
+              alt="Lixo cinza"
+            />
+          </div>
+          <p class='type-lixo'>Não Reciclável</p>
+        </div>
+            </div>
 
       <!-- Card de descrição que aparece ao clicar -->
       <div id="card-container" class="card hidden">

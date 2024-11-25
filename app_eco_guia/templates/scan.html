@@ -10,6 +10,8 @@
       src="https://kit.fontawesome.com/941c3f3017.js"
       crossorigin="anonymous"
     ></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="icon" href="{% static 'img/favicon.ico' %}"/>
   </head>
 
   <body>
@@ -20,10 +22,13 @@
       <button id="open-camera">Abrir câmera</button>
       <button id="switch-camera">Trocar Câmera</button>
       <!-- Área para mostrar a câmera -->
-      <div id="camera-container" style="display: none">
+      <div id="camera-container" style="display: none;">
         <video id="video" autoplay></video>
-        <button id="capture">Tirar Foto</button>
+        <div id="capture-container">
+          <button id="capture">Capturar</button>
+        </div>
       </div>
+      
 
       <!-- Canvas para a captura da imagem -->
       <canvas id="canvas" style="display: none"></canvas>
@@ -50,8 +55,10 @@
           <span class="counter">({{ entry.count }})</span>
           <p>
             Última imagem enviada:
-            <img src="{{ entry.image.url }}" alt="Imagem" class="history-img" />
           </p>
+          <div class='img-div'>
+            <img src="{{ entry.image.url }}" alt="Imagem" class="history-img" />
+          </div>
         </div>
         {% empty %}
         <p>Nenhuma classificação no histórico.</p>

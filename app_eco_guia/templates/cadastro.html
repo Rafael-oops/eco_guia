@@ -6,6 +6,7 @@
     <title>Cadastre-se</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/cadastro.css' %}">
+    <link rel="icon" href="{% static 'img/favicon.ico' %}"/>
 </head>
 
 <body>
@@ -29,7 +30,7 @@
     <section class="sessao">
         <div class="logo d-flex justify-content-center" id="logo">
             <div class="img">
-                <a href="index.html"><img class="img-logo" src="  {% static "img/logotipo.png" %}" alt="logo" width="100"></a>
+                <a href="index.html"><img class="img-logo" src="  {% static "img/logo_definitiva_192-rbg.png" %}" alt="logo" width="100"></a>
             </div>
             
             <form id="cadastroForm" action="{% url 'salvar' %}" method="POST">

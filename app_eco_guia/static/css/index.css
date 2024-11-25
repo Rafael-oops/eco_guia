@@ -3,6 +3,11 @@
 /* Estilos gerais */
 .cabecalho { margin-bottom: 2rem; } /* Margem inferior para separar o cabeçalho */
 
+a {
+  text-decoration: none;
+}
+
+
 /* Menu de cabeçalho */
 .menu-header {
   display: flex;
@@ -44,7 +49,7 @@
   letter-spacing: 5px;
   font-size: 20px;
 }
-.img-logo { width: 30%; } /* Tamanho da imagem do logotipo */
+.img-logo { width: 60%; } /* Tamanho da imagem do logotipo */
 
 /* Ícone de menu "burger" */
 .burger {
@@ -171,6 +176,7 @@ p { font-family: "DM Sans", sans-serif; } /* Fonte do texto */
 .histo .h3histo {
   margin: 0;
   font-family: "DM Sans", sans-serif;
+  text-decoration: none;
 }
 
 /* Grid para itens populares */
@@ -188,8 +194,8 @@ p { font-family: "DM Sans", sans-serif; } /* Fonte do texto */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 250px;
-  height: 150px;
+  width: 240px;
+  height: 140px;
   background-color: #f8f8f8;
   border-radius: 10px;
   box-sizing: border-box;
@@ -216,12 +222,20 @@ p { font-family: "DM Sans", sans-serif; } /* Fonte do texto */
 /* Ajuste de tamanho para as imagens dos lixos dentro do grid */
 .rias {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(2, 140px);
   grid-gap: 20px;
   width: 100%;
-  max-width: 300px; /* Limita a largura total do grid */
+  max-width: 900px; /* Limita a largura total do grid */
   margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+  
+  .rias {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* Ajuste para centralizar imagem e parágrafo dentro do contêiner de cada item */
@@ -267,7 +281,7 @@ p { font-family: "DM Sans", sans-serif; } /* Fonte do texto */
   transition: transform 0.3s ease; /* Animação suave */
 }
 
-.item .imgitem:hover { transform: scale(1.1); } /* Aumenta a imagem no hover */
+/* .item .imgitem:hover { transform: scale(1.1); } Aumenta a imagem no hover */
 
 .lixo .imglixo:hover { transform: scale(1.3); } /* Aumenta imagem de lixo no hover */
 
@@ -275,17 +289,24 @@ p { font-family: "DM Sans", sans-serif; } /* Fonte do texto */
 
 /* Card flutuante de lixo */
 #card-container {
-  position: fixed;
-  bottom: 20px;
-  transform: translateY(-100%);
+  position: absolute; /* Usamos absolute para permitir que o card se mova para a posição desejada */
+  transform: translateY(0); /* Remove o efeito de animação do translateY */
   width: 300px;
   background-color: white;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   padding: 20px;
   z-index: 1000;
+  transition: all 0.3s ease-in-out; /* Transição suave */
 }
 
+/* Ajustes para telas pequenas */
+@media (max-width: 600px) {
+  #card-container {
+    width: 45%; /* Aumenta a largura para telas menores */
+    max-width: 40%; /* Reduz um pouco a largura máxima */
+  }
+}
 /*estou vendo como fazer os pop-up do lixo fica dentro do grid do lixo*/
 
 #close-card {
