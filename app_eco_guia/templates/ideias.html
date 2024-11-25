@@ -1,26 +1,353 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ideias</title>
     {% load static %}
-    <link rel="stylesheet" href="{% static 'css/ideias.css' %}">
-    <link rel="icon" href="{% static 'img/favicon.ico' %}"/>
-</head>
-<body>
-    <h1>Ideias de Reciclagem:</h1>
+    <link rel="stylesheet" href="{% static 'css/ideias.css' %}" />
+    <link rel="icon" href="{% static 'img/favicon.ico' %}" />
+  </head>
+  <body>
     <ul class="lista">
-    {% for ideia in ideias %}
-        <a href="#">
-            <li class="card">
-                <h2 class="titulo">{{ ideia.titulo }}</h2>
-                <em>{{ ideia.id_categ.nome_categ }}</em>
-                <p class="conteudo">{{ ideia.resumo }}</p>
-            </li>
-        </a>
-    {% endfor %}
+      {% for ideia in ideias %}
+        <li class="card">
+          <a href="#">
+            <h2 class="titulo">{{ ideia.titulo }}</h2>
+            <em>{{ ideia.id_categ.nome_categ }}</em>
+            <p class="conteudo">{{ ideia.resumo }}</p>
+          </a>
+        </li>
+      {% endfor %}
     </ul>
+    <h1>Ideias de Reciclagem: Transforme Lixo em Luxo</h1>
+    <p>Consumimos materiais diariamente que podem ser reaproveitados e transformados em novos itens. Confira algumas ideias de reciclagem que ajudam o meio ambiente e são fáceis de fazer.</p>
+    <h2>5 vídeos com tutoriais e passo a passo de ideias de reciclagem</h2>
+    <p>Os materiais reciclados podem ser usados para criar itens úteis e decorativos, contribuindo para o meio ambiente. Confira tutoriais de reciclagem:</p>
+
+    <h3>1- Como fazer um porta pão de material reciclável</h3>
+    <iframe title="Do lixo ao luxo : Porta Pães com Material Reciclável - DIY Artesanato" width="800" height="450" src="https://www.youtube.com/embed/JvKvav1eMsM" frameborder="0" allowfullscreen></iframe>
+    <p>Aprenda a fazer um porta pão decorado com tecido, usando materiais recicláveis.</p>
+
+    <h3>2- Como fazer decorações usando vidros reciclados</h3>
+    <iframe title="O que fiz com esses vidros? Veja😱 reciclagem decoração e artesanato" width="800" height="450" src="https://www.youtube.com/embed/GnLRljTmT_w" frameborder="0" allowfullscreen></iframe>
+    <p>Aprenda a criar uma luminária com garrafa de vodka e um vasinho com pote de vidro e suculenta.</p>
+
+    <h3>3- Como fazer uma luminária de garrafa PET</h3>
+    <iframe title="DIY : como fazer LUMINÁRIA de GARRAFA PET | Paulo Biacchi" width="800" height="450" src="https://www.youtube.com/embed/79fEGndFqVI" frameborder="0" allowfullscreen></iframe>
+    <p>Veja como fazer uma luminária estilosa e barata com garrafa PET.</p>
+
+    <h3>4- Como fazer artesanato com latinhas</h3>
+    <iframe title="APRENDA COM FAZER LATINHAS DE CONDIMENTOS" width="800" height="450" src="https://www.youtube.com/embed/bUoymws1xvc" frameborder="0" allowfullscreen></iframe>
+    <p>Aprenda a fazer potes de condimentos usando latinhas de alumínio recicladas.</p>
+
+    <h3>5- Como fazer um cofre com pote de plástico</h3>
+    <iframe title="IDEIAS COM POTE PLÁSTICO | Reciclagem criativa | Cofre | Cicera Criativa" width="800" height="450" src="https://www.youtube.com/embed/i-MIYllx6S8" frameborder="0" allowfullscreen></iframe>
+    <p>Reaproveite potes plásticos para criar um cofre decorado.</p>
+
+    <h2>100 fotos de ideias de reciclagem para te inspirar</h2>
+    <p>Quase tudo o que usamos no dia a dia pode ser reaproveitado. Selecionamos 100 projetos incríveis e criativos que vão mostrar as infinitas possibilidades que temos de reciclar. Confira!</p>
+
+    <h3>1- As garrafas PET podem ser usadas para criar hortas dos mais variados formatos e direções</h3>
+    <img src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-1.jpg" alt="ideias de reciclagem" width="540" height="960" />
+
+    <h3>2- Ao invés da garrafa PET, reutilize bules e chaleiras antigas que não são mais usadas</h3>
+    <img src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-2.jpg" alt="ideias de reciclagem" width="600" height="306" />
+
+    <h3>3- Um estojo reciclado, feito manualmente e criativo para usar em casa ou na escola</h3>
+    <img src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-3.jpg" alt="ideias de reciclagem" width="600" height="735" />
+
+    <h3>4- Se os pássaros visitam a sua casa, faça casinhas com latas recicladas e coloridas, além de funcional, elas decoram o seu jardim</h3>
+    <img src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-4.jpg" alt="ideias de reciclagem" width="600" height="345" />
+
+    <h3>5- O pote de café instantâneo pintado e repaginado para decorar ou brincar</h3>
+    <img src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-5.jpg" alt="ideias de reciclagem" width="600" height="265" />
+
+    <h3>6- Os rolos de papel higiênico ou papel toalha são ótimos para criar peças novas, como esse trio criativo para escritório</h3>
+    <img src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-6.jpg" alt="ideias de reciclagem" width="600" height="481" />
+
+    <h3>7- Faça brinquedos divertidos para as crianças com aqueles potinhos de suco que iriam para o lixo</h3>
+    <img src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-7.jpg" alt="ideias de reciclagem" width="600" height="371" />
+
+    <h3>8- Os copinhos descartáveis, depois de lavados, se transformam em porquinhos alegres e podem ser usados em decoração de festa ou lembrancinha na escola</h3>
+    <img src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-8.jpg" alt="ideias de reciclagem" width="700" height="933" />
     
-</body>
+    <h3>9- Personagens feitos com rolo de papel higiênico ficam divertidos e únicos</h3>
+    <img src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-9.jpg" alt="ideias de reciclagem" width="700" height="515" />
+
+    <h3>10- A garrafa PET é matéria-prima para brinquedos e atividades lúdicas como o pega varetas</h3>
+    <img src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-10.jpg" alt="ideias de reciclagem" width="700" height="394" />
+
+    <h3>11- Ou esse jogo de argolas em que cada garrafa tem uma careta diferente</h3>
+    <img src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-11.jpg" alt="ideias de reciclagem" width="700" height="525" />
+
+    <h3>12- Os palitos de picolé são versáteis e podem ser usados como uma tela de pintura</h3>
+    <img src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-12.jpg" alt="ideias de reciclagem" width="700" height="525" />
+
+    <h3>13- Que tal esse jogo de damas feito com papelão e tampas de garrafa?</h3>
+    <img src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-13.jpg" alt="ideias de reciclagem" width="700" height="525" />
+
+    <h3>14- Para decorar ou brincar, a caixa de papelão foi transformada em uma linda câmera fotográfica</h3>
+    <img src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-14.jpg" alt="ideias de reciclagem" width="700" height="417" />
+
+    <h3>15- Se você não escuta mais CD, não os jogue fora, transforme-os em molduras para espelhos ou quadros</h3>
+    <img src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-15.jpg" alt="ideias de reciclagem" width="650" height="687" />
+
+    <h3>16- Dá para acreditar que esses vasinhos fofos foram feitos com a parte inferior da garrafa de refrigerante?</h3>
+    <img src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-16.jpg" alt="ideias de reciclagem" width="650" height="462" />
+    
+    <h3>17- As lâmpadas quando queimam podem ganhar novos destinos, como vasos pendentes para plantas</h3>
+    <img src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-17.jpg" alt="ideias de reciclagem" width="650" height="443" />
+
+    <h3>18- Uma adega criativa e estilosa feita somente com latas recicladas</h3>
+    <img src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-18.jpg" alt="ideias de reciclagem" width="645" height="430" />
+
+    <h3>19- Se você quer fugir do tradicional tapete de banheiro, use rolhas de vinho e faça uma peça personalizada</h3>
+    <img src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-19.jpg" alt="ideias de reciclagem" width="600" height="450" />
+
+    <h3>20- Nunca mais tenha fios espalhados pela casa, transforme uma velha caixa de sapatos em um recipiente para organizá-los e escondê-los</h3>
+    <img src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-20.jpg" alt="ideias de reciclagem" width="599" height="511" />
+
+    <h3>21- Pegue uma lata, tire o rótulo, faça furos como preferir, adicione luzinhas no seu interior e tenha uma nova luminária em casa</h3>
+    <img src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-21.jpg" alt="ideias de reciclagem" width="645" height="430" />
+
+    <h3>22- Os pneus são excelentes para fazer bancos e pufes para ter assentos novos e confortáveis em casa</h3>
+    <img src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-22.jpg" alt="ideias de reciclagem" width="600" height="450" />
+
+    <h3>23- Que tal esse vasinho feito com pregadores?</h3>
+    <img src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-23.jpg" alt="ideias de reciclagem" width="645" height="430" />
+
+    <h3>24- As colheres de plástico das festas de aniversário ganharam um novo visual depois de serem pintadas e coladas e viraram uma luminária linda</h3>
+    <img src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-24.jpg" alt="ideias de reciclagem" width="600" height="450" />
+
+    <h3>25- Que tal usar as embalagens de bala para guardar temperos?</h3>
+    <h3><img src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-25.jpg" alt="ideias de reciclagem" width="640" height="480" /></h3>
+
+    <h3>26- CDs velhos viraram porta-copos incríveis e criativos, revista-os com tecidos coloridos e alegres</h3>
+    <h3><img src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-26.jpg" alt="ideias de reciclagem" width="640" height="480" /></h3>
+
+    <h3>27- Dá para fazer esculturas com caixas de papelão</h3>
+    <h3><img src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-27.jpg" alt="ideias de reciclagem" width="640" height="640" /></h3>
+
+    <h3>28- Luminárias com latas e madeira pinus são maravilhosas e combinam com uma decoração industrial</h3>
+    <h3><img src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-28.jpg" alt="ideias de reciclagem" width="640" height="754" /></h3>
+
+    <h3>29- Uma lata com cor e decoração diferentes para separar e organizar os talheres que você usa para cozinhar</h3>
+    <h3><img src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-29.jpg" alt="ideias de reciclagem" width="640" height="360" /></h3>
+
+    <h3>30- Sabe aqueles talheres que não estão mais tão novos? Dê uma nova utilidade como chaveiros criativos</h3>
+    <h3><img src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-30.jpg" alt="ideias de reciclagem" width="500" height="401" /></h3>
+
+    <h3>31- As latas de metal são duradouras e práticas, basta uma pintura legal que ela pode ser usada com uma nova finalidade</h3>
+    <h3><img src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-31.jpg" alt="ideias de reciclagem" width="429" height="640" /></h3>
+
+    <h3>32- Molduras antigas, pintadas com cores alegres e com uma linha no lado de dentro se transformaram em murais de fotos ou recados</h3>
+    <h3><img src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-32.jpg" alt="ideias de reciclagem" width="570" height="768" /></h3>
+
+    <h3>33- Sobrou botões de alguma coisa que você fez? Faça um lindo quadro para decorar sua casa ou presentear alguém</h3>
+    <img src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-33.jpg" alt="ideias de reciclagem" width="426" height="640" />
+
+    <h3>34- Mais uma ideia de como transformar garrafas de refrigerante em vasinhos lúdicos e charmosos</h3>
+    <img src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-34.jpg" alt="ideias de reciclagem" width="580" height="773" />
+
+    <h3>35- Os fãs de vinho que guardam as rolhas podem usá-las para fazer decorações e peças de utilidade doméstico</h3>
+    <img src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-35.jpg" alt="ideias de reciclagem" width="386" height="471" />
+
+    <h3>36- Sabe os potes de azeitona? Lave-os bem, tire a cola e escolha um tecido para decorá-los, depois é só usar como porta-talheres</h3>
+    <img src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-36.jpg" alt="ideias de reciclagem" width="736" height="491" />
+
+    <h3>37- As garrafas de vidro podem ser pintadas e transformadas em vasos lindos para usar no dia a dia ou como decoração de festa</h3>
+    <img src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-37.jpg" alt="ideias de reciclagem" width="550" height="767" />
+
+    <h3>38- Restaure um móvel antigo com uma pintura geométrica e moderna</h3>
+    <img src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-38.jpg" alt="ideias de reciclagem" width="499" height="680" />
+
+    <h3>39- Blocos de concreto que sobraram da reforma podem ser usados como base para fazer lindo banco para o seu jardim</h3>
+    <img src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-39.jpg" alt="ideias de reciclagem" width="450" height="543" />
+
+    <h3>40- Olha que lindo esse móbile de corações feito com jornais velhos</h3>
+    <img src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-40.jpg" alt="ideias de reciclagem" width="736" height="971" />
+
+    <h3>41- Os caixotes de feira são campeões de reciclagem porque podem ser usados para fazer móveis, nichos, bandejas e muito mais</h3>
+    <img src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-41.jpg" alt="ideias de reciclagem" width="416" height="640" />
+
+    <h3>42- Um cesto de roupa suja novinho feito só com tampinhas coloridas de garrafa PET</h3>
+    <img alt="ideias de reciclagem" src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-42.jpg" width="236" height="248" />
+
+    <h3>43- Mais uma ideia de luminária feita com colheres descartáveis</h3>
+    <img alt="ideias de reciclagem" src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-43.jpg" width="600" height="446" />
+
+    <h3>44- Se você tiver como cortar uma garrafa de vidro, faça um vasinho com irrigação natural</h3>
+    <img alt="ideias de reciclagem" src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-44.jpg" width="580" height="663" />
+
+    <h3>45- Olha que charmoso esses pinguins feitos com garrafa PET</h3>
+    <img alt="ideias de reciclagem" src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-45.jpg" width="225" height="225" />
+
+    <h3>46- As caixas plásticas de engradado foram pintadas para serem usadas como um móvel novinho</h3>
+    <img alt="ideias de reciclagem" src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-46.jpg" width="959" height="1199" />
+
+    <h3>47- Garrafas de vidro são charmosas para ganharem a função de abajur reciclado</h3>
+    <img alt="ideias de reciclagem" src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-47.jpg" width="714" height="629" />
+
+    <h3>48- Os tijolos e a madeira antiga unidos para fazer um lindo jardim externo</h3>
+    <img alt="ideias de reciclagem" src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-48.jpg" width="730" height="730" />
+
+    <h3>49- Canos de PVC também são reciclados ao ganharam novas utilidades, como vasinhos, cabideiros ou porta trecos</h3>
+    <img alt="ideias de reciclagem" src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-49.jpg" width="612" height="684" />
+
+    <h3>50- A decoração perfeita para tomar vinho é aquela feita inteira com rolhas</h3>
+    <img alt="ideias de reciclagem" src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-50.jpg" width="730" height="548" />
+
+    <h3>51- Um relógio feito com colagem e um disco de vinil antigo, puro charme, não é mesmo?</h3>
+    <img src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-51.jpg" alt="ideias de reciclagem" width="730" height="487" />
+
+    <h3>52- Um organizador feito com papelão e decorado com tecido para guardar seus livros escolares</h3>
+    <img src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-52.jpg" alt="ideias de reciclagem" width="730" height="730" />
+
+    <h3>53- Até decoração de festa dá para fazer com itens reciclados</h3>
+    <img src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-53.jpg" alt="ideias de reciclagem" width="730" height="730" />
+
+    <h3>54- Para separar seus lápis, faça um organizador de caixa de leite com divisórias internas</h3>
+    <img src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-54.jpg" alt="ideias de reciclagem" width="640" height="550" />
+
+    <h3>55- Nem parece que esses bancos foram feitos com pneu, corda sisal e tecido</h3>
+    <img src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-55.jpg" alt="ideias de reciclagem" width="730" height="730" />
+
+    <h3>56- A decoração de Natal pode ser feita com materiais reciclados, como essa árvore de tirinhas de jornal</h3>
+    <img src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-56.jpg" alt="ideias de reciclagem" width="720" height="720" />
+
+    <h3>57- Além de transformar as latinhas em vasos de plantas, você pode pregá-las em um painel de padeira e deixá-las penduradas</h3>
+    <img src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-57.jpg" alt="ideias de reciclagem" width="720" height="720" />
+
+    <h3>58- A bicicleta estragou? Use o pneu para fazer um vaso pendente diferente e criativo</h3>
+    <img src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-58.jpg" alt="ideias de reciclagem" width="720" height="900" />
+
+    <h3>59- Quadrinhos feitos com fitas antigas e que ninguém usa mais, mais um objeto que deixou de ir para o lixo para virar algo útil e bonito</h3>
+    <img src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-59.jpg" alt="ideias de reciclagem" width="400" height="340" />
+
+    <h3>60- As embalagens de produtos de limpeza agora são usadas como cestas para decorar e organizar seus pertences</h3>
+    <img src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-60.jpg" alt="ideias de reciclagem" width="730" height="730" />
+
+    <h3>61- Além de pintar, você pode revestir garrafas de vidro com barbantes coloridos</h3>
+    <img src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-61.jpg" alt="ideias de reciclagem" width="550" height="824" />
+
+    <h3>62- Pinte todas as tampinhas de branco para ter um cesto com uma aparência clean, pode ser cesto de roupa suja ou para guardar os brinquedos das crianças</h3>
+    <img src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-62.jpg" alt="ideias de reciclagem" width="454" height="391" />
+
+    <h3>63- Os apaixonados por signos podem decorar caixas de leite com o tema da astrologia</h3>
+    <img src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-63.jpg" alt="ideias de reciclagem" width="600" height="338" />
+   
+    <h3>64- Todos os calçados organizados com uma sapateira feita com itens reciclados</h3>
+    <img src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-64.jpg" alt="ideias de reciclagem" width="550" height="436" />
+
+    <h3>65- Lembrancinhas de coruja para festa de aniversário feita com papelão reciclado</h3>
+    <img src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-65.jpg" alt="ideias de reciclagem" width="640" height="655" />
+
+    <h3>66- Mais uma ideia de como criar organizadores de talher com itens que iriam para o lixo</h3>
+    <img src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-66.jpg" alt="ideias de reciclagem" width="590" height="590" />
+
+    <h3>67- Uma luminária feita com ralador e que combina com a decoração da cozinha</h3>
+    <img src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-67.jpg" alt="ideias de reciclagem" width="564" height="375" />
+
+    <h3>68- Retalhos de tecido também podem ser reaproveitados para fazer brinquedos ou decorações</h3>
+    <img src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-68.jpg" alt="ideias de reciclagem" width="600" height="315" />
+
+    <h3>69- Que tal esse conjunto de descanso de panela e porta copos feitos com revistas velhas pintadas?</h3>
+    <img src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-69.jpg" alt="ideias de reciclagem" width="590" height="443" />
+
+    <h3>70- Não jogue fora as latas de tinta ou de óleo, use-as para fazer bancos extras para a sua casa</h3>
+    <img src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-70.jpg" alt="ideias de reciclagem" width="602" height="377" />
+
+    <h3>71- Olha que criativo esse relógio feito com tampinhas de garrafa</h3>
+    <img src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-71.jpg" alt="ideias de reciclagem" width="425" height="260" />
+
+    <h3>72- Faça pequenos rolinhos de papel colorido e monte um coração para pendurar e decorar sua casa ou uma festa</h3>
+    <img src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-72.jpg" alt="ideias de reciclagem" width="640" height="850" />
+
+    <h3>73- As bandeirinhas de festa junina recicladas feitas com jornal ou revistas velhas</h3>
+    <h3><img src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-73.jpg" alt="ideias de reciclagem" width="590" height="394" /></h3>
+
+    <h3>74- Os caixotes de feira só lixados e com tom natural, empilhados para um lindo jardim vertical em áreas internas</h3>
+    <h3><img src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-74.jpg" alt="ideias de reciclagem" width="720" height="900" /></h3>
+
+    <h3>75- O <a href="https://www.totalconstrucao.com.br/reciclagem-de-pallet/">palete</a> é outro material que é amplamente reciclado e pode ser transformado em móveis</h3>
+    <h3><img src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-75.jpg" alt="ideias de reciclagem" width="640" height="700" /></h3>
+
+    <h3>76- Mais uma peça de bicicleta que ganhou uma nova utilidade</h3>
+    <h3><img src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-76.jpg" alt="ideias de reciclagem" width="600" height="264" /></h3>
+
+    <h3>77- Decore seu vaso de plantas com CDs velhos</h3>
+    <h3><img src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-77.jpg" alt="ideias de reciclagem" width="605" height="714" /></h3>
+
+    <h3>78- Uma caixa que combina com a decoração do quarto para guardar os brinquedos e sem custo na hora de fazer</h3>
+    <h3><img src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-78.jpg" alt="ideias de reciclagem" width="600" height="450" /></h3>
+
+    <h3>79- Latinhas para decorar o quarto infantil todas feitas com materiais reciclados</h3>
+    <h3><img src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-79.jpg" alt="ideias de reciclagem" width="225" height="225" /></h3>
+
+    <h3>80- A guirlanda de Natal pode ser feita manualmente com rolinhos de revista decorados com papel colorido</h3>
+    <h3><img src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-80.jpg" alt="ideias de reciclagem" width="500" height="500" /></h3>
+
+    <h3>81- Outra ideia de vaso feito com lâmpada</h3>
+    <h3><img src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-81.jpg" alt="ideias de reciclagem" width="225" height="225" /></h3>
+
+    <h3>82- Não jogue nada fora, quase tudo pode ser usado como vasinho para cactos e suculentas</h3>
+    <h3><img alt="ideias de reciclagem" src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-82.jpg" width="1080" height="1080" /></h3>
+
+    <h3>83- As garrafas de suco, bem lavadas e etiquetadas para guardar os condimentos do dia a dia</h3>
+    <h3><img alt="ideias de reciclagem" src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-83.jpg" width="1080" height="1080" /></h3>
+
+    <h3>84- O bordado ficou ainda mais criativo com os botões velhos sendo usados como novos</h3>
+    <h3><img alt="ideias de reciclagem" src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-84.jpg" width="1028" height="1028" /></h3>
+
+    <h3>85- Use o EVA como seu aliado para decorar potinhos de plástico</h3>
+    <h3><img alt="ideias de reciclagem" src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-85.jpg" width="1080" height="1080" /></h3>
+
+    <h3>86- Ou tecidos e rendas</h3>
+    <h3><img alt="ideias de reciclagem" src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-86.jpg" width="1080" height="1080" /></h3>
+
+    <h3>87- A pintura é mais trabalhosa, mas o resultado vale a pena, né?</h3>
+    <h3><img class="alignnone size-full wp-image-40805" src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-87.jpg" alt="" width="1080" height="1080" /></h3>
+
+    <h3>88- Um brinquedo lúdico e divertido feito com vários materiais reciclados</h3>
+    <h3><img class="alignnone size-full wp-image-40806" src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-88.jpg" alt="ideias de reciclagem" width="1080" height="1350" /></h3>
+
+    <h3>89- Uma peça de MDF reformada e usada como decoração para quem quer algo “novo” e criativo na sua casa</h3>
+    <h3><img src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-89.jpg" alt="ideias de reciclagem" width="1080" height="1350" /></h3>
+
+    <h3>90- Algumas ideias de brinquedo simples e criativas para as crianças</h3>
+    <h3><img src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-90.jpg" alt="ideias de reciclagem" width="1080" height="1080" /></h3>
+
+    <h3>91- Latinhas pintadas de branco para uma decoração clean e cheia de estilosa</h3>
+    <h3><img src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-91.jpg" alt="ideias de reciclagem" width="320" height="320" /></h3>
+
+    <h3>92- Com um pouco mais de dedicação, você pode transformar a garrafa PET em um vaso estiloso e muito criativo</h3>
+    <h3><img src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-92.jpg" alt="ideias de reciclagem" width="1080" height="1350" /></h3>
+
+    <h3>93- Olha que incrível esse banco suspenso feito com pneu reciclado, tem a versão na horizontal e na vertical</h3>
+    <h3><img src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-93.jpg" alt="ideias de reciclagem" width="1080" height="1080" /></h3>
+
+    <h3>94- O móvel antigo estragou? Use as gavetas para fazer móveis novos</h3>
+    <img src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-94.jpg" alt="ideias de reciclagem" width="623" height="611" />
+
+    <h3>95- Outra sugestão do que fazer com as rolhas dos vinhos que você guarda</h3>
+    <img src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-95.jpg" alt="ideias de reciclagem" width="690" height="690" />
+
+    <h3>96- A reutilização dos tonéis para fazer mesas é muito popular e rende peças incríveis</h3>
+    <img src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-96.jpg" alt="ideias de reciclagem" width="1080" height="1080" />
+
+    <h3>97- A juta é excelente para decorar peças recicladas e ter um toque rústico</h3>
+    <h3><img src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-97.jpg" alt="ideias de reciclagem" width="564" height="705" /></h3>
+    
+    <h3>98- A máquina de costura está parada e ninguém usa? Transforme em uma pia nova e diferenciada para o seu banheiro</h3>
+    <h3><img src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-98.jpg" alt="ideias de reciclagem" width="462" height="462" /></h3>
+    
+    <h3>99- A reciclagem é uma aliada da pedagogia para ensinar as crianças de uma forma lúdica</h3>
+    <h3><img src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-99.jpg" alt="ideias de reciclagem" width="1080" height="1171" /></h3>
+    
+    <h3>100- Com pezinhos, os caixotes viram uma linda estante que não precisa ser suspensa</h3>
+    <h3><img src="https://www.totalconstrucao.com.br/wp-content/uploads/2020/03/ideias-de-reciclagem-100.jpg" alt="ideias de reciclagem" width="1080" height="1080" /></h3>
+
+    <p>Reciclar é fundamental na atualidade para cuidarmos da natureza. É possível criar muitas peças interessantes e úteis com um pouco de habilidade e criatividade. Com certeza, com as ideias que selecionamos no texto de hoje, você poderá reaproveitar melhor os itens que iriam para o lixo. Se arrisque mais, coloque a mão na massa e contribua com o meio ambiente!</p>
+  </body>
 </html>

@@ -1,18 +1,100 @@
+/* Paleta de cores relacionadas à COP30 e sustentabilidade */
+:root {
+    --verde-principal: #006747;
+    --verde-secundario: #8cc63f;
+    --azul-cop30: #2a6b8d;
+    --amarelo-destaque: #f4c300;
+    --cinza-claro: #f4f4f4;
+    --cinza-escuro: #333333;
+    --branco: #ffffff;
+}
+
+/* Reset básico de margens e padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--cinza-claro);
+    color: var(--cinza-escuro);
+    line-height: 1.6;
+    text-align: center; /* Centraliza todo o conteúdo do body */
+}
+
+/* Estilo do título principal */
+h3 {
+    font-size: 1.5rem;
+    color: var(--verde-principal);
+    font-weight: 700;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+/* Estilo para os links relacionados aos vídeos de reciclagem */
 a {
+    color: var(--azul-cop30);
     text-decoration: none;
-    width: 100%;
+    font-weight: 600;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
-.lista {
+a:hover {
+    color: var(--amarelo-destaque);
+    text-decoration: underline;
+}
+
+p {
+    font-size: 24px;
+}
+
+/* Estilo das imagens dos vídeos */
+img {
     width: 50%;
+    height: 50%; /* Define altura fixa para uniformizar as imagens */
+    object-fit: cover; /* Garante que as imagens ocupem a área sem distorcer */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 }
 
-.card {
-    list-style: none;
-    border: 1px solid green;
+/* Estilo das seções de reciclagem */
+.reciclagem-item {
+    background-color: var(--branco);
+    padding: 20px;
     border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: inline-block;
     width: 100%;
-    margin: 1rem;
-    padding: 1rem;
-    color: black;
+    max-width: 700px; /* Limita a largura das seções */
+    text-align: center; /* Centraliza o texto dentro das seções */
+}
+
+.reciclagem-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilo da legenda para as imagens */
+.reciclagem-item p {
+    font-size: 1rem;
+    color: var(--cinza-escuro);
+    line-height: 1.5;
+    margin-top: 10px;
+}
+
+/* Estilo para os vídeos embutidos (se houver) */
+iframe {
+    width: 100%;
+    max-width: 800px;
+    height: 450px;
+    margin: 20px auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }

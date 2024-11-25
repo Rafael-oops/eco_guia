@@ -190,12 +190,24 @@ p { font-family: "DM Sans", sans-serif; } /* Fonte do texto */
   border-radius: 20px;
 }
 
+@media (max-width: 480px) {
+  .populares {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 20px;
+  }
+}
+
 .item {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 240px;
-  height: 140px;
+  height: 130px;
   background-color: #f8f8f8;
   border-radius: 10px;
   box-sizing: border-box;
