@@ -149,7 +149,7 @@ img_size = 224
 # model_path = "app_eco_guia\model\model_trained_quantized.tflite"
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-model_path = os.path.join(BASE_DIR, 'app_eco_guia', 'model', 'modelo_compativel_V2.tflite')
+model_path = os.path.join(BASE_DIR, 'app_eco_guia', 'model', 'modelo_compativel_V3.tflite')
 
 
 # Função para preparar a imagem antes da predição

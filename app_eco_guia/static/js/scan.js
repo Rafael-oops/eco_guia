@@ -149,7 +149,7 @@ uploadForm.addEventListener("submit", async function (event) {
   try {
     let response = await fetch(
       "https://eco-guia.onrender.com/predict/",
-      // "https://7843-177-104-245-40.ngrok-free.app/predict/",
+      // "https://0a0c-2804-214-9004-e23e-ada5-a7ff-ab9d-3afa.ngrok-free.app/predict/",
       {
         method: "POST",
         headers: {
